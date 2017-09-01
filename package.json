@@ -18,10 +18,14 @@
   "homepage": "https://github.com/cbaddeley/project2#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "chai": "^4.1.2",
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.2.0",
     "method-override": "^2.3.9",
     "mysql": "^2.14.1",
-    "mysql2": "^1.4.2"
+    "mysql2": "^1.4.2",
+    "sequelize": "^4.8.0"
   }
 }
