@@ -1,1 +1,1 @@
---This is the schema file
+CREATE DATABASE game_db;
