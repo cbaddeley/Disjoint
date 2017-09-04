@@ -1,17 +1,17 @@
 .worldMap {
-  width: 960px;
+  width: 990px;
   margin: auto;
   margin-top: 40px;
   border: 1px solid black;
+  height: 500px;
 }
-
 .hexagon {
   position: relative;
-  width: 300px;
-  height: 173.21px;
-  margin: 86.60px 0;
+  width: 150px;
+  height: 86.60px;
+  margin: 43.30px 0;
   background-image: url(http://csshexagon.com/img/meow.jpg);
-  background-size: auto 334.8632px;
+  background-size: auto 161.6581px;
   background-position: center;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
   border-left: solid 5px #333333;
@@ -22,14 +22,14 @@
 .hexBottom {
   position: absolute;
   z-index: 1;
-  width: 212.13px;
-  height: 212.13px;
+  width: 106.07px;
+  height: 106.07px;
   overflow: hidden;
   -webkit-transform: scaleY(0.5774) rotate(-45deg);
   -ms-transform: scaleY(0.5774) rotate(-45deg);
   transform: scaleY(0.5774) rotate(-45deg);
   background: inherit;
-  left: 38.93px;
+  left: 16.97px;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
@@ -38,11 +38,11 @@
 .hexBottom:after {
   content: "";
   position: absolute;
-  width: 290.0000px;
-  height: 167.4315780649915px;
-  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-83.7158px);
-  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-83.7158px);
-  transform:          rotate(45deg) scaleY(1.7321) translateY(-83.7158px);
+  width: 140.0000px;
+  height: 80.82903768654762px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
@@ -50,7 +50,7 @@
 }
 
 .hexTop {
-  top: -106.0660px;
+  top: -53.0330px;
   border-top: solid 7.0711px #333333;
   border-right: solid 7.0711px #333333;
 }
@@ -60,7 +60,7 @@
 }
 
 .hexBottom {
-  bottom: -106.0660px;
+  bottom: -53.0330px;
   border-bottom: solid 7.0711px #333333;
   border-left: solid 7.0711px #333333;
 }
@@ -74,8 +74,58 @@
   position: absolute;
   top: 2.8868px;
   left: 0;
-  width: 290.0000px;
-  height: 167.4316px;
+  width: 140.0000px;
+  height: 80.8290px;
   z-index: 2;
   background: inherit;
+}
+
+#level1 {
+    left: 10px;
+    top: 10px;
+}
+
+#level2 {
+    left: 95px;
+    top: 25px;
+}
+
+#level3 {
+    left: 185px;
+    top: 40px;
+}
+
+#level4 {
+    left: 275px;
+    bottom: 235px;
+}
+
+#level5 {
+    bottom: 510px;
+    left: 370px;
+}
+
+#level6 {
+    bottom: 500px;
+    left: 460px;
+}
+
+#level7 {
+    bottom: 485px;
+    left: 552px;
+}
+
+#level8 {
+    bottom: 760px;
+    left: 640px;
+}
+
+#level9 {
+    bottom: 1030px;
+    left: 730px;
+}
+
+#level10 {
+    bottom: 1020px;
+    left: 820px;
 }

@@ -1,14 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
-  var Item = sequelize.define("Item", {
-    item_name: {
+  var Level = sequelize.define("Level", {
+    level_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 15]
+        len: [1]
       }
     }
   }, {
     timestamps: false
   });
-  return Item;
+  return Level;
 };
