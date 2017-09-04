@@ -1,0 +1,36 @@
+
+/*This is just random CSS applicable only to the first screen where the player creates a name*/
+.beginDiv {
+  text-align: center;
+  width: 480px;
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 40px;
+}
+
+#beginTitle {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+#playerNameButton {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: #2b9e3c;
+  background-image: -webkit-linear-gradient(top, #2b9e3c, #66541e);
+  background-image: -moz-linear-gradient(top, #2b9e3c, #66541e);
+  background-image: -ms-linear-gradient(top, #2b9e3c, #66541e);
+  background-image: -o-linear-gradient(top, #2b9e3c, #66541e);
+  background-image: linear-gradient(to bottom, #2b9e3c, #66541e);
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Arial;
+  color: #f2e4f2;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#playerNameButton:hover {
+  background: #1f5e85;
+  text-decoration: none;
+}
