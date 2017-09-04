@@ -52,9 +52,19 @@ module.exports = function(app) {
         player_name: req.body.player_name
       }
     }).then(function(dbGame) {
-      res.send({redirect: '/worldMap/' + playerName});
+      res.send({redirect: '/worldMap/'});
 
     });
+  });
+
+  app.get("/worldMap", function(req, res) {
+    db.Level.findAll({}).then(function(dbLevels) {
+      var hbsObject = {
+        levels: dbLevels
+      };
+      console.log(hbsObject);
+      res.render("worldMap", hbsObject);
+      });
   });
 
 };
