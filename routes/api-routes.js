@@ -26,16 +26,35 @@ module.exports = function(app) {
       res.send({redirect: '/firstLevel'});
     });
   });
-// Don't worry about this function I'm still figuring stuff out
-  // app.get("/start", function(req, res) {
-  //   console.log("asdf");
-  //   db.Player.findOne({
-  //     where: {
-  //       player_name: id
-  //     }
-  //   }).then(function(dbAuthor) {
-  //     res.json(dbAuthor);
-  //   });
-  // });
+
+  app.get("/worldMap/:playerName", function(req, res) {
+    db.Player.findOne({
+      where: {
+        player_name: req.params.playerName
+      }
+    }).then(function(dbLevels) {
+      var hbsObject = {
+        players: dbLevels
+      };
+      console.log(hbsObject);
+      res.render("worldMap", hbsObject);
+      });
+  });
+
+  app.put("/api/levelAccess", function(req, res) {
+    var playerName = req.body.player_name;
+    // Update takes in an object describing the properties we want to update, and
+    // we use where to describe which objects we want to update
+    db.Player.update({
+      level_access: req.body.level
+    }, {
+      where: {
+        player_name: req.body.player_name
+      }
+    }).then(function(dbGame) {
+      res.send({redirect: '/worldMap/' + playerName});
+
+    });
+  });
 
 };
