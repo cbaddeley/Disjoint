@@ -6,7 +6,6 @@
 
 // Requiring our models
 var db = require("../models");
-var id;
 
 // Routes
 // =============================================================
@@ -19,11 +18,12 @@ module.exports = function(app) {
 
   });
 //Here is when the player first puts in their name. It stores the value in the database and then renders the first level
-  app.post("/", function(req, res) {
+  app.post("/api/playerName", function(req, res) {
     db.Player.create({
       player_name: req.body.player_name
     }).then(function(dbTodo) {
-      res.render("firstLevel");
+      //I'm sending a redirect to the client but they have to use it on their side as well
+      res.send({redirect: '/firstLevel'});
     });
   });
 // Don't worry about this function I'm still figuring stuff out
