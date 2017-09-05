@@ -34,3 +34,8 @@
   background: #1f5e85;
   text-decoration: none;
 }
+
+#titlePage{
+  background: url(title_bg.jpg);
+  background-repeat: no-repeat;
+}
