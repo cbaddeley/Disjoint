@@ -6,7 +6,7 @@
   height: 500px;
 }
 .hexagon {
-  display: none;
+  /*display: none;*/
   position: relative;
   width: 150px;
   height: 86.60px;
