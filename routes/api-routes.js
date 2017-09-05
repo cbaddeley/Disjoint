@@ -23,21 +23,17 @@ module.exports = function(app) {
       player_name: req.body.player_name
     }).then(function(dbTodo) {
       //I'm sending a redirect to the client but they have to use it on their side as well
-      res.send({redirect: '/firstLevel'});
+      res.send({redirect: '/level1'});
     });
   });
 
-  app.get("/worldMap/:playerName", function(req, res) {
-    db.Player.findOne({
+  app.get("/api/playerLevel/:player", function(req, res) {
+    db.Player.findAll({
       where: {
-        player_name: req.params.playerName
+        player_name: req.params.player
       }
-    }).then(function(dbLevels) {
-      var hbsObject = {
-        players: dbLevels
-      };
-      console.log(hbsObject);
-      res.render("worldMap", hbsObject);
+    }).then(function(data) {
+      res.json(data);
       });
   });
 
@@ -64,6 +60,16 @@ module.exports = function(app) {
       };
       console.log(hbsObject);
       res.render("worldMap", hbsObject);
+      });
+  });
+
+  app.get("/level3", function(req, res) {
+    db.Item.findAll({}).then(function(dbItems) {
+      var hbsObject = {
+        items: dbItems
+      };
+      console.log(hbsObject);
+      res.render("level3", hbsObject);
       });
   });
 
