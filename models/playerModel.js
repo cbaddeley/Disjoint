@@ -13,5 +13,14 @@ module.exports = function(sequelize, DataTypes) {
         defaultValue: "1",
     }
   });
+
+  Player.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Player.hasOne(models.Backpack, {
+      onDelete: "cascade"
+    });
+  };
+
   return Player;
 };
