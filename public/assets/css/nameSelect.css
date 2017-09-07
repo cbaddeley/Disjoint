@@ -6,9 +6,13 @@
   margin: auto;
 /*  border: 1px solid black;*/
   margin-top: 40px;
-  color: white;
+  /*color: white;*/
 }
 
+label{
+  color: white;
+
+}
 #beginTitle {
   font-size: 48px;
   margin-bottom: 40px;
@@ -36,8 +40,9 @@
   background: #1f5e85;
   text-decoration: none;
 }
-
-body{
+/*change this out so it isn't affecting body on other pages*/
+/*body{
   background: url(../img/title_bg.jpg);
   background-repeat: no-repeat;
 }
+*/

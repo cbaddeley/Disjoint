@@ -11,4 +11,3 @@ INSERT INTO Levels (level_name) VALUES ('Level 8');
 INSERT INTO Levels (level_name) VALUES ('Level 9');
 INSERT INTO Levels (level_name) VALUES ('Level 10');
 
-
