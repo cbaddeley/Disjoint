@@ -33,3 +33,9 @@
 }*/
 
 /*level 2 forest*/
+#displayForest{
+  background: url(../img/goblin.png);
+  background-repeat: no-repeat;
+  border: black solid 5px;
+
+}
