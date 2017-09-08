@@ -21,29 +21,62 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
-  <div class ="container-fluid">
+ <!--  <div class ="container-fluid"> -->
+    <div class="container-fluid"><img src="/assets/img/bedroom.png" id="bedPic">
+    <!--textbox div-->
+    <div class="ticker" id="textBox">
+      
+      <ul>
+        <li>This is a test</li>
+        <li>This is another test wooooooooo!</li>
 
-    <div id="bedRoom" class="fill">Image goes here</div>
+      </ul>
+    </div>
 
-    <div class="col-md-6 col-md-offset-3">
+    </div><!--closes fluid container-->
+
+<!--next button div-->
+     <footer class="navbar-default navbar-fixed-bottom">
       <form id="nextLevel">
         <input type="hidden" id="level" name="level" value="5">
         <button type="submit" class="btn btn-primary">Next Level</button>
       </form>
-  </div><!--ends form info-->
-  </div><!--ends container-->
+      <button id="nextBtn">More Dialogue</button>
+  </footer><!--ends form footer div-->
+<!--   </div>ends container -->
   </body>
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--ticker link-->
+  <script src="/path/to/jquery.ticker.js"></script>
     <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
   //jquery calls 
 $(document).ready(function(){
 //when the player clicks the next button, the textbox div will show the next block of tetx
+  $("#nextBtn").on("click"){
 
-//potentially look into hides for this?
-
-
+    $('.ticker').ticker();
+    // addText();
+  };
 
      });
+
+
+// function addText(){
+
+//   var textToAdd = "This is some text.  It fills in one character at a time.  When it gets to the end of the div, it wraps to the next line.  Modify the number at the end of the setInterval function to change the text typing speed! :-)";
+// var placeHolder = 0;
+// //put the text in a hidden div?
+// var textAdder = setInterval(function(){
+//     document.getElementById("textBox").innerHTML += textToAdd.charAt(placeHolder);
+//     if (++placeHolder == textToAdd.length){
+//         clearInterval(textAdder);
+//     }
+// }, 100);
+
+// $(#textBox).innerHTML(textAdder);
+
+// }
 
   </script>
 </html>
