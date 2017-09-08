@@ -26,7 +26,7 @@
     <!--textbox div-->
     <div class="ticker" id="textBox">
       
-      <ul>
+      <ul id="webTicker">
         <li>This is a test</li>
         <li>This is another test wooooooooo!</li>
 
@@ -48,14 +48,15 @@
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!--ticker link-->
-  <script src="/path/to/jquery.ticker.js"></script>
+ <script src="./path/to/jquery.webticker.min.js"></script>
     <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
   //jquery calls 
 $(document).ready(function(){
 //when the player clicks the next button, the textbox div will show the next block of tetx
   $("#nextBtn").on("click"){
 
-    $('.ticker').ticker();
+    $('#webTicker').webTicker();
+    // $('.ticker').ticker();
     // addText();
   };
 

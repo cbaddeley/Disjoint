@@ -27,6 +27,7 @@
     "method-override": "^2.3.9",
     "mysql": "^2.14.1",
     "mysql2": "^1.4.2",
-    "sequelize": "^4.8.0"
+    "sequelize": "^4.8.0",
+    "webticker": "^3.0.0"
   }
 }
