@@ -4,13 +4,19 @@
   text-align: center;
   width: 480px;
   margin: auto;
-  border: 1px solid black;
+/*  border: 1px solid black;*/
   margin-top: 40px;
+  /*color: white;*/
 }
 
+label{
+  color: white;
+
+}
 #beginTitle {
   font-size: 48px;
   margin-bottom: 40px;
+  color: white;
 }
 
 #playerNameButton {
@@ -34,3 +40,9 @@
   background: #1f5e85;
   text-decoration: none;
 }
+/*change this out so it isn't affecting body on other pages*/
+/*body{
+  background: url(../img/title_bg.jpg);
+  background-repeat: no-repeat;
+}
+*/

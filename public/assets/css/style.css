@@ -32,12 +32,10 @@
   padding-top:20px;
 }*/
 
+
 /*level 2 forrest*/
 #displayForrest{
   background: url(../img/Fairy_Forest.png);
-  background-repeat: no-repeat;
-  border: black solid 5px;
-
 }
 
 #textBox{
@@ -53,3 +51,4 @@
 
 
 }
+

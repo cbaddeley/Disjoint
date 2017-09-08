@@ -27,6 +27,7 @@ module.exports = function(app) {
     });
   });
 
+//This route will be used on the worldMap and is used in worldMap.js file. It sends what levels the player has access to.
   app.get("/api/playerLevel/:player", function(req, res) {
     db.Player.findAll({
       where: {
@@ -37,10 +38,10 @@ module.exports = function(app) {
       });
   });
 
+//This is the PUT request to update the levels the player has access to
   app.put("/api/levelAccess", function(req, res) {
     var playerName = req.body.player_name;
-    // Update takes in an object describing the properties we want to update, and
-    // we use where to describe which objects we want to update
+
     db.Player.update({
       level_access: req.body.level
     }, {
@@ -48,11 +49,12 @@ module.exports = function(app) {
         player_name: req.body.player_name
       }
     }).then(function(dbGame) {
+      //It brings them to the worldMap. Well the js file on the client side does but this sends the redirect. This function would ideally be used with the next level button.
       res.send({redirect: '/worldMap/'});
 
     });
   });
-
+//This gets all the levels from the levels database and uses handlebars to render them on the page.
   app.get("/worldMap", function(req, res) {
     db.Level.findAll({}).then(function(dbLevels) {
       var hbsObject = {
@@ -62,7 +64,7 @@ module.exports = function(app) {
       res.render("worldMap", hbsObject);
       });
   });
-
+//This is the market page.
   app.get("/level3", function(req, res) {
     db.Item.findAll({}).then(function(dbItems) {
       var hbsObject = {
