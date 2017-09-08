@@ -27,3 +27,25 @@ db.sequelize.sync({force:true}).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+//TO DO FOR OUR GAME_DB: 
+//need to set up connection to JAWSDB in controller.js file
+// var mysql = require("mysql");
+
+// var connection;
+
+// if(process.env.JAWSDB_URL){
+
+// 	connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else{
+
+// 	connection = mysql.createConnection({
+// 	host: "localhost",
+// 	user: "root",
+// 	password: "1234",
+// 	database: "burgers_db"
+// });
+// };
+
+// connection.connect();
+// module.exports = connection; 
