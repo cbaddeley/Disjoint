@@ -6,6 +6,15 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
+    },
+    choices: {
+      type: DataTypes.TEXT
+    },
+    sf_dialog: {
+      type: DataTypes.TEXT
+    },
+    player_dialog: {
+      type: DataTypes.TEXT
     }
   }, {
     timestamps: false

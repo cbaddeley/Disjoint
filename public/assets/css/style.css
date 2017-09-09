@@ -1,0 +1,108 @@
+/*style sheet for general templating*/
+/*general elements*/
+
+/*#textBox{
+  border: blue solid 10px;
+  color: white;
+  background-color: black;
+  width: 400px;
+  height: auto;
+}*/
+
+
+#portal{
+    opacity: 1;
+    position: absolute;
+    margin:auto;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+
+}
+
+.other{
+    background: #88B040;
+
+}
+
+.p{
+
+    text-align: center;
+  padding-top: 120px;
+}
+
+
+.form-group{
+  background: red;
+  color: white;
+
+}
+
+
+
+
+
+
+/*level 1 bedroom */
+
+#bedPic{
+  max-width: 100%;
+  height: auto;
+}
+/*.footer{
+  position: relative;
+  margin-top: -150px;  negative value of footer height 
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+}*/
+
+
+/*level 2 forest*/
+#displayForest{
+/*  background: url(../img/Fairy_Forest.JPG);*/
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*level 4 underworld */
+
+#displayHell{
+   max-width: 100%;
+  height: auto;
+}
+
+/*li{
+  color: red;
+  border: green 5px solid;
+}
+*/
+
+/*level 5*/
+#displayHall{
+   max-width: 100%;
+  height: auto;
+}
+
+/*level 6*/
+#displayCastle{
+   max-width: 100%;
+  height: auto;
+}
+
+
+/*level 7*/
+#displayFishing{
+   max-width: 100%;
+  height: auto;
+}
+
+
+/*level 8*/
+#displayHell{
+   max-width: 100%;
+  height: auto;
+}
+

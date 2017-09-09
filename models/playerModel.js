@@ -10,8 +10,27 @@ module.exports = function(sequelize, DataTypes) {
     level_access: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: "1",
+        defaultValue: "1"
+    },
+    reputation: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 1
+    },
+    gold: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 1
     }
   });
+
+  Player.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Player.hasOne(models.Backpack, {
+      onDelete: "cascade"
+    });
+  };
+
   return Player;
 };
