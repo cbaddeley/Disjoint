@@ -75,4 +75,13 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/api/levelInfo/:level", function(req, res) {
+    db.Level.findAll({where: {
+      id: parseInt(req.params.level)
+    }
+  }).then(function(dbLevelData) {
+    res.json(dbLevelData);
+  });
+});
+
 };
