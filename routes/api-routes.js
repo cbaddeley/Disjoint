@@ -64,6 +64,23 @@ module.exports = function(app) {
       res.render("worldMap", hbsObject);
       });
   });
+
+
+  //app.get("/level3", function(req, res) {
+    //db.Item.findAll({}).then(function(dbItems) {
+      //var hbsObject = {
+      //  items: dbItems
+      //};
+     // console.log(hbsObject);
+      //res.render("level3", hbsObject);
+      //});
+  //});
+  //check json
+  app.get("/api/level3", function(req, res){
+    db.Shop.findAll({}).then(function(dbShop){
+      res.json(dbShop);
+    });
+
 //This is the market page.
   app.get("/level3", function(req, res) {
     db.Item.findAll({}).then(function(dbItems) {
@@ -73,7 +90,58 @@ module.exports = function(app) {
       console.log(hbsObject);
       res.render("level3", hbsObject);
       });
+
   });
+//adding shop values
+app.get("/level3", function(req, res){db.Shop.findAll({}).then(function(dbShop){var hbsObject = {shop: dbShop};
+console.log(hbsObject);//doesn't show in console
+res.render("level3", hbsObject);
+});
+});
+//route for creating shop stuff
+app.post("/api/level3", function(req, res){db.Shop.create({item_name: req.body.item_name//, reputation: req.body.reputation, backpack: req.body.backpack, secret: req.body.secret
+}).then(function(dbShop) {
+  res.redirect("level3", res.json(dbShop));//maybe takeout hbsObject
+});
+});
+//PUT route for 'buying' items from shop
+app.put("/:id", function(req, res) {
+  db.Shop.update({
+    backpack: true
+  }, {
+    where: {
+      id: req.params.id
+    }
+  
+  }).then(function(dbShop) {
+    res.redirect("/level3");
+  });
+});
+
+// //PUT route for 'buying' items from shop
+// app.put("/:id", function(req, res) {
+//   db.Shop.update({
+//     backpack: false
+//   }, {
+//     where: {
+//       id: req.params.id
+//     }
+  
+//   }).then(function(dbShop) {
+//     res.redirect("/level3");
+//   });
+// });
+//DELETE by something other than id?Maybe shop item#?
+app.delete("/api/level3/:id", function(req, res) {
+  db.Shop.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(dbShop) {
+    res.redirect("/level3");
+  });
+});
+
 
   app.get("/api/levelInfo/:level", function(req, res) {
     db.Level.findAll({where: {
