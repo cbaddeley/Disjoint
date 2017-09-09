@@ -9,23 +9,20 @@
   height: auto;
 }*/
 
-/*#level{
-
-background:url("portal.png");
-
-}*/
 
 #portal{
-
-
+    opacity: 1;
+    position: absolute;
+    margin:auto;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
 
 }
 
-
 .other{
     background: #88B040;
-
-
 
 }
 
@@ -36,6 +33,11 @@ background:url("portal.png");
 }
 
 
+.form-group{
+  background: red;
+  color: white;
+
+}
 
 
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Into the Forest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,106 +21,110 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
-  <body>
-   <!--  <div class ="container-fluid"> -->
-    <div class="container-fluid"><img src="/assets/img/Fairy_Forest.JPG" id="displayForest">
 
-	<!--textbox info-->
+<body>
+    <!--  <div class ="container-fluid"> -->
+    <div class="container-fluid">
+        <div class="row">
+            <img src="/assets/img/Fairy_Forest.JPG" id="displayForest">
+            <div><img src="/assets/img/portal.png" id="portal" class="img-responsive"></div>
 
 
-	<!--questions div-->
-	<div class = "row">
-		<div class="form-group">
-  		<label class="col-md-4 control-label" for="questChoices">A goblin appoarches...you decide to</label>
- 			<div class="col-md-4">
-  			<div class="radio">
-   			<label for="questChoices0">
+            <!--questions div-->
+            <div class="row">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="questChoices">A goblin appoarches...you decide to</label>
+                    <div class="col-md-4">
+                        <div class="radio">
+                            <label for="questChoices0">
      		<input type="radio" name="questChoices" id="questChoices0" value="1">option one
    			 </label>
-			</div><!--ends radio button for question 1 option 1-->		
-			  <div class="radio">
-   			 <label for="questChoices1">
+                        </div>
+                        <!--ends radio button for question 1 option 1-->
+                        <div class="radio">
+                            <label for="questChoices1">
       		<input type="radio" name="questChoices" id="questChoices1" value="0">Option two
     		</label>
-			</div><!--ends radio button for question 1 option 2-->
- 			 <div class="radio">
-  		  <label for="questChoices2">
+                        </div>
+                        <!--ends radio button for question 1 option 2-->
+                        <div class="radio">
+                            <label for="questChoices2">
     	  <input type="radio" name="questChoices" id="questChoices2" value="0">
      		 Option three
    				 </label>
-			</div><!--ends radio button for question 1 option 3-->
-  <div class="radio">
-    <label for="questChoices3">
+                        </div>
+                        <!--ends radio button for question 1 option 3-->
+                        <div class="radio">
+                            <label for="questChoices3">
       <input type="radio" name="questChoices" id="questChoices3" value="0">
       Option four
     </label>
-	</div><!--ends radio button for question 1 option 4-->
+                        </div>
+                        <!--ends radio button for question 1 option 4-->
 
 
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Your Rep Repo</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="displayPurchases">
+                                            <p>Your reputation increased!</p>
+                                        </div>
+                                        <div id="displayRep">
+                                        </div>
+                                    </div>
 
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
+                    <!--textbox info-->
+                    <!--next button div used to be a footer class, testign nested format 9/9-->
+                    <div class="row">
+                        <div class="col-sm-6 other">
+                            <h2>Dialogue</h2>
+                            <form id="nextLevel">
+                                <input type="hidden" id="level" name="level" value="3">
+                                <!--try in the button below as a graphic image:  style="background:url('portal.png')"-->
+                                <button type="submit" class="btn btn-primary">Next Level</button>
+                            </form>
+                        </div>
+                    </div>
 
-
-
-
-
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Your Rep Repo</h4>
-      </div>
-      <div class="modal-body" >
-        <div id ="displayPurchases">
-        <p>Your reputation increased!</p>
-        </div>
-        <div id = "displayRep">
-        </div>
-      </div>
-       
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-
-
-    <!--next button div-->
-    <footer class="navbar-default navbar-fixed-bottom">
+                    <!--next button div-->
+                    <!--  <footer class="navbar-default navbar-fixed-bottom">
         <form id="nextLevel">
             <input type="hidden" id="level" name="level" value="3">
             <button type="submit" class="btn btn-primary">Next Level</button>
-        </form>
-       <!--  <button id="nextBtn">More Dialogue</button> -->
-    </footer>
-</div><!--ends fluid container-->
-  </body>
+        </form> -->
+                    <!--  <button id="nextBtn">More Dialogue</button> -->
+                    <!--    </footer>
+</div>< -->
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
+    //jquery calls 
+    $(document).ready(function() {
+        //when the player clicks the next button, the textbox div will show the next block of text
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
+        //potentially look into hides for this?
+        $("#myModal").modal('show');
+        $("#displayRep").text(reputation);
+        //are we trying to post these rep points somewhere?
+        // $.post('apilink here');
+    });
+</script>
 
-  //jquery calls 
-$(document).ready(function(){
-//when the player clicks the next button, the textbox div will show the next block of tetx
-	
-
-
-
-//potentially look into hides for this?
-
-$("#myModal").modal('show');
-
-     });
-
-
-
-  </script>
 </html>

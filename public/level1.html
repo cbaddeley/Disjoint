@@ -24,11 +24,29 @@
 
 <body>
     <!--  <div class ="container-fluid"> -->
+    <!--test the portal id as nextLevel to see if function still works? 9/9-->
     <div class="container-fluid">
-    <div class="row">
-    <img src="/assets/img/bedroom.png" id="bedPic">
+        <div class="row">
+            <img src="/assets/img/bedroom.png" id="bedPic">
+            <div><img src="/assets/img/portal.png" id="portal" class="img-responsive"></div>
+        </div>
+        <!--ends the background image div-->
+
+        <!--next button div used to be a footer class, testign nested format 9/9-->
+        <div class="row">
+            <div class="col-sm-6 other">
+                <h2>Dialogue</h2>
+                <form id="nextLevel">
+                    <input type="hidden" id="level" name="level" value="2">
+                    <!--try in the button below as a graphic image:  style="background:url('portal.png')"-->
+                    <button type="submit" class="btn btn-primary">Next Level</button>
+                </form>
+            </div>
+        </div>
+
+
         <!--textbox div-->
- <!--  <div id="ticker">
+        <!--  <div id="ticker">
     <p>"t""e""s""t""i""n""g"</p>
  -->
 
@@ -42,7 +60,7 @@
   <div class="mask"> -->
         <!--     <ul id="WebTicker"> -->
         <!-- <li class="ticker-spacer"></li> -->
-  <!--       <ul class="newsticker">
+        <!--       <ul class="newsticker">
             <li>This List Item will scroll infintely</li>
             <li>And this one will follow it</li>
             <li class="last">Finally when it goes out of screen, it will queue again at the end</li>
@@ -50,34 +68,17 @@
         <!--     <span class="tickeroverlay-left">&nbsp;</span>
     <span class="tickeroverlay-right">&nbsp;</span> -->
         <!--  </div> -->
-          <div><img src="/assets/img/portal.png" id="portal"></div>
-    </div><!--ends the background image div-->
 
-    <!--next button div used to be a footer class, testign nested format 9/9-->
-        <div class="row">
-        <div class="col-sm-6 other">
-          <h2>Dialogue</h2>
-
-        <form id="nextLevel">
-            <input type="hidden" id="level" name="level" value="2">
-            <!--try in the button below:  style="background:url('portal.png')"-->
-            <button type="submit" class="btn btn-primary">Next Level</button>
-        </form>
-    </div>
-    </div>
-
-
-
-
- <!--    <footer class="navbar-default navbar-fixed-bottom"> -->
-<!--         <form id="nextLevel">
+        <!--    <footer class="navbar-default navbar-fixed-bottom"> -->
+        <!--         <form id="nextLevel">
             <input type="hidden" id="level" name="level" value="2">
             try in the button below:  style="background:url('portal.png')"
             <button type="submit" class="btn btn-primary">Next Level</button>
         </form> -->
-         <!--  <button id="nextBtn">More Dialogue</button> -->
-<!--     </footer> --> <!--ends form footer div-->
-    <!--   </div>ends container -->
+        <!--  <button id="nextBtn">More Dialogue</button> -->
+        <!--     </footer> -->
+        <!--ends form footer div-->
+        <!--   </div>ends container -->
 </body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -87,7 +88,6 @@
 <script type="text/javascript" src="js/jquery.jticker.js"></script>
 
 <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
-
 </script>
 
 </html>
