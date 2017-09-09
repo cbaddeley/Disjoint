@@ -15,12 +15,12 @@ module.exports = function(sequelize, DataTypes) {
     reputation: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 1
+      defaultValue: 0
     },
     gold: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 1
+      defaultValue: 0
     }
   });
 
