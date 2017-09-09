@@ -20,5 +20,6 @@ $( document ).ready(function() {
       //push quest choices to the question space
       $("#test").text(prArray[0]);
       //push dialog choices to the dialog textbox space
+      displayData();
   	})
 });
