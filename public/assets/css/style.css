@@ -16,7 +16,7 @@
 
 
 /*level 2 forrest*/
-#displayForrest{
+#displayForest{
   background: url(../img/Fairy_Forest.png);
 }
 
@@ -34,9 +34,9 @@
   background: url(../img/);
 }
 
-li{
+/*li{
 
   color: red;
   border: green 5px solid;
 }
-
+*/
