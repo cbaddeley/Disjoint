@@ -10,7 +10,17 @@ module.exports = function(sequelize, DataTypes) {
     level_access: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: "1",
+        defaultValue: "1"
+    },
+    reputation: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 1
+    },
+    gold: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 1
     }
   });
 
