@@ -41,8 +41,9 @@ label{
   text-decoration: none;
 }
 /*change this out so it isn't affecting body on other pages*/
-/*body{
+#fullLogWindow{
   background: url(../img/title_bg.jpg);
   background-repeat: no-repeat;
+  width: 1600px;
+  height: 1600px;
 }
-*/

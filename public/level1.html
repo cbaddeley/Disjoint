@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>In your room...</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/nameSelect.css">
     <link rel="stylesheet" href="/assets/css/worldMap.css">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -19,31 +20,74 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </head>
-  <body>
-  <div class ="container-fluid">
+</head>
 
-    <div id="bedRoom" class="fill">Image goes here</div>
+<body>
+    <!--  <div class ="container-fluid"> -->
+    <!--test the portal id as nextLevel to see if function still works? 9/9-->
+    <div class="container-fluid">
+        <div class="row">
+            <img src="/assets/img/bedroom.png" id="bedPic">
+            <div><img src="/assets/img/portal.png" id="portal" class="img-responsive"></div>
+        </div>
+        <!--ends the background image div-->
 
-    <div class="col-md-6 col-md-offset-3">
-      <form id="nextLevel">
-        <input type="hidden" id="level" name="level" value="5">
-        <button type="submit" class="btn btn-primary">Next Level</button>
-      </form>
-  </div><!--ends form info-->
-  </div><!--ends container-->
-  </body>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
-  //jquery calls 
-$(document).ready(function(){
-//when the player clicks the next button, the textbox div will show the next block of tetx
-
-//potentially look into hides for this?
+        <!--next button div used to be a footer class, testign nested format 9/9-->
+        <div class="row">
+            <div class="col-sm-6 other">
+                <h2>Dialogue</h2>
+                <form id="nextLevel">
+                    <input type="hidden" id="level" name="level" value="2">
+                    <!--try in the button below as a graphic image:  style="background:url('portal.png')"-->
+                    <button type="submit" class="btn btn-primary">Next Level</button>
+                </form>
+            </div>
+        </div>
 
 
+        <!--textbox div-->
+        <!--  <div id="ticker">
+    <p>"t""e""s""t""i""n""g"</p>
+ -->
 
-     });
+        <!--   <div class="ticker" id="textBox"> -->
+        <!--       
+      <ul id="webTicker">
+        <li>This is a test</li>
+        <li>This is another test wooooooooo!</li>
+      </ul> -->
+        <!--       <div class="tickercontainer">
+  <div class="mask"> -->
+        <!--     <ul id="WebTicker"> -->
+        <!-- <li class="ticker-spacer"></li> -->
+        <!--       <ul class="newsticker">
+            <li>This List Item will scroll infintely</li>
+            <li>And this one will follow it</li>
+            <li class="last">Finally when it goes out of screen, it will queue again at the end</li>
+        </ul> -->
+        <!--     <span class="tickeroverlay-left">&nbsp;</span>
+    <span class="tickeroverlay-right">&nbsp;</span> -->
+        <!--  </div> -->
 
-  </script>
+        <!--    <footer class="navbar-default navbar-fixed-bottom"> -->
+        <!--         <form id="nextLevel">
+            <input type="hidden" id="level" name="level" value="2">
+            try in the button below:  style="background:url('portal.png')"
+            <button type="submit" class="btn btn-primary">Next Level</button>
+        </form> -->
+        <!--  <button id="nextBtn">More Dialogue</button> -->
+        <!--     </footer> -->
+        <!--ends form footer div-->
+        <!--   </div>ends container -->
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--ticker link-->
+<!--  <script src="./path/to/jquery.webticker.min.js"></script> -->
+<!-- <script src="http://risq.github.io/jquery-advanced-news-ticker/assets/js/jquery.newsTicker.js"></script> -->
+<script type="text/javascript" src="js/jquery.jticker.js"></script>
+
+<script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
+</script>
+
 </html>
