@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>In your room...</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/nameSelect.css">
     <link rel="stylesheet" href="/assets/css/worldMap.css">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -19,65 +20,163 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </head>
-  <body>
- <!--  <div class ="container-fluid"> -->
+</head>
+
+<body>
+    <!--  <div class ="container-fluid"> -->
     <div class="container-fluid"><img src="/assets/img/bedroom.png" id="bedPic">
-    <!--textbox div-->
-    <div class="ticker" id="textBox">
-      
+        <!--textbox div-->
+ <!--  <div id="ticker">
+    <p>"t""e""s""t""i""n""g"</p>
+ -->
+
+        <!--   <div class="ticker" id="textBox"> -->
+        <!--       
       <ul id="webTicker">
         <li>This is a test</li>
         <li>This is another test wooooooooo!</li>
-
-      </ul>
+      </ul> -->
+        <!--       <div class="tickercontainer">
+  <div class="mask"> -->
+        <!--     <ul id="WebTicker"> -->
+        <!-- <li class="ticker-spacer"></li> -->
+  <!--       <ul class="newsticker">
+            <li>This List Item will scroll infintely</li>
+            <li>And this one will follow it</li>
+            <li class="last">Finally when it goes out of screen, it will queue again at the end</li>
+        </ul> -->
+        <!--     <span class="tickeroverlay-left">&nbsp;</span>
+    <span class="tickeroverlay-right">&nbsp;</span> -->
+        <!--  </div> -->
     </div>
+    <!--  </div> -->
 
-    </div><!--closes fluid container-->
+    </div>
+    <!--closes fluid container-->
 
-<!--next button div-->
-     <footer class="navbar-default navbar-fixed-bottom">
-      <form id="nextLevel">
-        <input type="hidden" id="level" name="level" value="5">
-        <button type="submit" class="btn btn-primary">Next Level</button>
-      </form>
-      <button id="nextBtn">More Dialogue</button>
-  </footer><!--ends form footer div-->
-<!--   </div>ends container -->
-  </body>
+    <!--next button div-->
+    <footer class="navbar-default navbar-fixed-bottom">
+        <form id="nextLevel">
+            <input type="hidden" id="level" name="level" value="5">
+            <button type="submit" class="btn btn-primary">Next Level</button>
+        </form>
+       <!--  <button id="nextBtn">More Dialogue</button> -->
+    </footer>
+    <!--ends form footer div-->
+    <!--   </div>ends container -->
+</body>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!--ticker link-->
- <script src="./path/to/jquery.webticker.min.js"></script>
-    <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
-  //jquery calls 
-$(document).ready(function(){
-//when the player clicks the next button, the textbox div will show the next block of tetx
-  $("#nextBtn").on("click"){
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--ticker link-->
+<!--  <script src="./path/to/jquery.webticker.min.js"></script> -->
+<!-- <script src="http://risq.github.io/jquery-advanced-news-ticker/assets/js/jquery.newsTicker.js"></script> -->
+<script type="text/javascript" src="js/jquery.jticker.js"></script>
 
-    $('#webTicker').webTicker();
-    // $('.ticker').ticker();
-    // addText();
-  };
+<script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
+    //jquery calls 
 
-     });
+    jQuery(document).ready(function(){
+    // Instantiate jTicker 
+    jQuery("#ticker").ticker({
+        cursorList:  " ",
+        rate:        10,
+        delay:       4000
+    }).trigger("play").trigger("stop");
 
+    // Trigger events 
+    jQuery(".stop").click(function(){
+        jQuery("#ticker").trigger("stop");
+        return false;
+    });
+    
+    jQuery(".play").click(function(){
+        jQuery("#ticker").trigger("play");
+        return false;
+    });
+    
+    jQuery(".speedup").click(function(){
+        jQuery("#ticker")
+        .trigger({
+            type: "control",
+            item: 0,
+            rate: 10,
+            delay: 4000
+        })
+        return false;
+    });
+    
+    jQuery(".slowdown").click(function(){
+        jQuery("#ticker")
+        .trigger({
+            type: "control",
+            item: 0,
+            rate: 90,
+            delay: 8000
+        })
+        return false;
+    });
+    
+    jQuery(".next").live("click", function(){
+        jQuery("#ticker")
+        .trigger({type: "play"})
+        .trigger({type: "stop"});
+        return false;
+    });
 
-// function addText(){
+    jQuery(".style").click(function(){
+        jQuery("#ticker")
+        .trigger({
+            type: "control",
+            cursor: jQuery("#ticker").data("ticker").cursor.css({width: "4em", background: "#efefef", position: "relative", top: "1em", left: "-1em"})
+        })
+        return false;
+    });
+    
+  });
+    // $(document).ready(function() {
+    //     //when the player clicks the next button, the textbox div will show the next block of text
+    //     jQuery(function($) {
+    //         $('.newsticker').newsTicker({
+    //             row_height: 48,
+    //             max_rows: 2,
+    //             speed: 600,
+    //             direction: 'up',
+    //             duration: 4000,
+    //             autostart: 1,
+    //             pauseOnHover: 0
+    //         });
+    //     });
+        // $('#webTicker').webTicker([
+        //    height:'75px', 
+        //    duplicate:true, 
+        //    rssfrequency:0, 
+        //    startEmpty:false, 
+        //    hoverpause:false, 
+        //    transition: "ease"
+        //  ]);
+        // $("#nextBtn").on("click") {
 
-//   var textToAdd = "This is some text.  It fills in one character at a time.  When it gets to the end of the div, it wraps to the next line.  Modify the number at the end of the setInterval function to change the text typing speed! :-)";
-// var placeHolder = 0;
-// //put the text in a hidden div?
-// var textAdder = setInterval(function(){
-//     document.getElementById("textBox").innerHTML += textToAdd.charAt(placeHolder);
-//     if (++placeHolder == textToAdd.length){
-//         clearInterval(textAdder);
-//     }
-// }, 100);
+        //     // $('#webTicker').webTicker();
+        //     // $('.ticker').ticker();
+        //     // addText();
+        // };
 
-// $(#textBox).innerHTML(textAdder);
+    // });
 
-// }
+    // function addText(){
+    //   var textToAdd = "This is some text.  It fills in one character at a time.  When it gets to the end of the div, it wraps to the next line.  Modify the number at the end of the setInterval function to change the text typing speed! :-)";
+    // var placeHolder = 0;
+    // //put the text in a hidden div?
+    // var textAdder = setInterval(function(){
+    //     document.getElementById("textBox").innerHTML += textToAdd.charAt(placeHolder);
+    //     if (++placeHolder == textToAdd.length){
+    //         clearInterval(textAdder);
+    //     }
+    // }, 100);
 
-  </script>
+    // $(#textBox).innerHTML(textAdder);
+
+    // }
+</script>
+
 </html>

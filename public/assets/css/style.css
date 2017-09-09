@@ -20,13 +20,13 @@
   background: url(../img/Fairy_Forest.png);
 }
 
-#textBox{
+/*#textBox{
   border: blue solid 10px;
   color: white;
   background-color: black;
   width: 400px;
   height: auto;
-}
+}*/
 
 /*level 4 underworld */
 
@@ -34,5 +34,9 @@
   background: url(../img/);
 }
 
+li{
 
+  color: red;
+  border: green 5px solid;
+}
 
