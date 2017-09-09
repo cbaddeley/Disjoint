@@ -49,17 +49,16 @@
     <span class="tickeroverlay-right">&nbsp;</span> -->
         <!--  </div> -->
     </div><!--ends the background image div-->
-    <!--  </div> -->
-    </div>
-    <!--closes fluid container-->
+  <div><img src="/assets/img/portal.png" id="portal"></div>
 
     <!--next button div-->
     <footer class="navbar-default navbar-fixed-bottom">
         <form id="nextLevel">
             <input type="hidden" id="level" name="level" value="2">
+            <!--try in the button below:  style="background:url('portal.png')"-->
             <button type="submit" class="btn btn-primary">Next Level</button>
         </form>
-       <!--  <button id="nextBtn">More Dialogue</button> -->
+         <!--  <button id="nextBtn">More Dialogue</button> -->
     </footer>
     <!--ends form footer div-->
     <!--   </div>ends container -->
@@ -72,110 +71,7 @@
 <script type="text/javascript" src="js/jquery.jticker.js"></script>
 
 <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
-    //jquery calls 
 
-    jQuery(document).ready(function(){
-    // Instantiate jTicker 
-    jQuery("#ticker").ticker({
-        cursorList:  " ",
-        rate:        10,
-        delay:       4000
-    }).trigger("play").trigger("stop");
-
-    // Trigger events 
-    jQuery(".stop").click(function(){
-        jQuery("#ticker").trigger("stop");
-        return false;
-    });
-    
-    jQuery(".play").click(function(){
-        jQuery("#ticker").trigger("play");
-        return false;
-    });
-    
-    jQuery(".speedup").click(function(){
-        jQuery("#ticker")
-        .trigger({
-            type: "control",
-            item: 0,
-            rate: 10,
-            delay: 4000
-        })
-        return false;
-    });
-    
-    jQuery(".slowdown").click(function(){
-        jQuery("#ticker")
-        .trigger({
-            type: "control",
-            item: 0,
-            rate: 90,
-            delay: 8000
-        })
-        return false;
-    });
-    
-    jQuery(".next").live("click", function(){
-        jQuery("#ticker")
-        .trigger({type: "play"})
-        .trigger({type: "stop"});
-        return false;
-    });
-
-    jQuery(".style").click(function(){
-        jQuery("#ticker")
-        .trigger({
-            type: "control",
-            cursor: jQuery("#ticker").data("ticker").cursor.css({width: "4em", background: "#efefef", position: "relative", top: "1em", left: "-1em"})
-        })
-        return false;
-    });
-    
-  });
-    // $(document).ready(function() {
-    //     //when the player clicks the next button, the textbox div will show the next block of text
-    //     jQuery(function($) {
-    //         $('.newsticker').newsTicker({
-    //             row_height: 48,
-    //             max_rows: 2,
-    //             speed: 600,
-    //             direction: 'up',
-    //             duration: 4000,
-    //             autostart: 1,
-    //             pauseOnHover: 0
-    //         });
-    //     });
-        // $('#webTicker').webTicker([
-        //    height:'75px', 
-        //    duplicate:true, 
-        //    rssfrequency:0, 
-        //    startEmpty:false, 
-        //    hoverpause:false, 
-        //    transition: "ease"
-        //  ]);
-        // $("#nextBtn").on("click") {
-
-        //     // $('#webTicker').webTicker();
-        //     // $('.ticker').ticker();
-        //     // addText();
-        // };
-
-    // });
-
-    // function addText(){
-    //   var textToAdd = "This is some text.  It fills in one character at a time.  When it gets to the end of the div, it wraps to the next line.  Modify the number at the end of the setInterval function to change the text typing speed! :-)";
-    // var placeHolder = 0;
-    // //put the text in a hidden div?
-    // var textAdder = setInterval(function(){
-    //     document.getElementById("textBox").innerHTML += textToAdd.charAt(placeHolder);
-    //     if (++placeHolder == textToAdd.length){
-    //         clearInterval(textAdder);
-    //     }
-    // }, 100);
-
-    // $(#textBox).innerHTML(textAdder);
-
-    // }
 </script>
 
 </html>

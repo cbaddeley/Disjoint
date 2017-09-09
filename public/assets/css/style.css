@@ -1,4 +1,37 @@
 /*style sheet for general templating*/
+/*general elements*/
+
+/*#textBox{
+  border: blue solid 10px;
+  color: white;
+  background-color: black;
+  width: 400px;
+  height: auto;
+}*/
+
+/*#level{
+
+background:url("portal.png");
+
+}*/
+
+#portal{
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*level 1 bedroom */
 
@@ -15,20 +48,13 @@
 }*/
 
 
-/*level 2 forrest*/
+/*level 2 forest*/
 #displayForest{
 /*  background: url(../img/Fairy_Forest.JPG);*/
   max-width: 100%;
   height: auto;
 }
 
-/*#textBox{
-  border: blue solid 10px;
-  color: white;
-  background-color: black;
-  width: 400px;
-  height: auto;
-}*/
 
 /*level 4 underworld */
 
@@ -38,7 +64,6 @@
 }
 
 /*li{
-
   color: red;
   border: green 5px solid;
 }

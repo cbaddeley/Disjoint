@@ -23,6 +23,74 @@
   <body>
    <!--  <div class ="container-fluid"> -->
     <div class="container-fluid"><img src="/assets/img/Fairy_Forest.JPG" id="displayForest">
+
+	<!--textbox info-->
+
+
+	<!--questions div-->
+	<div class = "row">
+		<div class="form-group">
+  		<label class="col-md-4 control-label" for="questChoices">A goblin appoarches...you decide to</label>
+ 			<div class="col-md-4">
+  			<div class="radio">
+   			<label for="questChoices0">
+     		<input type="radio" name="questChoices" id="questChoices0" value="1">option one
+   			 </label>
+			</div><!--ends radio button for question 1 option 1-->		
+			  <div class="radio">
+   			 <label for="questChoices1">
+      		<input type="radio" name="questChoices" id="questChoices1" value="0">Option two
+    		</label>
+			</div><!--ends radio button for question 1 option 2-->
+ 			 <div class="radio">
+  		  <label for="questChoices2">
+    	  <input type="radio" name="questChoices" id="questChoices2" value="0">
+     		 Option three
+   				 </label>
+			</div><!--ends radio button for question 1 option 3-->
+  <div class="radio">
+    <label for="questChoices3">
+      <input type="radio" name="questChoices" id="questChoices3" value="0">
+      Option four
+    </label>
+	</div><!--ends radio button for question 1 option 4-->
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Your Rep Repo</h4>
+      </div>
+      <div class="modal-body" >
+        <div id ="displayPurchases">
+        <p>Your reputation increased!</p>
+        </div>
+        <div id = "displayRep">
+        </div>
+      </div>
+       
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
     <!--next button div-->
     <footer class="navbar-default navbar-fixed-bottom">
         <form id="nextLevel">
@@ -33,16 +101,21 @@
     </footer>
 </div><!--ends fluid container-->
   </body>
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
 
   //jquery calls 
 $(document).ready(function(){
 //when the player clicks the next button, the textbox div will show the next block of tetx
+	
+
+
 
 //potentially look into hides for this?
 
-
+$("#myModal").modal('show');
 
      });
 
