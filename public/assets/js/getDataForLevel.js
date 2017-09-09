@@ -1,6 +1,8 @@
 var choiceArray = [];
 var prArray = [];
 var sfArray = [];
+var currentGold;
+var currentRep;
 
 //Ajax request
 $( document ).ready(function() {
@@ -22,4 +24,17 @@ $( document ).ready(function() {
       //push dialog choices to the dialog textbox space
       displayData();
   	})
+});
+
+//This is going to get the user's current gold and reputationGained
+$( document ).ready(function() {
+  $.ajax({
+  		method: "GET",
+  		crossDomain: 'true',
+  		url: "/api/playerLevel/" + sessionStorage.getItem("playerName")
+  	}).done(function(response){
+  		currentRep = response[0].reputation;
+      currentGold = response[0].gold;
+  	})
+
 });

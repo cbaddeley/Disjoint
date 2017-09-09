@@ -38,14 +38,14 @@ $(".test").on("click", ".choiceSelector", function( event ) {
   var reputationGained;
   var choiceSelectedValue = $(this).attr('data-value');
   if (choiceSelectedValue == 1) {
-    goldGained = 50;
-    reputationGained = 10;
+    goldGained = currentGold + 50;
+    reputationGained = currentRep + 10;
   } else if (choiceSelectedValue == 2) {
-    goldGained = 25;
-    reputationGained = 25;
+    goldGained = currentGold + 25;
+    reputationGained = currentRep + 25;
   } else {
-    goldGained = 10;
-    reputationGained = 50;
+    goldGained = currentGold + 10;
+    reputationGained = currentRep + 50;
   }
 
   var data = {
@@ -59,9 +59,9 @@ $(".test").on("click", ".choiceSelector", function( event ) {
           data: data,
           dataType: 'json',
           success: function(result) {
-            if (typeof result.redirect == 'string') {
-                window.location = result.redirect;
-              }
+            // if (typeof result.redirect == 'string') {
+            //     window.location = result.redirect;
+            //   }
           }
       });
 });
