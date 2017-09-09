@@ -38,6 +38,20 @@ module.exports = function(app) {
       });
   });
 
+  app.put("/api/goldRep", function(req,res) {
+
+    db.Player.update({
+      gold: req.body.gold,
+      reputation: req.body.reputation
+    }, {
+      where: {
+        player_name: req.body.player_name
+      }
+    }).then(function(updatedPlayer) {
+
+    });
+  });
+
 //This is the PUT request to update the levels the player has access to
   app.put("/api/levelAccess", function(req, res) {
     var playerName = req.body.player_name;
