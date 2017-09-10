@@ -13,11 +13,11 @@
     /*left:0;*/
     height: 100%;
     border: yellow solid 4px;
+    display: none;
 }
 
 .test{
-  
-  border: blue solid 4px;
+   border: blue solid 4px;
   color: white;
   text-align: left;
 
@@ -61,8 +61,14 @@
     /*left:0;*/
     height: 100%;
   border: solid green 4px; 
+  display:none;
 }
 
+.choiceSelector {
+  border: 1px solid white;
+  color: white;
+  background: black;
+}
 
 /*level 2 forest*/
 #displayForest{
@@ -110,9 +116,7 @@
   height: auto;
 }
 
-.choiceSelector {
-  border: 1px solid black;
-}
+
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   #bedPic {

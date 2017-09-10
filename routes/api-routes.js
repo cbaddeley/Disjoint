@@ -160,11 +160,13 @@ app.delete("/api/level3/:id", function(req, res) {
 
 
   app.get("/api/levelInfo/:level", function(req, res) {
+    console.log("the level is:" + req.params.level);
     db.Level.findAll({where: {
       id: parseInt(req.params.level)
     }
   }).then(function(dbLevelData) {
     res.json(dbLevelData);
+    console.log("This is gathering all level data"+ dbLevelData);
   });
 });
 

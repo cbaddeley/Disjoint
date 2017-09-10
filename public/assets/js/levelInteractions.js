@@ -1,6 +1,7 @@
-//display data function to display text from the llevels table
+//display data function to display text from the levels table
 
 function displayData() {
+  //display choices in individual divs in test space 
   $("#choicePrompt").text(choiceArray[0]);
   for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
@@ -8,15 +9,26 @@ function displayData() {
     choiceDiv.attr("data-value", i);
     $(".test").append(choiceDiv);
   }
+  // display dialog from NP/SF in other space.
+
 }
 
-//animate the shadow figure 
-$("#displayShadow").on("click", function(){
+function animateShadow(){
+  $("#displayShadow").animate({
+      top: '400px',
+      opacity: '.8',
+      height:'500px',
+  });
+   $("#displayShadow").show(5000);
+  }
 
-  // $("#displayShadow").hide();
-  $("#displayShadow").toggle();
+// //animate the shadow figure 
+// $("#displayShadow").on("click", function(){
 
-});
+//   // $("#displayShadow").hide();
+//   // $("#displayShadow").toggle();
+
+// });
 
 // $("#displayShadow").show(5000, function(){
 
@@ -83,10 +95,10 @@ $(".test").on("click", ".choiceSelector", function( event ) {
           }
       });
 
-  //hide the test dialgoe div
+  //hide the test  div
   $(".test").hide(1000);
   //call the portal to appear to take user to the next page 
-  $("#portal").show(1000);
+  $("#portal").show(2000);
 
 });
 

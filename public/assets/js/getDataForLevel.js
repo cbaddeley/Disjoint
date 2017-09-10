@@ -13,17 +13,29 @@ $( document ).ready(function() {
   		crossDomain: 'true',
   		url: "/api/levelInfo/" + lastChar
   	}).done(function(response){
+      console.log(response);
       //grabs the values for the choices and dialogue for each scenario
       choiceArray = (response[0].choices).split("@");
+      console.log("these are choices:" + choiceArray);
+//consider makign this just a dialogue column with the split between speakers?
       prArray = (response[0].player_dialog).split("@");
-      sfArray = (response[0].sf_dialog).split("@");
+      console.log("this is player:" + prArray);
 
+      sfArray = (response[0].sf_dialog).split("@");
+       console.log("this is villain"+ sfArray);
+      // console.log(choiceArray);
       //Test for something
       //push quest choices to the question space
-      $("#test").text(prArray[0]);
+      $("#test").html(prArray[0]);
+      //NP dialogue
+      $('#displayNP').html(sfArray[0]);
+      //SF dialogue
+      $('#displaySF').html(choiceArray[0]);
       //push dialog choices to the dialog textbox space
       displayData();
-  	})
+      //animate the shadow figure and dialogue
+      animateShadow();
+      })
 });
 
 //This is going to get the user's current gold and reputationGained
