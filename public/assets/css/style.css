@@ -10,23 +10,35 @@
 }*/
 
 
+/*div.row{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+}*/
+
 #portal{
     opacity: 1;
     position: absolute;
     margin:auto;
     top:0;
     right:0;
+    padding-right: 150px;
+    padding-top: 150px;
+    margin-right: 50px;
     bottom:0;
     /*left:0;*/
-    height: 50%;
+    height: 75%;
 
 }
 
 /*textbox row */
-.row{
-    background: #88B040;
-
-}
+/*.row{
+    background: black;
+    color: white;
+}*/
 
 .p{
 
@@ -42,7 +54,11 @@
 }
 
 
+.container-fluid{
+      background: black;
+    color: white;
 
+}
 
 
 
@@ -51,6 +67,17 @@
 #bedPic{
   max-width: 100%;
   height: auto;
+  position: relative;
+  min-height: 100%
+  min-width: 100%;
+  top:0;
+  left: 0;
+  /*layering*/
+ /* z-index: -10;*/
+  /*center the image*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*.footer{
   position: relative;
@@ -59,6 +86,12 @@
   clear:both;
   padding-top:20px;
 }*/
+
+#displayShadow{
+  background-image: url(../img/shadow.png);
+  position: absolute;
+  
+}
 
 
 /*level 2 forest*/
@@ -70,7 +103,6 @@
 
 
 /*level 4 underworld */
-
 #displayHell{
    max-width: 100%;
   height: auto;
@@ -110,4 +142,11 @@
 
 .choiceSelector {
   border: 1px solid black;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  #bedPic {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
 }

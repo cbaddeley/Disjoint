@@ -1,4 +1,4 @@
-//display data fucntion to display text from the llevels table
+//display data function to display text from the llevels table
 
 function displayData() {
   $("#choicePrompt").text(choiceArray[0]);
@@ -9,6 +9,23 @@ function displayData() {
     $(".test").append(choiceDiv);
   }
 }
+
+//animate the shadow figure 
+$("#displayShadow").on("click", function(){
+
+  $("#displayShadow").hide();
+
+});
+
+// $("#displayShadow").show(5000, function(){
+
+//   $("#displayShadow").animate({
+//   // top: '500px',
+//   // opacity: '.8',
+//   height: $("#displayShadow".get(0).scrollHeight}, 
+//   );
+//   $("#displayShadow").hide(2000);
+// });
 
 
 //portal replacement (takes the place of former next level advancement button)
@@ -64,7 +81,17 @@ $(".test").on("click", ".choiceSelector", function( event ) {
             //   }
           }
       });
+
+  //hide the test dialgoe div
+  $(".test").hide(1000);
+  //call the portal to appear to take user to the next page 
+  $("#portal").show(1000);
+
 });
+
+
+
+
 // var resultDiv = $("<div class='resultDiv container-fluid row'>");
 // var likeButton = $("<button class='btn-yes col-xs-4'>");
 // var dislikeButton = $("<button class='btn-no col-xs-4'>");
