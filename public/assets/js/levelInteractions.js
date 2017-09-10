@@ -9,7 +9,9 @@ function displayData() {
     choiceDiv.attr("data-value", i);
     $(".test").append(choiceDiv);
   }
-  // display dialog from NP/SF in other space.
+   // display dialog from NP/SF in other space.
+   $(".displayNP").append(prArray[0]);
+   $(".displaySF").append(sfArray[0]);
 
 }
 
@@ -20,6 +22,7 @@ function animateShadow(){
       height:'500px',
   });
    $("#displayShadow").show(5000);
+   $("#displayShadow").hide();
   }
 
 // //animate the shadow figure 
