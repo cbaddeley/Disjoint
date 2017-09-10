@@ -13,7 +13,8 @@ function displayData() {
 //animate the shadow figure 
 $("#displayShadow").on("click", function(){
 
-  $("#displayShadow").hide();
+  // $("#displayShadow").hide();
+  $("#displayShadow").toggle();
 
 });
 

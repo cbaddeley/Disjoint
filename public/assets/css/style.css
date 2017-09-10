@@ -1,69 +1,36 @@
 /*style sheet for general templating*/
 /*general elements*/
 
-/*#textBox{
-  border: blue solid 10px;
-  color: white;
-  background-color: black;
-  width: 400px;
-  height: auto;
-}*/
-
-
-/*div.row{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-
-}*/
 
 #portal{
     opacity: 1;
     position: absolute;
-    margin:auto;
+    margin-left: auto;
+    margin-right: auto;
     top:0;
     right:0;
-    padding-right: 150px;
-    padding-top: 150px;
-    margin-right: 50px;
     bottom:0;
     /*left:0;*/
-    height: 75%;
-
+    height: 100%;
+    border: yellow solid 4px;
 }
 
-/*textbox row */
-/*.row{
-    background: black;
-    color: white;
-}*/
-
-.p{
-
-    text-align: center;
-  padding-top: 120px;
-}
-
-
-.form-group{
-  background: red;
+.test{
+  
+  border: blue solid 4px;
   color: white;
+  text-align: left;
 
 }
-
 
 .container-fluid{
-      background: black;
-    color: white;
-
+  background: black;
+  color: white;
 }
-
 
 
 /*level 1 bedroom */
-
+/*bg image*/
 #bedPic{
   max-width: 100%;
   height: auto;
@@ -72,6 +39,7 @@
   min-width: 100%;
   top:0;
   left: 0;
+  border: red solid 5px;
   /*layering*/
  /* z-index: -10;*/
   /*center the image*/
@@ -79,18 +47,20 @@
   margin-left: auto;
   margin-right: auto;
 }
-/*.footer{
-  position: relative;
-  margin-top: -150px;  negative value of footer height
-  height: 150px;
-  clear:both;
-  padding-top:20px;
-}*/
 
 #displayShadow{
   background-image: url(../img/shadow.png);
-  position: absolute;
-  
+ /* position: absolute;*/
+     opacity: 1;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:0;
+    right:0;
+    bottom:0;
+    /*left:0;*/
+    height: 100%;
+  border: solid green 4px; 
 }
 
 
