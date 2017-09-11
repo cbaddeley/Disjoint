@@ -1,14 +1,61 @@
-//display data fucntion to display text from the llevels table
+//display data function to display text from the levels table
 
 function displayData() {
+  
+  //display choices in individual divs in test space 
   $("#choicePrompt").text(choiceArray[0]);
+  //produces a triple posting -- nede to fix the iterator here, but pushes to the right div
+  for (let i =0; i < 1; i++){
+    var question = choiceArray[0];
+    }
+  // $(".test").show();
   for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
     choiceDiv.text(choiceArray[i]);
     choiceDiv.attr("data-value", i);
+    $(".testTitle").append(question);
     $(".test").append(choiceDiv);
   }
+  $(".test").show();
+   // display dialog from NP/SF in other space.
+   $(".displayNP").append(prArray[0]);
+   $(".displaySF").append(sfArray[0]);
+
 }
+
+function animateText(){
+  // $('#webTicker').webTicker();
+  $('.ticker').ticker();
+}
+
+
+function animateShadow(){
+  $("#displayShadow").animate({
+      top: '400px',
+      opacity: '.8',
+      height:'500px',
+  });
+   $("#displayShadow").show(5000);
+   $("#displayShadow").hide();
+  }
+
+// //animate the shadow figure 
+// $("#displayShadow").on("click", function(){
+
+//   // $("#displayShadow").hide();
+//   // $("#displayShadow").toggle();
+
+// });
+
+// $("#displayShadow").show(5000, function(){
+
+//   $("#displayShadow").animate({
+//   // top: '500px',
+//   // opacity: '.8',
+//   height: $("#displayShadow".get(0).scrollHeight}, 
+//   );
+//   $("#displayShadow").hide(2000);
+// });
 
 
 //portal replacement (takes the place of former next level advancement button)
@@ -64,7 +111,17 @@ $(".test").on("click", ".choiceSelector", function( event ) {
             //   }
           }
       });
+
+  //hide the test  div
+  $(".test").hide(1000);
+  //call the portal to appear to take user to the next page 
+  $("#portal").show(2000);
+
 });
+
+
+
+
 // var resultDiv = $("<div class='resultDiv container-fluid row'>");
 // var likeButton = $("<button class='btn-yes col-xs-4'>");
 // var dislikeButton = $("<button class='btn-no col-xs-4'>");

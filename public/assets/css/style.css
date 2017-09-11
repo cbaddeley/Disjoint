@@ -1,62 +1,131 @@
 /*style sheet for general templating*/
 /*general elements*/
 
-/*#textBox{
-  border: blue solid 10px;
-  color: white;
-  background-color: black;
-  width: 400px;
-  height: auto;
-}*/
-
 
 #portal{
     opacity: 1;
     position: absolute;
-    margin:auto;
+    margin-left: auto;
+    margin-right: auto;
     top:0;
     right:0;
     bottom:0;
-    left:0;
-
+    /*left:0;*/
+    height: 100%;
+    border: yellow solid 4px;
+    display: none;
 }
 
-.other{
-    background: #88B040;
-
-}
-
-.p{
-
-    text-align: center;
-  padding-top: 120px;
-}
-
-
-.form-group{
-  background: red;
+.test{
+   border: blue solid 4px;
   color: white;
+  text-align: left;
+
+}
+.testTitle{
+  background: black;
+  color: white;
+  font-size: xx-large;
+
 
 }
 
+.container-fluid{
+  background: black;
+  color: white;
+      padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto
+}
+
+.displaySF{
+  border: orange solid 4px;
+  font-size: xx-large;
+   width:100%;
+      bottom: .3rem;
+        position: absolute;
+        background:#000;
+        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+
+}
+
+.displayNP{
+  font-size: xx-large;
+  border: purple solid 4px;
+   width:100%;
+        bottom: .3rem;
+        position: absolute;
+        background:#000;
+        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
 
 
+.ticker{
+  background: black;
+  color:white;
+  border: red 2px solid;
+  font-size: xx-large;
+  border: purple solid 4px;
+   width:100%;
+        bottom: .3rem;
+        position: absolute;
+        background:#000;
+        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
 
-
+.choiceSelector {
+  border: 1px solid white;
+  color: white;
+  background: black;
+  font-size: larger;
+  
+}
 
 /*level 1 bedroom */
-
+/*bg image*/
 #bedPic{
   max-width: 100%;
   height: auto;
-}
-/*.footer{
   position: relative;
-  margin-top: -150px;  negative value of footer height
-  height: 150px;
-  clear:both;
-  padding-top:20px;
-}*/
+  min-height: 100%
+  min-width: 100%;
+  top:0;
+  left: 0;
+  border: red solid 5px;
+  /*layering*/
+ /* z-index: -10;*/
+  /*center the image*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#displayShadow{
+  background-image: url(../img/shadow.png);
+ /* position: absolute;*/
+     opacity: 1;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:0;
+    right:0;
+    bottom:0;
+    /*left:0;*/
+    height: 100%;
+  border: solid green 4px; 
+  display:none;
+}
+
 
 
 /*level 2 forest*/
@@ -68,7 +137,6 @@
 
 
 /*level 4 underworld */
-
 #displayHell{
    max-width: 100%;
   height: auto;
@@ -106,6 +174,69 @@
   height: auto;
 }
 
-.choiceSelector {
-  border: 1px solid black;
+
+
+/*@media screen and (max-width: 1024px) {  Specific to this particular image 
+  #bedPic {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+/*  }
+}*/
+*/
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
 }
