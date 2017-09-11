@@ -1,8 +1,8 @@
 //display data function to display text from the levels table
 
 function displayData() {
-  
-  //display choices in individual divs in test space 
+
+  //display choices in individual divs in test space
   $("#choicePrompt").text(choiceArray[0]);
   //produces a triple posting -- nede to fix the iterator here, but pushes to the right div
   for (let i =0; i < 1; i++){
@@ -15,11 +15,13 @@ function displayData() {
     choiceDiv.attr("data-value", i);
     $(".testTitle").append(question);
     $(".test").append(choiceDiv);
+
   }
   $(".test").show();
    // display dialog from NP/SF in other space.
-   $(".displayNP").append(prArray[0]);
-   $(".displaySF").append(sfArray[0]);
+   //HARDCODE THESE FOR THE SCENES
+   $(".displayNP").append(prArray[1]);
+   $(".displaySF").append(sfArray[1]);
 
 }
 
@@ -39,7 +41,7 @@ function animateShadow(){
    $("#displayShadow").hide();
   }
 
-// //animate the shadow figure 
+// //animate the shadow figure
 // $("#displayShadow").on("click", function(){
 
 //   // $("#displayShadow").hide();
@@ -52,7 +54,7 @@ function animateShadow(){
 //   $("#displayShadow").animate({
 //   // top: '500px',
 //   // opacity: '.8',
-//   height: $("#displayShadow".get(0).scrollHeight}, 
+//   height: $("#displayShadow".get(0).scrollHeight},
 //   );
 //   $("#displayShadow").hide(2000);
 // });
@@ -114,7 +116,7 @@ $(".test").on("click", ".choiceSelector", function( event ) {
 
   //hide the test  div
   $(".test").hide(1000);
-  //call the portal to appear to take user to the next page 
+  //call the portal to appear to take user to the next page
   $("#portal").show(2000);
 
 });

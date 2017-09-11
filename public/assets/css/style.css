@@ -88,7 +88,7 @@
   color: white;
   background: black;
   font-size: larger;
-  
+
 }
 
 /*level 1 bedroom */
@@ -122,7 +122,7 @@
     bottom:0;
     /*left:0;*/
     height: 100%;
-  border: solid green 4px; 
+  border: solid green 4px;
   display:none;
 }
 
@@ -176,7 +176,7 @@
 
 
 
-/*@media screen and (max-width: 1024px) {  Specific to this particular image 
+/*@media screen and (max-width: 1024px) {  Specific to this particular image
   #bedPic {
     left: 50%;
     margin-left: -512px;   /* 50% */
@@ -189,12 +189,12 @@
 
 /*==========  Mobile First Method  ==========*/
 
-/* Custom, iPhone Retina */ 
+/* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
 
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
 
 }
@@ -231,12 +231,16 @@
 
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
 }
 
-/* Custom, iPhone Retina */ 
+/* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
 
+}
+
+.displayNP {
+  color: red;
 }

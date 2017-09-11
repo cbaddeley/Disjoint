@@ -52,3 +52,18 @@ $( document ).ready(function() {
   	})
 
 });
+
+// 
+// $(document).ready(function(){
+// resizeDiv();
+// });
+//
+// window.onresize = function(event) {
+// resizeDiv();
+// }
+//
+// function resizeDiv() {
+// vpw = $(window).width();
+// vph = $(window).height();
+// $('.container-fluid').css({'height': vph + 'px'});
+// }

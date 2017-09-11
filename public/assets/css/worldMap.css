@@ -4,6 +4,7 @@
   margin-top: 40px;
   border: 1px solid black;
   height: 500px;
+  background-image: url(/assets/img/oldmap.jpg);
 }
 .hexagon {
   /*display: none;*/
