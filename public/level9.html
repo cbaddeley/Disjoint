@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Level 5</title>
   <link rel="stylesheet" href="/assets/css/level5game.css">
+  <link rel="stylesheet" href="/assets/css/pixiGame.css">
 </head>
   <script src="/assets/js/pixi.min.js"></script>
 <body>
@@ -12,8 +13,75 @@
 
   </div>
 
-<script type="text/javascript" src="/assets/js/game.js">
+  <!-- The Modal -->
+  <div id="startModal" class="modal">
 
-</script>
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Escape 90s Internet</h1>
+      </div>
+      <div class="modal-body">
+        <p>You've been pulled back in time to the mid 90s. The internet was a strange place. Try and fight your way out.</p>
+
+        <h4>Controls:</h4>
+        <p>Up and Down Arrow</p>
+        <p>Spacebar To Shoot</p>
+
+        <h4>Win Condition:</h4>
+        <p>Make it out alive.</p>
+        <h4>Lose Condition:</h4>
+        <p>Lose all your health.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="startGame" type="button" name="button">Start Game now</button>
+      </div>
+    </div>
+
+  </div>
+
+<!-- The Modal -->
+<div id="loseModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1>You Lost</h1>
+        </div>
+        <div class="modal-body">
+          you lost
+        </div>
+        <div class="modal-footer">
+          Button will go here
+        </div>
+      </div>
+
+
+</div>
+<!-- The Modal -->
+<div id="winModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1>You won</h1>
+        </div>
+        <div class="modal-body">
+          filler text
+        </div>
+        <div class="modal-footer">
+          Button will go here
+        </div>
+      </div>
+
+
+</div>
+<audio id="player" preload="auto">
+  <source src="assets/sounds/battleThemeA.mp3" />
+</audio>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bump.js"></script>
+<script type="text/javascript" src="/assets/js/game.js"></script>
+
 </body>
 </html>
