@@ -28,24 +28,24 @@ db.sequelize.sync({force:true}).then(function() {
   });
 });
 
-//TO DO FOR OUR GAME_DB: 
+//TO DO FOR OUR GAME_DB:
 //need to set up connection to JAWSDB in controller.js file
-// var mysql = require("mysql");
+var mysql = require("mysql");
 
-// var connection;
+var connection;
 
-// if(process.env.JAWSDB_URL){
+if(process.env.JAWSDB_URL){
 
-// 	connection = mysql.createConnection(process.env.JAWSDB_URL);
-// } else{
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else{
 
-// 	connection = mysql.createConnection({
-// 	host: "localhost",
-// 	user: "root",
-// 	password: "1234",
-// 	database: "burgers_db"
-// });
-// };
+	connection = mysql.createConnection({
+	host: "p1us8ottbqwio8hv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+	user: "ehhjiswjb8549j6u",
+	password: "qar7dbcw3gion7k7",
+	database: "game_db"
+});
+};
 
-// connection.connect();
-// module.exports = connection; 
+connection.connect();
+module.exports = connection;
