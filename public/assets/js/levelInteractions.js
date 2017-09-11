@@ -24,7 +24,6 @@ function displayData() {
 }
 
 function animateText(){
-
   // $('#webTicker').webTicker();
   $('.ticker').ticker();
 }
