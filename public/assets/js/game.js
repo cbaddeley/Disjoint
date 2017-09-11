@@ -8,12 +8,15 @@ var Container = PIXI.Container,
     Text = PIXI.Text,
     Graphics = PIXI.Graphics;
     b = new Bump(PIXI);
+
 //Create a Pixi stage and renderer and add the
 //renderer.view to the DOM
 var stage = new Container(),
     renderer = autoDetectRenderer(768, 512);
+//Appending it to a div to move around if i want
 document.getElementById('gameCanvas').appendChild(renderer.view);
 
+//These are audio files
 var explo1 = new Audio('assets/sounds/Explosion.wav');
 var explo2 = new Audio('assets/sounds/Explosion2.wav');
 var laser1 = new Audio('assets/sounds/Laser1.wav');
@@ -43,7 +46,7 @@ function setup() {
   background = new Sprite(resources["assets/img/background.png"].texture);
   stage.addChild(background);
 
-
+  //Ship rendering
   ship = new Sprite(spriteId["ship.png"]);
   ship.scale.set(0.4, 0.4);
   ship.x = -50;
@@ -100,8 +103,6 @@ function setup() {
     }
   };
 
-
-
   var explosionOneframes = [];
     for (var i = 0; i < 24; i++) {
       var val = i < 10 ? '0' + i : i;
@@ -153,8 +154,7 @@ function gameLoop(){
   //Update the current game state
   state();
 
-
-  background.vx = 2;
+  background.vx = 3;
   background.x -= background.vx;
   //Render the stage
   renderer.render(stage);
@@ -377,7 +377,7 @@ function enemyCreation() {
       battlecruiser.scale.set(0.4, 0.4);
       battlecruiser.x = 800;
       battlecruiser.y = Math.random() * renderer.height - battlecruiser.height;
-      battlecruiser.vx = -3.5;
+      battlecruiser.vx = -5;
       battlecruiser.vy = -2;
       battlecruisers.push(battlecruiser);
       stage.addChild(battlecruiser);
@@ -386,7 +386,7 @@ function enemyCreation() {
       battleship.scale.set(0.4, 0.4);
       battleship.x = 800;
       battleship.y = Math.random() * renderer.height - battleship.height;
-      battleship.vx = -4;
+      battleship.vx = -4.5;
       battleship.vy = -1;
       battleships.push(battleship);
       stage.addChild(battleship);
@@ -395,7 +395,7 @@ function enemyCreation() {
       bomber.scale.set(0.4, 0.4);
       bomber.x = 800;
       bomber.y = Math.random() * renderer.height - bomber.height;
-      bomber.vx = -3;
+      bomber.vx = -3.5;
       bomber.vy = -3;
       bombers.push(bomber);
       stage.addChild(bomber);
@@ -404,7 +404,7 @@ function enemyCreation() {
       cruiser.scale.set(0.4, 0.4);
       cruiser.x = 800;
       cruiser.y = Math.random() * renderer.height - cruiser.height;
-      cruiser.vx = -2.5;
+      cruiser.vx = -4;
       cruiser.vy = -3;
       cruisers.push(cruiser);
       stage.addChild(cruiser);
@@ -541,18 +541,43 @@ function hitTestRectangle(r1, r2) {
 
   //`hit` will be either `true` or `false`
   return hit;
-};
+}
 
 function lose() {
   $("#loseModal").show();
 }
 
+var currentRep;
+var currentGold;
+
 function win() {
   $("#winModal").show();
+  var data = {
+    player_name: sessionStorage.getItem("playerName"),
+    gold: currentGold+ healthBar.outer.width,
+    reputation: currentRep+ healthBar.outer.width
+  };
+  $.ajax({
+          url: "/api/goldRep",
+          type: 'PUT',
+          data: data,
+          dataType: 'json',
+          success: function(result) {}
+      });
 }
 
 
+$( document ).ready(function() {
+  $.ajax({
+  		method: "GET",
+  		crossDomain: 'true',
+  		url: "/api/playerLevel/" + sessionStorage.getItem("playerName")
+  	}).done(function(response){
+  		currentRep = response[0].reputation;
+      currentGold = response[0].gold;
+  	})
 
+});
 
 $( document ).ready(function() {
   $("#startModal").show();
@@ -562,4 +587,23 @@ $("#startGame").click(function() {
   $("#startModal").hide();
   PIXI.loader.load(setup);
   $('#player').get(0).play();
+});
+
+$("#winButton").on("click", function( event ) {
+  event.preventDefault();
+  $.ajax({
+          url: "/api/levelAccess",
+          type: 'PUT',
+          data: {
+            level: "10",
+            player_name: sessionStorage.getItem("playerName")
+          },
+          dataType: 'json',
+          success: function(result) {
+            if (typeof result.redirect == 'string') {
+                window.location = result.redirect;
+              }
+          }
+      });
+
 });
