@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS game_db; 
+DROP DATABASE IF EXISTS game_db;
 CREATE DATABASE game_db;
 USE game_db;
 
@@ -35,4 +35,3 @@ INSERT INTO Levels (level_name) VALUES ('Level 7');
 INSERT INTO Levels (level_name) VALUES ('Level 8');
 INSERT INTO Levels (level_name) VALUES ('Level 9');
 INSERT INTO Levels (level_name) VALUES ('Level 10');
-
