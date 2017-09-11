@@ -20,6 +20,10 @@
   border-right: solid 5px #333333;
 }
 
+.hexagon:hover {
+
+}
+
 .hexTop,
 .hexBottom {
   position: absolute;
@@ -103,31 +107,16 @@
 }
 
 #level5 {
-    bottom: 510px;
-    left: 370px;
+    bottom: 365px;
+    left: 453px;
 }
 
 #level6 {
-    bottom: 500px;
-    left: 460px;
+    bottom: 495px;
+    left: 634px;
 }
 
 #level7 {
-    bottom: 485px;
-    left: 552px;
-}
-
-#level8 {
-    bottom: 760px;
-    left: 640px;
-}
-
-#level9 {
-    bottom: 1030px;
-    left: 730px;
-}
-
-#level10 {
-    bottom: 1020px;
-    left: 820px;
+    bottom: 626px;
+    left: 814px;
 }

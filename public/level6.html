@@ -1,42 +1,89 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Peasant Village</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/nameSelect.css">
-    <link rel="stylesheet" href="/assets/css/worldMap.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!--bootstrap links-->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Level 5</title>
+  <link rel="stylesheet" href="/assets/css/level5game.css">
+  <link rel="stylesheet" href="/assets/css/pixiGame.css">
+</head>
+  <script src="/assets/js/pixi.min.js"></script>
 <body>
-    <!--  <div class ="container-fluid"> -->
-    <div class="container-fluid"><img src="/assets/img/castle.JPG" id="displayCastle">
-    </div><!--ends the background image div-->
-    <!--  </div> -->
-    </div>
-    <!--closes fluid container-->
+  <div id="gameCanvas">
 
-    <!--next button div-->
-    <footer class="navbar-default navbar-fixed-bottom">
-        <form id="nextLevel">
-            <input type="hidden" id="level" name="level" value="7">
-            <button type="submit" class="btn btn-primary">Next Level</button>
-        </form>
-       <!--  <button id="nextBtn">More Dialogue</button> -->
-    </footer>
-    <!--ends form footer div-->
-    <!--   </div>ends container -->
+  </div>
+
+  <!-- The Modal -->
+  <div id="startModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Escape 90s Internet</h1>
+      </div>
+      <div class="modal-body">
+        <p>You've been pulled back in time to the mid 90s. The internet was a strange place. Try and fight your way out.</p>
+
+        <h4>Controls:</h4>
+        <p>Up and Down Arrow</p>
+        <p>Spacebar To Shoot</p>
+
+        <h4>Win Condition:</h4>
+        <p>Make it out alive.</p>
+        <h4>Lose Condition:</h4>
+        <p>Lose all your health.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="startGame" type="button" name="button">Start Game now</button>
+      </div>
+    </div>
+
+  </div>
+
+<!-- The Modal -->
+<div id="loseModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1>You Lost</h1>
+        </div>
+        <div class="modal-body">
+          you lost
+        </div>
+        <div class="modal-footer">
+          <a href="/worldMap"><button type="button" name="button">Go Back to the World Map</button></a>
+          <button type="button" name="button" onclick="location.reload()">Try Again</button>
+        </div>
+      </div>
+
+
+</div>
+<!-- The Modal -->
+<div id="winModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1>You won</h1>
+        </div>
+        <div class="modal-body">
+          filler text
+        </div>
+        <div class="modal-footer">
+          <button id="winButton" type="button" name="button">Move on</button>
+        </div>
+      </div>
+
+
+</div>
+
+<audio id="player" preload="auto">
+  <source src="assets/sounds/battleThemeA.mp3" />
+</audio>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/bump.js"></script>
+<script type="text/javascript" src="/assets/js/game.js"></script>
+
 </body>
 </html>
