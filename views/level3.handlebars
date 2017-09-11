@@ -30,7 +30,7 @@
      <li>
        {{this.item_name}}
 
-       <form action="/{{this.id}}?_method=PUT" method="POST">
+       <form action="/item/{{this.id}}?_method=PUT" method="POST">
        	<input type="hidden" name="backpack" value="false"><button id="sell-btn" type="submit">Give back</button>
        </form>
        </li>
@@ -41,7 +41,7 @@
 <h2>What should be in the store?</h2>
 
 <div>
-<form action="/" method="POST">
+<form action="/level3" method="POST">
     <textarea type="text" name="item_name">
   </textarea>
   {{!-- <input type="hidden" name="backpack" value="false"> --}}

@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS game_db; 
+DROP DATABASE IF EXISTS game_db;
 CREATE DATABASE game_db;
 USE game_db;
 
@@ -28,6 +28,7 @@ item_bonus INT NOT NULL,
 PRIMARY KEY(id)
 );
 
+
 USE game_db;
 
 INSERT INTO Levels (level_name, choices, sf_dialog, player_dialog) VALUES ('Level 1', "You decided to grab the item closest to you:@Your pants@A shield left over from a costume@A letter opener", "IT’S GONE! Then demonstrate that you are brave, bold, (and gullible enough) to capture me!@Don’t worry about who I am@JUST GET READY TO GO!", "Resize…commit..and done! Another project link submitted anddddd…..@Who the hell are you and what just happened to my project?!?  My group is going to KILL me!");
@@ -43,7 +44,4 @@ INSERT INTO Levels (level_name, choices, sf_dialog, player_dialog) VALUES ('Leve
 
 -- INSERT INTO Shops (item_name, reputation, backpack, secret)
 -- VALUES ("Motivation", 10), ("Nightmare book", 5), ("Curly lip hair", 15), ("Solved Folder", 10, false, true);
- 
-
-
 

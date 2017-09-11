@@ -96,15 +96,15 @@ module.exports = function(app) {
     });
   });
 //This is the market page.
-  app.get("/level3", function(req, res) {
-    db.Item.findAll({}).then(function(dbItems) {
-      var hbsObject = {
-        items: dbItems
-      };
-      console.log(hbsObject);
-      res.render("level3", hbsObject);
-      });
-  });
+  // app.get("/level3", function(req, res) {
+  //   db.Item.findAll({}).then(function(dbItems) {
+  //      var hbsObject = {
+  //       items: dbItems
+  //     };
+  //     console.log(hbsObject);
+  //     res.render("level3", hbsObject);
+  //     });
+  // });
 
 //adding shop values
   app.get("/level3", function(req, res) {
@@ -115,10 +115,10 @@ module.exports = function(app) {
     });
   });
 //route for creating shop stuff
-  app.post("/api/level3", function(req, res) {
+  app.post("/level3", function(req, res) {
     db.Shop.create({item_name: req.body.item_name//, reputation: req.body.reputation, backpack: req.body.backpack, secret: req.body.secret
     }).then(function(dbShop) {
-      res.redirect("level3", res.json(dbShop));//maybe takeout hbsObject
+      res.redirect("/level3");//maybe takeout hbsObject
     });
   });
 //PUT route for 'buying' items from shop
@@ -134,19 +134,19 @@ app.put("/:id", function(req, res) {
   });
 });
 
-// //PUT route for 'buying' items from shop
-// app.put("/:id", function(req, res) {
-//   db.Shop.update({
-//     backpack: false
-//   }, {
-//     where: {
-//       id: req.params.id
-//     }
+//PUT route for 'buying' items from shop
+app.put("/item/:id", function(req, res) {
+  db.Shop.update({
+    backpack: false
+  }, {
+    where: {
+      id: req.params.id
+    }
 
-//   }).then(function(dbShop) {
-//     res.redirect("/level3");
-//   });
-// });
+  }).then(function(dbShop) {
+    res.redirect("/level3");
+  });
+});
 //DELETE by something other than id?Maybe shop item#?
 app.delete("/api/level3/:id", function(req, res) {
   db.Shop.destroy({
