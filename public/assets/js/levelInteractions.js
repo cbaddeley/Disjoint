@@ -3,10 +3,16 @@
 function displayData() {
   //display choices in individual divs in test space 
   $("#choicePrompt").text(choiceArray[0]);
+  //produces a triple posting -- nede to fix the iterator here, but pushes to the right div
+  for (let i =0; i < 1; i++){
+    var question = choiceArray[0];
+    }
+  
   for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
     choiceDiv.text(choiceArray[i]);
     choiceDiv.attr("data-value", i);
+    $(".testTitle").append(question);
     $(".test").append(choiceDiv);
   }
    // display dialog from NP/SF in other space.

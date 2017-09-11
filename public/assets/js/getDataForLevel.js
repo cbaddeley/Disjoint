@@ -27,6 +27,7 @@ $( document ).ready(function() {
       //Test for something
       //push quest choices to the question space
       $("#test").html(prArray[0]);
+      
       //NP dialogue
       $('#displayNP').html(sfArray[0]);
       //SF dialogue

@@ -22,6 +22,12 @@
   text-align: left;
 
 }
+.testTitle{
+  background: black;
+  color: white;
+  font-size: xx-large;
+
+}
 
 .container-fluid{
   background: black;
@@ -30,17 +36,18 @@
 
 .displaySF{
   border: orange solid 4px;
+  font-size: xx-large;
 
 }
 
 .displayNP{
-
+  font-size: xx-large;
   border: purple solid 4px;
 }
 
 /*p{
 
-  
+
 }*/
 
 /*level 1 bedroom */
@@ -82,6 +89,7 @@
   border: 1px solid white;
   color: white;
   background: black;
+  font-size: larger;
 }
 
 /*level 2 forest*/
