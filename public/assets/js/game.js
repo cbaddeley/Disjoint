@@ -140,6 +140,8 @@ function setup() {
     }
     explosionFiveAnim = new PIXI.extras.AnimatedSprite(explosionFiveframes);
 
+
+      $('#player').get(0).play();
   //Set the game state
   state = play;
   //Start the game loop
@@ -586,7 +588,6 @@ $( document ).ready(function() {
 $("#startGame").click(function() {
   $("#startModal").hide();
   PIXI.loader.load(setup);
-  $('#player').get(0).play();
 });
 
 $("#winButton").on("click", function( event ) {

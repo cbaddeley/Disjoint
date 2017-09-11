@@ -42,8 +42,13 @@ label{
 }
 /*change this out so it isn't affecting body on other pages*/
 #fullLogWindow{
+  padding-top: 500px;
+  text-shadow: 2px 2px #ff0000;
   background: url(../img/title_bg.jpg);
-  background-repeat: no-repeat;
-  width: 1600px;
-  height: 1600px;
+  /*background: url(https://giphy.com/gifs/l3q2RgN7WUjeUUXm0/html5);*/
+  background-repeat: no-repeat center center-fixed;
+/*  width: 1600px;
+  height: 1600px;*/
+  height: auto;
+  width: auto;
 }

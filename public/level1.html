@@ -23,79 +23,44 @@
 </head>
 
 <body>
-    <!--  <div class ="container-fluid"> -->
-    <!--test the portal id as nextLevel to see if function still works? 9/9-->
+   
     <div class="container-fluid">
-        <div class="row">
+      <!--   <div class="row"> -->
+      <div class= "col-md-12-row">
             <img src="/assets/img/bedroom.png" id="bedPic">
-            <div><img src="/assets/img/portal.png" id="portal" class="img-responsive" data-value="2"></div>
-        </div>
-        <!--ends the background image div-->
-
-        <!--next button div used to be a footer class, testign nested format 9/9-->
-        <div class="row">
-            <div class="col-sm-6 other">
-                <h2>Dialogue</h2>
-                <!-- <form id="nextLevel">
-                    <input type="hidden" id="level" name="level" value="2"> -->
-                    <!--try in the button below as a graphic image:  style="background:url('portal.png')"-->
-                    <!-- <button type="submit" class="btn btn-primary">Next Level</button>
-                </form> -->
-            </div>
+            <img src="/assets/img/portal.png" id="portal" class="img-responsive" data-value="2">         
+         <img src="/assets/img/shadow.png" id="displayShadow" class="img-responsive">
+         </div>
+<!--ticker test-->
+        <div class="ticker">
+        <ul>
+       <li> <div class="displayNP"></div></li>
+        <li><div class="displaySF"></div></li>
+       <li> <div class="testTitle"></div></li>
+                 </ul>
         </div>
 
-        <div class="test">
+     <div class="test"></div>
 
-        </div>
+                 <!--textbox space-->
+<!--         <div class="displayNP"></div> 
+        <div class="displaySF"></div>
+        <div class="testTitle"></div>
+        <div class="test"></div> -->
+ </div>  
 
-        <!--textbox div-->
-        <!--  <div id="ticker">
-    <p>"t""e""s""t""i""n""g"</p>
- -->
-
-        <!--   <div class="ticker" id="textBox"> -->
-        <!--
-      <ul id="webTicker">
-        <li>This is a test</li>
-        <li>This is another test wooooooooo!</li>
-      </ul> -->
-        <!--       <div class="tickercontainer">
-  <div class="mask"> -->
-        <!--     <ul id="WebTicker"> -->
-        <!-- <li class="ticker-spacer"></li> -->
-        <!--       <ul class="newsticker">
-            <li>This List Item will scroll infintely</li>
-            <li>And this one will follow it</li>
-            <li class="last">Finally when it goes out of screen, it will queue again at the end</li>
-        </ul> -->
-        <!--     <span class="tickeroverlay-left">&nbsp;</span>
-    <span class="tickeroverlay-right">&nbsp;</span> -->
-        <!--  </div> -->
-
-        <!--    <footer class="navbar-default navbar-fixed-bottom"> -->
-        <!--         <form id="nextLevel">
-            <input type="hidden" id="level" name="level" value="2">
-            try in the button below:  style="background:url('portal.png')"
-            <button type="submit" class="btn btn-primary">Next Level</button>
-        </form> -->
-        <!--  <button id="nextBtn">More Dialogue</button> -->
-        <!--     </footer> -->
-        <!--ends form footer div-->
-        <!--   </div>ends container -->
 </body>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!--ticker link-->
-<!--  <script src="./path/to/jquery.webticker.min.js"></script> -->
-<!-- <script src="http://risq.github.io/jquery-advanced-news-ticker/assets/js/jquery.newsTicker.js"></script> -->
-<script type="text/javascript" src="js/jquery.jticker.js"></script>
-<script type="text/javascript" src="/assets/js/getDataForLevel.js">
 
+<!-- <script src="http://risq.github.io/jquery-advanced-news-ticker/assets/js/jquery.newsTicker.js"></script> -->
+<script type="text/javascript" src="/assets/js/jquery.ticker.js"></script>
+<!--makes dialog accessible-->
+<script type="text/javascript" src="/assets/js/getDataForLevel.js">
 </script>
+<script type="text/javascript" src="/assets/js/levelInteractions.js"></script>
 <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
 </script>
-<script type="text/javascript" src="/assets/js/levelInteractions.js">
-
-</script>
-
+<!--  <script src="/assets/js/jquery.webticker.min.js"></script> -->
 </html>
