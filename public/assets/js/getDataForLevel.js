@@ -27,13 +27,14 @@ $( document ).ready(function() {
       //Test for something
       //push quest choices to the question space
       $("#test").html(prArray[0]);
-      
+
       //NP dialogue
       $('#displayNP').html(sfArray[0]);
       //SF dialogue
       $('#displaySF').html(choiceArray[0]);
       //push dialog choices to the dialog textbox space
       displayData();
+      animateText();
       //animate the shadow figure and dialogue
       animateShadow();
       })

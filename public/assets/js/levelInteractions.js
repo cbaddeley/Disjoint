@@ -1,13 +1,14 @@
 //display data function to display text from the levels table
 
 function displayData() {
+  
   //display choices in individual divs in test space 
   $("#choicePrompt").text(choiceArray[0]);
   //produces a triple posting -- nede to fix the iterator here, but pushes to the right div
   for (let i =0; i < 1; i++){
     var question = choiceArray[0];
     }
-  
+  // $(".test").show();
   for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
     choiceDiv.text(choiceArray[i]);
@@ -15,11 +16,19 @@ function displayData() {
     $(".testTitle").append(question);
     $(".test").append(choiceDiv);
   }
+  $(".test").show();
    // display dialog from NP/SF in other space.
    $(".displayNP").append(prArray[0]);
    $(".displaySF").append(sfArray[0]);
 
 }
+
+function animateText(){
+
+  // $('#webTicker').webTicker();
+  $('.ticker').ticker();
+}
+
 
 function animateShadow(){
   $("#displayShadow").animate({

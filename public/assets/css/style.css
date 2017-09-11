@@ -27,6 +27,7 @@
   color: white;
   font-size: xx-large;
 
+
 }
 
 .container-fluid{
@@ -41,18 +42,54 @@
 .displaySF{
   border: orange solid 4px;
   font-size: xx-large;
+   width:100%;
+      bottom: .3rem;
+        position: absolute;
+        background:#000;
+        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 
 }
 
 .displayNP{
   font-size: xx-large;
   border: purple solid 4px;
+   width:100%;
+        bottom: .3rem;
+        position: absolute;
+        background:#000;
+        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
-/*p{
 
+.ticker{
+  background: black;
+  color:white;
+  border: red 2px solid;
+  font-size: xx-large;
+  border: purple solid 4px;
+   width:100%;
+        bottom: .3rem;
+        position: absolute;
+        background:#000;
+        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
 
-}*/
+.choiceSelector {
+  border: 1px solid white;
+  color: white;
+  background: black;
+  font-size: larger;
+  
+}
 
 /*level 1 bedroom */
 /*bg image*/
@@ -89,12 +126,7 @@
   display:none;
 }
 
-.choiceSelector {
-  border: 1px solid white;
-  color: white;
-  background: black;
-  font-size: larger;
-}
+
 
 /*level 2 forest*/
 #displayForest{
