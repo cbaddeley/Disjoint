@@ -1,0 +1,147 @@
+{"frames": {
+
+"Alien-Battlecruiser.png":
+{
+	"frame": {"x":512,"y":744,"w":256,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Alien-Battleship.png":
+{
+	"frame": {"x":256,"y":744,"w":256,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Alien-Bomber.png":
+{
+	"frame": {"x":434,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Alien-Cruiser.png":
+{
+	"frame": {"x":0,"y":744,"w":256,"h":256},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
+	"sourceSize": {"w":256,"h":256},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"greenBeam.png":
+{
+	"frame": {"x":0,"y":0,"w":16,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":17},
+	"sourceSize": {"w":16,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup1.png":
+{
+	"frame": {"x":0,"y":1000,"w":717,"h":324},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":717,"h":324},
+	"sourceSize": {"w":717,"h":324},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup2.png":
+{
+	"frame": {"x":0,"y":133,"w":326,"h":155},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":326,"h":155},
+	"sourceSize": {"w":326,"h":155},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup3.png":
+{
+	"frame": {"x":562,"y":0,"w":368,"h":133},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":368,"h":133},
+	"sourceSize": {"w":368,"h":133},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup4.png":
+{
+	"frame": {"x":34,"y":0,"w":400,"h":127},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":127},
+	"sourceSize": {"w":400,"h":127},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup5.png":
+{
+	"frame": {"x":400,"y":322,"w":474,"h":206},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":474,"h":206},
+	"sourceSize": {"w":474,"h":206},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup6.png":
+{
+	"frame": {"x":0,"y":528,"w":479,"h":211},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":479,"h":211},
+	"sourceSize": {"w":479,"h":211},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup7.png":
+{
+	"frame": {"x":0,"y":322,"w":400,"h":202},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":202},
+	"sourceSize": {"w":400,"h":202},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup8.png":
+{
+	"frame": {"x":326,"y":133,"w":433,"h":189},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":433,"h":189},
+	"sourceSize": {"w":433,"h":189},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"redBeam.png":
+{
+	"frame": {"x":16,"y":0,"w":18,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+	"sourceSize": {"w":18,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"ship.png":
+{
+	"frame": {"x":479,"y":528,"w":411,"h":216},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":411,"h":216},
+	"sourceSize": {"w":411,"h":216},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "gameSprites.png",
+	"format": "RGBA8888",
+	"size": {"w":930,"h":1324},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:902f9580c4635f57a65ffcef1349f042:290b6b94f7114386e9eb3393a077ae9f:359863cfc6425a6bfb712ea1166c4857$"
+}
+}
