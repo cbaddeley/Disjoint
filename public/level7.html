@@ -2,41 +2,76 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ocean Town</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/nameSelect.css">
-    <link rel="stylesheet" href="/assets/css/worldMap.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!--bootstrap links-->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Headin' Home</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="/assets/css/nameSelect.css">
+                <link rel="stylesheet" href="/assets/css/worldMap.css">
+                    <link rel="stylesheet" href="/assets/css/style.css">
+                        <!--jquery-->
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                        <!--bootstrap links-->
+                        <!-- Latest compiled and minified CSS -->
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                            <!-- Optional theme -->
+                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+                                <!-- Latest compiled and minified JavaScript -->
+                                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 <body>
     <!--  <div class ="container-fluid"> -->
-    <div class="container-fluid"><img src="/assets/img/fishing.jpg" id="displayFishing">
-    </div><!--ends the background image div-->
-    <!--  </div> -->
-    </div>
-    <!--closes fluid container-->
+    <div class="container-fluid"><div class="col-md-12-row"><img src="/assets/img/fishing.jpg" id="displayFishing"><img src="/assets/img/portal.png" id="portal" class="img-responsive" data-value="7">
+                                                <img src="/assets/img/shadow.png" id="displayShadow" class="img-responsive">
+    </div><!--closes row-->
+    <!--ticker test-->
+                                                <div class="ticker">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="displayNP"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="displaySF"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="testTitle"></div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--display text-->
+                                                <div class="test"></div> 
 
-    <!--next button div-->
-    <footer class="navbar-default navbar-fixed-bottom">
-        <form id="nextLevel">
-            <input type="hidden" id="level" name="level" value="8">
-            <button type="submit" class="btn btn-primary">Next Level</button>
-        </form>
-       <!--  <button id="nextBtn">More Dialogue</button> -->
-    </footer>
-    <!--ends form footer div-->
-    <!--   </div>ends container -->
+
+  <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Your Rep Repo</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="displayPurchases">
+                                            <p>Your reputation increased!</p>
+                                        </div>
+                                        <div id="displayRep">
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div><!--closes modal content-->
+
+                            </div><!--closes mdoal dialog-->
+                        </div><!--closes mymodal id-->
+                    </div><!--closes fluid-container-->
 </body>
-</html>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                                        <!--ticker link-->
+                             
+                                        <script type="text/javascript" src="/assets/js/jquery.ticker.js"></script>
+                                        <!--makes dialog accessible-->
+                                        <script type="text/javascript" src="/assets/js/getDataForLevel.js"></script>
+                                        <script type="text/javascript" src="/assets/js/levelInteractions.js"></script>
+                                        <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js"></script>
+                                                                           </html>
