@@ -3,127 +3,58 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Into the Forest</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/nameSelect.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!--jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Buggin' Out</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="/assets/css/nameSelect.css">
+                <link rel="stylesheet" href="/assets/css/worldMap.css">
+                    <link rel="stylesheet" href="/assets/css/style.css">
+                        <!--jquery-->
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                        <!--bootstrap links-->
+                        <!-- Latest compiled and minified CSS -->
+                        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                            <!-- Optional theme -->
+                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+                                <!-- Latest compiled and minified JavaScript -->
+                                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!--bootstrap links-->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <!--  <div class ="container-fluid"> -->
     <div class="container-fluid">
-        <div class="row">
+        <div class="col-md-12-row">
             <img src="/assets/img/Fairy_Forest.JPG" id="displayForest">
-            <div><img src="/assets/img/portal.png" id="portal" class="img-responsive"></div>
 
+            <img src="/assets/img/portal.png" id="portal" class="img-responsive" data-value="3">
+            <img src="/assets/img/shadow.png" id="displayShadow" class="img-responsive"></div>
 
-            <!--questions div-->
-            <div class="row">
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="questChoices">A goblin appoarches...you decide to</label>
-                    <div class="col-md-4">
-                        <div class="radio">
-                            <label for="questChoices0">
-     		<input type="radio" name="questChoices" id="questChoices0" value="1">option one
-   			 </label>
-                        </div>
-                        <!--ends radio button for question 1 option 1-->
-                        <div class="radio">
-                            <label for="questChoices1">
-      		<input type="radio" name="questChoices" id="questChoices1" value="0">Option two
-    		</label>
-                        </div>
-                        <!--ends radio button for question 1 option 2-->
-                        <div class="radio">
-                            <label for="questChoices2">
-    	  <input type="radio" name="questChoices" id="questChoices2" value="0">
-     		 Option three
-   				 </label>
-                        </div>
-                        <!--ends radio button for question 1 option 3-->
-                        <div class="radio">
-                            <label for="questChoices3">
-      <input type="radio" name="questChoices" id="questChoices3" value="0">
-      Option four
-    </label>
-                        </div>
-                        <!--ends radio button for question 1 option 4-->
+<!--ticker test-->
+                                                <div class="ticker">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="displayNP"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="displaySF"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="testTitle"></div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--display text-->
+                                                <div class="test"></div>
+                                            </div>
+                                        </body>
+                                        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                                        <!--ticker link-->
+                             
+                                        <script type="text/javascript" src="/assets/js/jquery.ticker.js"></script>
+                                        <!--makes dialog accessible-->
+                                        <script type="text/javascript" src="/assets/js/getDataForLevel.js"></script>
+                                        <script type="text/javascript" src="/assets/js/levelInteractions.js"></script>
+                                        <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js"></script>
+                                                          
 
-
-                        <!-- Modal -->
-                        <div id="myModal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Your Rep Repo</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div id="displayPurchases">
-                                            <p>Your reputation increased!</p>
-                                        </div>
-                                        <div id="displayRep">
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!--textbox info-->
-                    <!--next button div used to be a footer class, testign nested format 9/9-->
-                    <div class="row">
-                        <div class="col-sm-6 other">
-                            <h2>Dialogue</h2>
-                            <form id="nextLevel">
-                                <input type="hidden" id="level" name="level" value="3">
-                                <!--try in the button below as a graphic image:  style="background:url('portal.png')"-->
-                                <button type="submit" class="btn btn-primary">Next Level</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!--next button div-->
-                    <!--  <footer class="navbar-default navbar-fixed-bottom">
-        <form id="nextLevel">
-            <input type="hidden" id="level" name="level" value="3">
-            <button type="submit" class="btn btn-primary">Next Level</button>
-        </form> -->
-                    <!--  <button id="nextBtn">More Dialogue</button> -->
-                    <!--    </footer>
-</div>< -->
-</body>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="/assets/js/nextLevelPutRequest.js">
-    //jquery calls
-    $(document).ready(function() {
-        //when the player clicks the next button, the textbox div will show the next block of text
-
-
-        //potentially look into hides for this?
-        $("#myModal").modal('show');
-        $("#displayRep").text(reputation);
-        //are we trying to post these rep points somewhere?
-        // $.post('apilink here');
-    });
-</script>
 
 </html>

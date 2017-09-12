@@ -22,21 +22,37 @@
   </head>
 <body>
     <!--  <div class ="container-fluid"> -->
-    <div class="container-fluid"><img src="/assets/img/armor.jpg" id="displayHall">
+    <div class="container-fluid">  <div class= "col-md-12-row"><img src="/assets/img/armor.jpg" id="displayHall"><img src="/assets/img/portal.png" id="portal" class="img-responsive" data-value="2">
+                                                <img src="/assets/img/shadow.png" id="displayShadow" class="img-responsive">
     </div><!--ends the background image div-->
-    <!--  </div> -->
-    </div>
-    <!--closes fluid container-->
+   <!--ticker test-->
+                                                <div class="ticker">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="displayNP"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="displaySF"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="testTitle"></div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--display text-->
+                                                <div class="test"></div>
+                                           
 
-    <!--next button div-->
-    <footer class="navbar-default navbar-fixed-bottom">
-        <form id="nextLevel">
-            <input type="hidden" id="level" name="level" value="5">
-            <button type="submit" class="btn btn-primary">Next Level</button>
-        </form>
-       <!--  <button id="nextBtn">More Dialogue</button> -->
-    </footer>
-    <!--ends form footer div-->
-    <!--   </div>ends container -->
+
+    </div>
+
 </body>
-</html>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                                        <!--ticker link-->
+                             
+                                        <script type="text/javascript" src="/assets/js/jquery.ticker.js"></script>
+                                        <!--makes dialog accessible-->
+                                        <script type="text/javascript" src="/assets/js/getDataForLevel.js"></script>
+                                        <script type="text/javascript" src="/assets/js/levelInteractions.js"></script>
+                                        <script type="text/javascript" src="/assets/js/nextLevelPutRequest.js"></script>
+                                                                           </html>

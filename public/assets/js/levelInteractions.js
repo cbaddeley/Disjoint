@@ -4,25 +4,38 @@ function displayData() {
 
   //display choices in individual divs in test space
   $("#choicePrompt").text(choiceArray[0]);
-  //produces a triple posting -- nede to fix the iterator here, but pushes to the right div
+  //Okay now for showing the choice prompt
   for (let i =0; i < 1; i++){
     var question = choiceArray[0];
+        $(".testTitle").append(question);
     }
-  // $(".test").show();
-  for (let i = 1; i < choiceArray.length; i++) {
+    /*hides the conversation div*/
+  // $(".test").hide();
+
+  /*adds dialogues to the proper spaces*/
+      $(".displayNP").append(prArray[0]);
+   $(".displaySF").append(sfArray[0]);
+   $(".displayNP").append(prArray[1]);
+   $(".displaySF").append(sfArray[1]);
+  $(".displayNP").append(prArray[2]);
+   $(".displaySF").append(sfArray[2]);
+     $(".displayNP").append(prArray[3]);
+
+}
+
+function delayChoice(){
+  // setTimeout()
+  setTimeout(function(){
+ /*loop to provide choices for the player*/
+    for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
     choiceDiv.text(choiceArray[i]);
     choiceDiv.attr("data-value", i);
-    $(".testTitle").append(question);
+    // $(".testTitle").append(question);
     $(".test").append(choiceDiv);
-
   }
-  $(".test").show();
-   // display dialog from NP/SF in other space.
-   //HARDCODE THESE FOR THE SCENES
-   $(".displayNP").append(prArray[1]);
-   $(".displaySF").append(sfArray[1]);
-
+  // $(".test").show();
+}, 25000)
 }
 
 function animateText(){
