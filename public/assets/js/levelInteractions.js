@@ -7,13 +7,14 @@ function displayData() {
   //produces a triple posting -- nede to fix the iterator here, but pushes to the right div
   for (let i =0; i < 1; i++){
     var question = choiceArray[0];
+        $(".testTitle").append(question);
     }
   // $(".test").show();
   for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
     choiceDiv.text(choiceArray[i]);
     choiceDiv.attr("data-value", i);
-    $(".testTitle").append(question);
+    // $(".testTitle").append(question);
     $(".test").append(choiceDiv);
 
   }
@@ -22,7 +23,8 @@ function displayData() {
    //HARDCODE THESE FOR THE SCENES
    $(".displayNP").append(prArray[1]);
    $(".displaySF").append(sfArray[1]);
-
+  $(".displayNP").append(prArray[2]);
+   $(".displaySF").append(sfArray[2]);
 }
 
 function animateText(){
