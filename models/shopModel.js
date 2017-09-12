@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {var Shop = sequelize.define("Sh
 	item_name: {
 	type: DataTypes.STRING,
 	allowNull: false,
-	validate: {len: [1, 15]}
+	validate: {len: [1, 50]}
 	},
 	reputation: {
 	type: DataTypes.INTEGER,
