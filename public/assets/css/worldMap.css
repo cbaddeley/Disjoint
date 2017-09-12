@@ -1,5 +1,5 @@
 body {
-  background-image: url(/assets/img/worldMapBackground.jpg);
+  background-image: url(../img/worldMapBackground.jpg);
 }
 header {
   text-align: center;
@@ -21,7 +21,7 @@ header {
     margin-top: 10px;
     border: 1px solid black;
     height: 610px;
-    background-image: url(/assets/img/oldmap.jpg);
+    background-image: url(../img/oldmap.jpg);
 }
 .hexagon {
   /*display: none;*/

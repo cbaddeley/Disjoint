@@ -2,6 +2,10 @@ var path = require("path");
 
 module.exports = function(app) {
 
+  //This renders the first screen when the player visits the site
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/startScreen.html"));
+  });
   app.get("/level1", function(req, res) {
     res.sendFile(path.join(__dirname, "/../public/level1.html"));
   });

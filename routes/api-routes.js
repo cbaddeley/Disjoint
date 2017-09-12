@@ -11,12 +11,7 @@ var db = require("../models");
 // =============================================================
 
 module.exports = function(app) {
-//This renders the first screen when the player visits the site
-  app.get("/", function(req, res) {
 
-      res.render("index");
-
-  });
 //Here is when the player first puts in their name. It stores the value in the database and then renders the first level
   app.post("/api/playerName", function(req, res) {
     db.Player.create({
@@ -74,7 +69,6 @@ module.exports = function(app) {
       var hbsObject = {
         levels: dbLevels
       };
-      console.log(hbsObject);
       res.render("worldMap", hbsObject);
       });
   });
