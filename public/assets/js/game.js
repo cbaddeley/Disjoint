@@ -22,13 +22,13 @@ var explo2 = new Audio('assets/sounds/Explosion2.wav');
 var laser1 = new Audio('assets/sounds/Laser1.wav');
 var laser2 = new Audio('assets/sounds/Laser2.wav');
 
-//Tell the `renderer` to `render` the `stage`
 PIXI.loader
   .add("assets/img/gameSprites.json")
   .add("assets/img/explosions.json")
   .add("assets/img/background.png")
   .on("progress", loadProgressHandler);
 
+//Various variables
 var ship, state, background, battlecruiser, battleship, bomber, cruiser, redBeam, greenBeam;
 var battlecruisers = [];
 var battleships = [];
@@ -36,13 +36,15 @@ var bombers = [];
 var cruisers = [];
 var redBeams = [];
 var greenBeams = [];
+var popups = [];
 var explosionOneAnim, explosionTwoAnim, explosionThreeAnim, explosionFourAnim, explosionFiveAnim;
+
 //This `setup` function will run when the image has loaded
 function setup() {
 
   var spriteId = resources["assets/img/gameSprites.json"].textures;
   var explosionId = PIXI.loader.resources["assets/img/explosions.json"].textures;
-  // console.log(typeof spriteId);
+
   background = new Sprite(resources["assets/img/background.png"].texture);
   stage.addChild(background);
 
@@ -140,8 +142,12 @@ function setup() {
     }
     explosionFiveAnim = new PIXI.extras.AnimatedSprite(explosionFiveframes);
 
+    //Getting the textures for the popups and pushing them into an array
+    for (var o = 1; o < 9; o++) {
+      popups.push(new Sprite(spriteId["popup" + o + ".png"]));
+    }
 
-      $('#player').get(0).play();
+  $('#player').get(0).play();
   //Set the game state
   state = play;
   //Start the game loop
@@ -156,6 +162,7 @@ function gameLoop(){
   //Update the current game state
   state();
 
+  //This is sliding the background image to give the appearance of flying
   background.vx = 3;
   background.x -= background.vx;
   //Render the stage
@@ -171,6 +178,25 @@ function play() {
   if (background.getGlobalPosition().x < -10000) {
     state = win;
   }
+
+  //=================These are where the popup windows appear
+  if (background.getGlobalPosition().x < -3000) {
+    for (let t = 0; t<popups.length; t++) {
+      popups[t].scale.set(0.8, 0.8);
+      popups[t].x = 200 + (t * 40);
+      popups[t].y = 50 + (t * 40);
+      popups[t].vx = 0;
+      popups[t].vy = 0;
+      stage.addChild(popups[t]);
+    }
+  }
+//where the popup windows disappear
+  if (background.getGlobalPosition().x < -4500) {
+    for (let t = 0; t<popups.length; t++) {
+      stage.removeChild(popups[t]);
+    }
+  }
+
   var spriteId = resources["assets/img/gameSprites.json"].textures;
   //Space
   space.press = function() {
@@ -596,7 +622,7 @@ $("#winButton").on("click", function( event ) {
           url: "/api/levelAccess",
           type: 'PUT',
           data: {
-            level: "10",
+            level: "7",
             player_name: sessionStorage.getItem("playerName")
           },
           dataType: 'json',

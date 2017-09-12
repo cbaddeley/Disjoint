@@ -12,7 +12,9 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-
+* {
+  font-family: 'Source Code Pro', monospace;
+}
 
 /* The Close Button */
 .close {
@@ -32,26 +34,26 @@
 /* Modal Header */
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-image: url(/assets/img/green_cup.png);
     color: white;
 }
 
 /* Modal Body */
 .modal-body {padding: 2px 16px;
   text-align: left;
+      background-image: url(/assets/img/vintage-concrete.png);
 }
 
 /* Modal Footer */
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-image: url(/assets/img/green_cup.png);
     color: white;
 }
 
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
     margin: auto;
     margin-top: 30px;
     padding: 0;
@@ -78,4 +80,20 @@
 button {
   height: 30px;
   width: 200px;
+  font-size: 18px;
+}
+
+body {
+  background-image: url(/assets/img/memphis-colorful.png);
+}
+
+#instructions {
+  position: absolute;
+    width: 400px;
+    top: 165px;
+    right: 50px;
+}
+
+h4 {
+  font-weight: bold;
 }

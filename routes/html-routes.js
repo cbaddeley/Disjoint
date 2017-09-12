@@ -20,13 +20,4 @@ module.exports = function(app) {
   app.get("/level7", function(req, res) {
     res.sendFile(path.join(__dirname, "/../public/level7.html"));
   });
-  app.get("/level8", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/level8.html"));
-  });
-  app.get("/level9", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/level9.html"));
-  });
-  app.get("/level10", function(req, res) {
-    res.sendFile(path.join(__dirname, "/../public/level10.html"));
-  });
 };
