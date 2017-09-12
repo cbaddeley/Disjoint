@@ -2,85 +2,81 @@
 /*general elements*/
 
 
-#portal{
-    opacity: 1;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top:0;
-    right:0;
-    bottom:0;
+#portal {
+  opacity: 1;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
     /*left:0;*/
-    height: 100%;
-    border: yellow solid 4px;
-    display: none;
+  height: 100%;
+  border: yellow solid 4px;
+  display: none;
 }
 
-.test{
-   border: blue solid 4px;
+.test {
+  border: blue solid 4px;
   color: white;
   text-align: left;
-
 }
-.testTitle{
+
+.testTitle {
   background: black;
   color: white;
   font-size: xx-large;
-
-
 }
 
-.container-fluid{
+.container-fluid {
   background: black;
   color: white;
-      padding-right:0;
-    padding-left:0;
-    margin-right:auto;
-    margin-left:auto
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.displaySF{
+.displaySF {
   border: orange solid 4px;
   font-size: xx-large;
-   width:100%;
-      bottom: .3rem;
-        position: absolute;
-        background:#000;
-        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-
+  width: 100%;
+  bottom: .3rem;
+  position: absolute;
+  background: #000;
+  background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
-.displayNP{
+.displayNP {
   font-size: xx-large;
   border: purple solid 4px;
-   width:100%;
-        bottom: .3rem;
-        position: absolute;
-        background:#000;
-        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  width: 100%;
+  bottom: .3rem;
+  position: absolute;
+  background: #000;
+  background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
-
-.ticker{
+.ticker {
   background: black;
-  color:white;
+  color: white;
   border: red 2px solid;
   font-size: xx-large;
   border: purple solid 4px;
-   width:100%;
-        bottom: .3rem;
-        position: absolute;
-        background:#000;
-        background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-        background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  width: 100%;
+  bottom: .3rem;
+  position: absolute;
+  background: #000;
+  background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 .choiceSelector {
@@ -88,18 +84,17 @@
   color: white;
   background: black;
   font-size: larger;
-
 }
 
 /*level 1 bedroom */
 /*bg image*/
-#bedPic{
+#bedPic {
   max-width: 100%;
   height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top:0;
+  top: 0;
   left: 0;
   border: red solid 5px;
   /*layering*/
@@ -110,26 +105,26 @@
   margin-right: auto;
 }
 
-#displayShadow{
+#displayShadow {
   background-image: url(../img/shadow.png);
  /* position: absolute;*/
-     opacity: 1;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top:0;
-    right:0;
-    bottom:0;
+  opacity: 1;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
     /*left:0;*/
-    height: 100%;
+  height: 100%;
   border: solid green 4px;
-  display:none;
+  display: none;
 }
 
 
 
 /*level 2 forest*/
-#displayForest{
+#displayForest {
 /*  background: url(../img/Fairy_Forest.JPG);*/
   max-width: 100%;
   height: auto;
@@ -142,14 +137,13 @@
 
 
 /*displaySpider*/
-#displaySpider{
+#displaySpider {
   background: url(../img/spider.jpeg);
-
 }
 
 /*level 4 underworld */
-#displayHell{
-   max-width: 100%;
+#displayHell {
+  max-width: 100%;
   height: auto;
 }
 
@@ -160,28 +154,28 @@
 */
 
 /*level 5*/
-#displayHall{
-   max-width: 100%;
+#displayHall {
+  max-width: 100%;
   height: auto;
 }
 
 /*level 6*/
-#displayCastle{
-   max-width: 100%;
+#displayCastle {
+  max-width: 100%;
   height: auto;
 }
 
 
 /*level 7*/
-#displayFishing{
-   max-width: 100%;
+#displayFishing {
+  max-width: 100%;
   height: auto;
 }
 
 
 /*level 8*/
-#displayHell{
-   max-width: 100%;
+#displayHell {
+  max-width: 100%;
   height: auto;
 }
 
@@ -202,54 +196,44 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-
 }
 
 /*==========  Non-Mobile First Method  ==========*/
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
-
 }
 
 .displayNP {

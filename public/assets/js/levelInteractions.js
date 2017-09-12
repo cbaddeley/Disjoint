@@ -21,21 +21,12 @@ function displayData() {
    $(".displaySF").append(sfArray[2]);
      $(".displayNP").append(prArray[3]);
 
-  //    /*loop to provide choices for the player*/
-  // for (let i = 1; i < choiceArray.length; i++) {
-  //   var choiceDiv = $("<div class='choiceSelector'>");
-  //   choiceDiv.text(choiceArray[i]);
-  //   choiceDiv.attr("data-value", i);
-  //   // $(".testTitle").append(question);
-  //   $(".test").append(choiceDiv);
-  // }
-  // $(".test").show();
 }
 
 function delayChoice(){
   // setTimeout()
   setTimeout(function(){
-  //    /*loop to provide choices for the player*/
+ /*loop to provide choices for the player*/
     for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
     choiceDiv.text(choiceArray[i]);
@@ -46,19 +37,6 @@ function delayChoice(){
   // $(".test").show();
 }, 25000)
 }
-
-   // display dialog from NP/SF in other space.
-   //HARDCODE THESE FOR THE SCENES
-  //   $(".displayNP").append(prArray[0]);
-  //  $(".displaySF").append(sfArray[0]);
-  //  $(".displayNP").append(prArray[1]);
-  //  $(".displaySF").append(sfArray[1]);
-  // $(".displayNP").append(prArray[2]);
-  //  $(".displaySF").append(sfArray[2]);
-  //    $(".displayNP").append(prArray[3]);
-   // $(".displaySF").append(sfArray[3]);
-       // $(".test").append(choiceDiv);
-
 
 function animateText(){
   // $('#webTicker').webTicker();
