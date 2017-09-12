@@ -1,0 +1,46 @@
+* {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 18px;
+}
+
+body {
+  background: url(../img/vintage-concrete.png);
+}
+
+
+h3 {
+  font-weight: bold;
+  font-size: 64px;
+  color:#BF2A2A;
+  margin-bottom: 20px;
+}
+
+#fullLogWindow{
+  border: 3px solid black;
+  background-color: rgba(9, 33, 64, 0.9);
+  height: 600px;
+  width: 960px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn-5 {
+  margin-top: 20px;
+  font-size: 48px;
+  width: 240px;
+}
+
+
+.bgcolor-1 {
+    background: #F2C777;
+}
+
+/*.input__field--haruki, .input__field {
+    color: black;
+}*/
+
+.input__field--haruki {
+  font-size: 2em;
+  color: black;
+}

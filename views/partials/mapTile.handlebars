@@ -1,7 +1,11 @@
 {{#each levels}}
-<div id="level{{this.id}}"  class="hexagon"><a href="/level{{this.id}}"></a>
+<div id="level{{this.id}}"  class="hexagon"><a id="href{{this.id}}" href="/level{{this.id}}"></a>
 <div class="hexTop"></div>
-<p>Level {{this.id}}</p>
+<div class="hexagon2">
+  <span>
+    <p id="{{this.id}}" class="innerText">Level {{this.id}}</p>
+  </span>
+</div>
 <div class="hexBottom"></div>
 </div>
 {{/each}}

@@ -11,12 +11,7 @@ var db = require("../models");
 // =============================================================
 
 module.exports = function(app) {
-//This renders the first screen when the player visits the site
-  app.get("/", function(req, res) {
 
-      res.render("index");
-
-  });
 //Here is when the player first puts in their name. It stores the value in the database and then renders the first level
   app.post("/api/playerName", function(req, res) {
     db.Player.create({
@@ -74,7 +69,6 @@ module.exports = function(app) {
       var hbsObject = {
         levels: dbLevels
       };
-      console.log(hbsObject);
       res.render("worldMap", hbsObject);
       });
   });
@@ -105,6 +99,17 @@ module.exports = function(app) {
   //     res.render("level3", hbsObject);
   //     });
   // });
+app.get("/api/posts/category/:category", function(req, res) {
+    db.Post.findAll({
+      where: {
+        category: req.params.category
+      }
+    })
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
 
 //adding shop values
   app.get("/level3", function(req, res) {
@@ -112,6 +117,7 @@ module.exports = function(app) {
       var hbsObject = {shop: dbShop};
     console.log(hbsObject);//doesn't show in console
     res.render("level3", hbsObject);
+    //res.json(dbShop);
     });
   });
 //route for creating shop stuff
@@ -134,7 +140,7 @@ app.put("/:id", function(req, res) {
   });
 });
 
-//PUT route for 'buying' items from shop
+//PUT route for 'selling' items to shop
 app.put("/item/:id", function(req, res) {
   db.Shop.update({
     backpack: false

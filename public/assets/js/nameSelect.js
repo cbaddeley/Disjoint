@@ -2,9 +2,9 @@
 
 $("#beginForm").submit(function( event ) {
   event.preventDefault();
-  sessionStorage.setItem("playerName", $("#playerNameInputField").val());
+  sessionStorage.setItem("playerName", $("#input-1").val());
   var name = {
-    player_name: $("#playerNameInputField").val()
+    player_name: $("#input-1").val()
   };
 //Right here in the response from the server I redirect to the first level
   $.post("/api/playerName", name,
