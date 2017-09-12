@@ -59,7 +59,7 @@ module.exports = function(app) {
       }
     }).then(function(dbGame) {
       //It brings them to the worldMap. Well the js file on the client side does but this sends the redirect. This function would ideally be used with the next level button.
-      res.send({redirect: '/worldMap/'});
+      res.send({redirect: '/worldMap'});
 
     });
   });
