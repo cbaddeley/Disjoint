@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  background-color: #deb887;
+
+}
+
+#store-front {
+	border: 3px;
+	border-color: #0000cd;
+	color: #db7093;
+
+
+}
+#backpack{
+	border: 3px;
+	border-color: #800000;
+	color: #f5fffa;
+
+}
