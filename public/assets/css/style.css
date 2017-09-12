@@ -135,6 +135,17 @@
   height: auto;
 }
 
+/*#displayGoblin{
+   background-image: url(../img/goblin.png); 
+
+}*/
+
+
+/*displaySpider*/
+#displaySpider{
+  background: url(../img/spider.jpeg);
+
+}
 
 /*level 4 underworld */
 #displayHell{

@@ -31,7 +31,7 @@ PRIMARY KEY(id)
 
 USE game_db;
 
-INSERT INTO Levels (level_name, choices, sf_dialog, player_dialog) VALUES ('Level 1', "You decided to grab the item closest to you:@Your pants@A shield left over from a costume@A letter opener", "IT’S GONE! Then demonstrate that you are brave, bold, (and gullible enough) to capture me!@Don’t worry about who I am@JUST GET READY TO GO!", "Resize…commit..and done! Another project link submitted anddddd…..@Who the hell are you and what just happened to my project?!?  My group is going to KILL me!");
+INSERT INTO Levels (level_name, choices, sf_dialog, player_dialog) VALUES ('Level 1', "You decided to grab the item closest to you:@Your pants@A shield left over from a costume@A letter opener", "Villian:IT’S GONE! If you want it back, demonstrate that you are brave, bold, (and gullible enough) to capture me!@Don’t worry about who I am@JUST GET READY TO GO!", "Resize…commit..and done! Another project link submitted anddddd…..@Who the hell are you and what just happened to my project?!?  My group is going to KILL me!");
 -- INSERT INTO Levels (level_name) VALUES ('Level 2', "After thinking for a moment, you decide to…@Punch him and make a run for it @Ask him politely if he could show you how to get out of the forest@Hide and hope he doesn’t see you");
 -- INSERT INTO Levels (level_name) VALUES ('Level 3');
 -- INSERT INTO Levels (level_name) VALUES ('Level 4', "You stare at the phone…@Pick up phone@Ignore it@Yell loudly into the receiver");

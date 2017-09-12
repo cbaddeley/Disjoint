@@ -34,6 +34,7 @@ $( document ).ready(function() {
       $('#displaySF').html(choiceArray[0]);
       //push dialog choices to the dialog textbox space
       displayData();
+      delayChoice();
       animateText();
       //animate the shadow figure and dialogue
       animateShadow();
