@@ -36,8 +36,10 @@ $( document ).ready(function() {
       displayData();
       delayChoice();
       animateText();
+      // playclick();
       //animate the shadow figure and dialogue
       animateShadow();
+      // playclick();
       })
 });
 

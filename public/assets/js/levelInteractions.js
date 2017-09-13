@@ -40,7 +40,7 @@ function delayChoice(){
 
 function animateText(){
   // $('#webTicker').webTicker();
-  $('.ticker').ticker({finishOnHover:false, cursorSpeed:25});
+  $('.ticker').ticker({finishOnHover:false, cursorSpeed:50});
   $(".displayNP").hide();
   $(".displaySF").hide();
 
@@ -49,14 +49,34 @@ function animateText(){
 
 function animateShadow(){
   $("#displayShadow").animate({
-      top: '50px',
+      top: '10px',
       opacity: '1',
-      height:'500px',
+      height:'567px',
+      width: '200px', 
+      easing: 'linear'
   });
    $("#displayShadow").show(5000);
    $("#displayShadow").hide();
   }
 
+
+// function playClick(){
+//   $(".choiceSelector")
+//   // .each(function(i) {
+//   //   if (i != 0) {
+//   //     $("#beep-two")
+//   //       .clone()
+//   //       .attr("id", "beep-two" + i)
+//   //       .appendTo($(this).parent());
+//   //   }
+//   //   $(this).data("beeper", i);
+//   // })
+//   .mouseenter(function() {
+//     $("#beep-two" + $(this).data("beeper"))[0].play();
+//   });
+// // $("#beep-two").attr("id", "beep-two0");
+
+// }
 // //animate the shadow figure
 // $("#displayShadow").on("click", function(){
 
