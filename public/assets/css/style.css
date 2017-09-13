@@ -14,9 +14,9 @@
   height: 50%;
   /*border: yellow solid 4px;*/
   display: none;
-  animation: pulse 3s ease infinite alternate, 
+  /*animation: pulse 3s ease infinite alternate, */
 }
-@keyframes pulse{
+/*@keyframes pulse{
   0%{ transform: translate3d(50px, 40px, 0px);
        animation-timing-function: ease-in; 
       }
@@ -26,7 +26,7 @@
     }
   100%{ transform: translate3d(50px, 40px, 0px);
   }
-}
+}*/
 .test {
  /* border: blue solid 4px;*/
   color: white;
@@ -35,6 +35,8 @@
   left: 500;
   position: absolute;
   margin: 10px;
+  font-family: 'Press Start 2P', cursive;
+
 /*  border-radius: 15px 50px 30px;
   padding: 20px;
   width: 200px;
@@ -45,6 +47,7 @@
   background: black;
   color: white;
   font-size: xx-large;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .container {
@@ -58,6 +61,7 @@
 
 .displaySF {
   border: orange solid 4px;
+  font-family: 'Press Start 2P', cursive;
   font-size: xx-large;
   width: 100%;
   bottom: .3rem;
@@ -75,6 +79,7 @@
 
 .displayNP {
   font-size: xx-large;
+  font-family: 'Press Start 2P', cursive;
   border: purple solid 4px;
   width: 100%;
   bottom: .3rem;
@@ -103,7 +108,7 @@
   position: absolute;
   margin: auto;
   background: #000;
-  background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -115,7 +120,10 @@
   background: black;
   font-size: larger;
   padding: 5px;
+  font-family: 'Press Start 2P', cursive;
+
 }
+
 
 .choiceSelector:hover {
   color: gray;
@@ -214,7 +222,8 @@
   margin-right: auto;*/
     max-width: 100%;
   margin-top: 10px;
-  width:960px;
+  /*width:960px;*/
+  width: 100%;
   height: auto;
   position: relative;
   min-height: 100%
