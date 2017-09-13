@@ -17,12 +17,16 @@
 }
 
 .test {
-  /*border: blue solid 4px;*/
+/*  border: blue solid 4px;*/
   color: white;
   text-align: left;
   top: 470px;
   position: absolute;
-}
+/*  border-radius: 15px 50px 30px;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+*/}
 
 .testTitle {
   background: black;
@@ -50,6 +54,13 @@
   background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border-radius: 15px 50px 30px;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+
+
+
 }
 
 .displayNP {
@@ -63,6 +74,12 @@
   background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+/*  border-radius: 15px 50px 30px;
+  padding: 20px;
+  width: 200px;
+  height: 150px;*/
+
+
 }
 
 .ticker {
@@ -97,8 +114,6 @@
 #bedPic {
   max-width: 100%;
   margin-top: 10px;
-  /*height: auto;*/
-  /*remove the 800px h and w below, and uncomment height:auto above for full screen*/
   width:960px;
   height: auto;
   position: relative;
@@ -106,10 +121,6 @@
   min-width: 100%;
   top: 0;
   left: 0;
-  /*border: red solid 5px;*/
-  /*layering*/
- /* z-index: -10;*/
-  /*center the image*/
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -139,16 +150,15 @@
 #displayForest {
 /*  background: url(../img/Fairy_Forest.JPG);*/
   max-width: 100%;
-  /*height: auto;*/
-   width:600px;
-  height: 600px;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
   top: 0;
   left: 0;
-  border: red solid 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 
@@ -168,16 +178,15 @@
 /*level 4 underworld */
 #displayHell {
   max-width: 100%;
-  /*height: auto;*/
-   width:600px;
-  height: 600px;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
   top: 0;
   left: 0;
-  border: red solid 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -191,17 +200,16 @@
 /*level 5*/
 #displayHall {
 
-    max-width: 100%;
-  /*height: auto;*/
-   width:600px;
-  height: 600px;
+  max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
   top: 0;
   left: 0;
-  border: red solid 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -213,19 +221,18 @@
 }
 
 
-/*level 7*/
+/*level 7 FINAL STAGE*/
 #displayFishing {
-    max-width: 100%;
-  /*height: auto;*/
-   width:600px;
-  height: 600px;
+  max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
   top: 0;
   left: 0;
-  border: red solid 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }

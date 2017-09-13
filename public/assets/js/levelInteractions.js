@@ -40,7 +40,10 @@ function delayChoice(){
 
 function animateText(){
   // $('#webTicker').webTicker();
-  $('.ticker').ticker();
+  $('.ticker').ticker({finishOnHover:false, cursorSpeed:25});
+  $(".displayNP").hide();
+  $(".displaySF").hide();
+
 }
 
 
