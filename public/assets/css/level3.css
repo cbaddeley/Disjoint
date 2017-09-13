@@ -4,9 +4,8 @@ body {
 
 }
 
-#store-front {
-	border: 3px;
-	border-color: #0000cd;
+.store-front {
+	border: 3px solid #0000cd;
 	color: #db7093;
 
 

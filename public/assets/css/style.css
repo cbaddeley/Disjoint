@@ -7,20 +7,20 @@
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  top: 0;
-  right: 0;
+  top: 110px;
+  right: 120px;
   bottom: 0;
     /*left:0;*/
-  height: 100%;
-  border: yellow solid 4px;
+  height: 50%;
+  /*border: yellow solid 4px;*/
   display: none;
 }
 
 .test {
-  border: blue solid 4px;
+  /*border: blue solid 4px;*/
   color: white;
   text-align: left;
-  bottom: 240;
+  top: 470px;
   position: absolute;
 }
 
@@ -30,7 +30,7 @@
   font-size: xx-large;
 }
 
-.container-fluid {
+.container {
   background: black;
   color: white;
   padding-right: 0;
@@ -40,7 +40,7 @@
 }
 
 .displaySF {
-  border: orange solid 4px;
+  /*border: orange solid 4px;*/
   font-size: xx-large;
   width: 100%;
   bottom: .3rem;
@@ -54,7 +54,7 @@
 
 .displayNP {
   font-size: xx-large;
-  border: purple solid 4px;
+  /*border: purple solid 4px;*/
   width: 100%;
   bottom: .3rem;
   position: absolute;
@@ -68,12 +68,16 @@
 .ticker {
   background: black;
   color: white;
-  border: red 2px solid;
+  /*border: red 2px solid;*/
   font-size: xx-large;
-  border: purple solid 4px;
-  width: 100%;
-  bottom: .3rem;
+  /*border: purple solid 4px;*/
+  width: 1020px;
+  top: 290px;
+  left: 200px;
+  z-index: 30;
+
   position: absolute;
+  margin: auto;
   background: #000;
   background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -92,16 +96,17 @@
 /*bg image*/
 #bedPic {
   max-width: 100%;
+  margin-top: 10px;
   /*height: auto;*/
   /*remove the 800px h and w below, and uncomment height:auto above for full screen*/
-  width:600px;
-  height: 600px;
+  width:960px;
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
   top: 0;
   left: 0;
-  border: red solid 5px;
+  /*border: red solid 5px;*/
   /*layering*/
  /* z-index: -10;*/
   /*center the image*/
@@ -117,14 +122,14 @@
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  top: 0;
+  top: 50px;
   right: 150px;
   bottom: 0;
     /*left:0;*/
   height: 100%;
   height: 200px;
   width: 200px;
-  border: solid green 4px;
+  /*border: solid green 4px;*/
   display: none;
 }
 
@@ -150,7 +155,7 @@
 }
 
 /*#displayGoblin{
-   background-image: url(../img/goblin.png); 
+   background-image: url(../img/goblin.png);
 
 }*/
 
@@ -288,4 +293,9 @@
 
 .displayNP {
   color: red;
+}
+
+ body {
+  background: black;
+  /*text-align: center;*/
 }

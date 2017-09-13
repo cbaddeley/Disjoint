@@ -46,8 +46,8 @@ function animateText(){
 
 function animateShadow(){
   $("#displayShadow").animate({
-      top: '400px',
-      opacity: '.8',
+      top: '50px',
+      opacity: '1',
       height:'500px',
   });
    $("#displayShadow").show(5000);
@@ -131,6 +131,7 @@ $(".test").on("click", ".choiceSelector", function( event ) {
   $(".test").hide(1000);
   //call the portal to appear to take user to the next page
   $("#portal").show(2000);
+   $("#displayShadow").hide(2000);
 
 });
 
