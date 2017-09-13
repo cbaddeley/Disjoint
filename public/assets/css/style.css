@@ -134,7 +134,7 @@
   margin-right: auto;
   height: 100%;
   display: block;
-  animation: pulse 3s ease infinite alternate, 
+  /*animation: pulse 3s ease infinite alternate, */
     /*nudge 5s linear infinite alternate;*/
 }
 /*@keyframes pulse{
@@ -153,7 +153,19 @@
 /*level 2 forest*/
 #displayForest {
 /*  background: url(../img/Fairy_Forest.JPG);*/
-  max-width: 100%;
+/*  max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
+  position: relative;
+  min-height: 100%
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+    max-width: 100%;
   margin-top: 10px;
   width:960px;
   height: auto;
@@ -181,7 +193,19 @@
 
 /*level 4 underworld */
 #displayHell {
-  max-width: 100%;
+/*  max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
+  position: relative;
+  min-height: 100%
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;*/
+    max-width: 100%;
   margin-top: 10px;
   width:960px;
   height: auto;
@@ -227,6 +251,18 @@
 
 /*level 7 FINAL STAGE*/
 #displayFishing {
+/*  max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
+  position: relative;
+  min-height: 100%
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;*/
   max-width: 100%;
   margin-top: 10px;
   width:960px;
