@@ -14,10 +14,21 @@
   height: 50%;
   /*border: yellow solid 4px;*/
   display: none;
+  animation: pulse 3s ease infinite alternate, 
 }
+@keyframes pulse{
+  0%{ transform: translate3d(50px, 40px, 0px);
+       animation-timing-function: ease-in; 
+      }
+  50%{transform: translate3d(50px, 60px, 0px);
+       animation-timing-function: ease-out;
 
+    }
+  100%{ transform: translate3d(50px, 40px, 0px);
+  }
+}
 .test {
-  border: blue solid 4px;
+ /* border: blue solid 4px;*/
   color: white;
   text-align: left;
   top: 370px;
@@ -134,14 +145,10 @@
   margin-right: auto;
   height: 100%;
   display: block;
-  /*animation: pulse 3s ease infinite alternate, */
+  
     /*nudge 5s linear infinite alternate;*/
 }
-/*@keyframes pulse{
-  0%{ opacity: 1;}
-  100%{ opacity: .8; }
-}
-*/
+
 /*@keyframes nudge{
 
 0%{}
