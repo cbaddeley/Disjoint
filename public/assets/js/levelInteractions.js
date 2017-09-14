@@ -4,22 +4,24 @@ function displayData() {
 
   //display choices in individual divs in test space
   $("#choicePrompt").text(choiceArray[0]);
-  //Okay now for showing the choice prompt
-  for (let i =0; i < 3; i++){
+  //Shows the player choice prompt
+  for (let i =0; i < 1; i++){
     var question = choiceArray[0];
         $(".testTitle").append(question);
     }
     /*hides the conversation div*/
   // $(".test").hide();
-  console.log("contents of the prArray[0]" + prArray[0]);
+console.log("this is a preview of the script for this level:")
+console.log("contents of the prArray[0]" + prArray[0]);
 console.log("contents of the sfArray[0]" + sfArray[0]);
 console.log("contents of the prArray[1]" + prArray[1]);
 console.log("contents of the sfArray[1]" + sfArray[1]);
 console.log("contents of the prArray[2]" + prArray[2]);
 console.log("contents of the sfArray[2]" + sfArray[2]);
-// console.log("contents of the prArray[1]" + prArray[3]);
-// console.log("contents of the sfArray[1]" + sfArray[3]);
+// console.log("contents of the prArray[3]" + prArray[3]);
+// console.log("contents of the sfArray[3]" + sfArray[3]);
   /*adds dialogues to the proper spaces:  append versus .text method here*/
+  //append seems to add ALL of the dialogue from the loop, while .text starts with array[2]
    $(".displayNP").text(prArray[0]);
    $(".displaySF").text(sfArray[0]);
    $(".displayNP").text(prArray[1]);
@@ -41,8 +43,8 @@ function delayChoice(){
     $(".test").append(choiceDiv);
   }
   // $(".test").show();
-  /*run on 20 sec delay*/
-}, 20000)
+  /*run on 15 sec delay, was 25 secs for the longer version*/
+}, 15000)
 }
 
 function animateText(){
