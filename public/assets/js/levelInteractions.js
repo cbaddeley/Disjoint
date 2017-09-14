@@ -51,7 +51,7 @@ function animateShadow(){
       top: '10px',
       opacity: '1',
       height:'567px',
-      width: '200px', 
+      // width: '200px', 
       easing: 'linear'
   });
    $("#displayShadow").show(5000);

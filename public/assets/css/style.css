@@ -10,25 +10,12 @@
   top: 110px;
   right: 120px;
   bottom: 0;
-    /*left:0;*/
-  height: 50%;
-  /*border: yellow solid 4px;*/
-  display: none;
-  /*animation: pulse 3s ease infinite alternate, */
+    height: 50%;
+    display: none;
+  
 }
-/*@keyframes pulse{
-  0%{ transform: translate3d(50px, 40px, 0px);
-       animation-timing-function: ease-in; 
-      }
-  50%{transform: translate3d(50px, 60px, 0px);
-       animation-timing-function: ease-out;
 
-    }
-  100%{ transform: translate3d(50px, 40px, 0px);
-  }
-}*/
 .test {
- /* border: blue solid 4px;*/
   color: white;
   text-align: left;
   top: 370px;
@@ -94,9 +81,7 @@
 .ticker {
   background: black;
   color: white;
-  /*border: red 2px solid;*/
-  font-size: large;
-  /*border: purple solid 4px;*/
+   font-size: large;
   width: 1020px;
   top: 500px;
   left: 300px;
@@ -142,23 +127,34 @@
 }
 
 #displayShadow {
-  background-image: url(../img/shadow.png);
+  /*background-image: url(../img/shadow3.png);*/
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
   display: block;
-  
-    /*nudge 5s linear infinite alternate;*/
+  animation: bobble 3s infinite;
 }
 
-/*@keyframes nudge{
+@keyframes bobble{
 
-0%{}
-100%{}
+0%{
+
+  transform: translate3d(50px, 40px, 0px);
+  animation-timing-function: ease-in;
+}
+
+50%{
+  transform: translate3d(50px, 70px, 0px);
+  animation-timing-function: ease-out;
+}
+
+100%{
+
+  transform: translate3d(50px, 40px, 0px);
+}
 
 }
-*/
 
 /*level 2 forest*/
 #displayForest {
@@ -170,7 +166,7 @@
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
   display: block;
   margin-left: auto;
@@ -194,7 +190,7 @@
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
   display: block;
   margin-left: auto;
@@ -215,7 +211,7 @@
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
   display: block;
   margin-left: auto;
@@ -246,6 +242,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;*/
+  /*top: 300px;*/
   max-width: 100%;
   margin-top: 10px;
   width:960px;
@@ -253,7 +250,7 @@
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
   display: block;
   margin-left: auto;
