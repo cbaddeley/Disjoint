@@ -11,15 +11,22 @@ function displayData() {
     }
     /*hides the conversation div*/
   // $(".test").hide();
-
+  console.log("contents of the prArray[0]" + prArray[0]);
+console.log("contents of the sfArray[0]" + sfArray[0]);
+console.log("contents of the prArray[1]" + prArray[1]);
+console.log("contents of the sfArray[1]" + sfArray[1]);
+console.log("contents of the prArray[2]" + prArray[2]);
+console.log("contents of the sfArray[2]" + sfArray[2]);
+// console.log("contents of the prArray[1]" + prArray[3]);
+// console.log("contents of the sfArray[1]" + sfArray[3]);
   /*adds dialogues to the proper spaces*/
-      $(".displayNP").append(prArray[0]);
+    $(".displayNP").append(prArray[0]);
    $(".displaySF").append(sfArray[0]);
    $(".displayNP").append(prArray[1]);
    $(".displaySF").append(sfArray[1]);
   $(".displayNP").append(prArray[2]);
    $(".displaySF").append(sfArray[2]);
-     $(".displayNP").append(prArray[3]);
+     // $(".displayNP").append(prArray[3]);
 
 }
 

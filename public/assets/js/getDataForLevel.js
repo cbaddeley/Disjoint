@@ -29,9 +29,9 @@ $( document ).ready(function() {
       $("#test").html(prArray[0]);
 
       //NP dialogue
-      $('#displayNP').html(sfArray[0]);
+      // $('#displayNP').html(sfArray[0]);
       //SF dialogue
-      $('#displaySF').html(choiceArray[0]);
+      // $('#displaySF').html(choiceArray[0]);
       //push dialog choices to the dialog textbox space
       displayData();
       delayChoice();
