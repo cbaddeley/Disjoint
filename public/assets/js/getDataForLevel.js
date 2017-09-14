@@ -29,15 +29,18 @@ $( document ).ready(function() {
       $("#test").html(prArray[0]);
 
       //NP dialogue
-      $('#displayNP').html(sfArray[0]);
+      // $('#displayNP').html(sfArray[0]);
       //SF dialogue
-      $('#displaySF').html(choiceArray[0]);
+      // $('#displaySF').html(choiceArray[0]);
       //push dialog choices to the dialog textbox space
       displayData();
       delayChoice();
       animateText();
+      // playclick();
       //animate the shadow figure and dialogue
       animateShadow();
+      playClick();
+      displayFinalStats();
       })
 });
 
@@ -51,8 +54,8 @@ $( document ).ready(function() {
   		currentRep = response[0].reputation;
       currentGold = response[0].gold;
   	})
+ });
 
-});
 
 // 
 // $(document).ready(function(){
