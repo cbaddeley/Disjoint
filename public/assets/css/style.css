@@ -37,16 +37,12 @@
   margin: 10px;
   font-family: 'Press Start 2P', cursive;
 
-/*  border-radius: 15px 50px 30px;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
-*/}
+}
 
 .testTitle {
   background: black;
   color: white;
-  font-size: xx-large;
+  font-size: large;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -62,7 +58,7 @@
 .displaySF {
   border: orange solid 4px;
   font-family: 'Press Start 2P', cursive;
-  font-size: xx-large;
+  font-size: large;
   width: 100%;
   bottom: .3rem;
   position: absolute;
@@ -78,7 +74,7 @@
   }
 
 .displayNP {
-  font-size: xx-large;
+  font-size: large;
   font-family: 'Press Start 2P', cursive;
   border: purple solid 4px;
   width: 100%;
@@ -99,7 +95,7 @@
   background: black;
   color: white;
   /*border: red 2px solid;*/
-  font-size: xx-large;
+  font-size: large;
   /*border: purple solid 4px;*/
   width: 1020px;
   top: 500px;
@@ -360,5 +356,6 @@
 
  body {
   background: black;
+   font-family: 'Press Start 2P', cursive;
   /*text-align: center;*/
 }
