@@ -72,7 +72,7 @@ $("#myModal").modal('show');
 $("#displayGold").text(currentGold);
 $("#displayRep").text(currentRep);
 // $("#displayCongratsPhoto").html()
-}
+}//LOOK INTO JPLAYER:  http://jplayer.org/
 // function playClick(){
 //   $(".choiceSelector")
 //   // .each(function(i) {
@@ -88,26 +88,10 @@ $("#displayRep").text(currentRep);
 //     $("#beep-two" + $(this).data("beeper"))[0].play();
 //   });
 // // $("#beep-two").attr("id", "beep-two0");
-
 // }
-// //animate the shadow figure
-// $("#displayShadow").on("click", function(){
 
-//   // $("#displayShadow").hide();
-//   // $("#displayShadow").toggle();
-
-// });
-
-// $("#displayShadow").show(5000, function(){
-
-//   $("#displayShadow").animate({
-//   // top: '500px',
-//   // opacity: '.8',
-//   height: $("#displayShadow".get(0).scrollHeight},
-//   );
-//   $("#displayShadow").hide(2000);
-// });
-
+//OR     var audio = $("audio")[0];
+    // audio.play();
 
 //portal replacement (takes the place of former next level advancement button)
 $("#portal").on("click", function( event ) {
