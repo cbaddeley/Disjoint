@@ -188,19 +188,13 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
 
 }
 
-/*#displayGoblin{
-   background-image: url(../img/goblin.png);
 
-}*/
-
-
-/*displaySpider*/
-#displaySpider {
-  background: url(../img/spider.jpeg);
-}
 
 /*level 4 underworld */
 #displayHell {
@@ -229,13 +223,11 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
 }
 
-/*li{
-  color: red;
-  border: green 5px solid;
-}
-*/
 
 /*level 5*/
 #displayHall {
@@ -252,6 +244,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
 }
 
 /*level 6*/
@@ -262,7 +257,7 @@
 
 
 /*level 7 FINAL STAGE*/
-#displayFishing {
+#displayCongrats{
 /*  max-width: 100%;
   margin-top: 10px;
   width:960px;
@@ -287,6 +282,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
 }
 
 #myModal{
