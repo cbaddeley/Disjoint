@@ -1,6 +1,10 @@
 /*style sheet for general templating*/
 /*general elements*/
-
+ body {
+  background: black;
+   font-family: 'Press Start 2P', cursive;
+  /*text-align: center;*/
+}
 
 #portal {
   opacity: 1;
@@ -10,24 +14,30 @@
   top: 110px;
   right: 120px;
   bottom: 0;
-    /*left:0;*/
-  height: 50%;
-  /*border: yellow solid 4px;*/
-  display: none;
+    height: 50%;
+    display: none;
+  
 }
 
 .test {
-  /*border: blue solid 4px;*/
   color: white;
   text-align: left;
-  top: 470px;
+  /*top: 370px;*/
+  top: 300px;
+  /*left: 500;*/
+  right: 500px;
   position: absolute;
+  margin: 10px;
+  padding: 5px;
+  font-family: 'Press Start 2P', cursive;
+
 }
 
 .testTitle {
   background: black;
   color: white;
-  font-size: xx-large;
+  font-size: large;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .container {
@@ -40,8 +50,9 @@
 }
 
 .displaySF {
-  /*border: orange solid 4px;*/
-  font-size: xx-large;
+ /* border: orange solid 4px;*/
+  font-family: 'Press Start 2P', cursive;
+  font-size: large;
   width: 100%;
   bottom: .3rem;
   position: absolute;
@@ -50,11 +61,16 @@
   background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
+  border-radius: 15px 50px 30px;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  }
 
 .displayNP {
-  font-size: xx-large;
-  /*border: purple solid 4px;*/
+  font-size: large;
+  font-family: 'Press Start 2P', cursive;
+/*  border: purple solid 4px;*/
   width: 100%;
   bottom: .3rem;
   position: absolute;
@@ -63,19 +79,17 @@
   background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+
 }
 
 .ticker {
   background: black;
   color: white;
-  /*border: red 2px solid;*/
-  font-size: xx-large;
-  /*border: purple solid 4px;*/
+   font-size: large;
   width: 1020px;
-  top: 290px;
-  left: 200px;
+  top: 500px;
+  left: 300px;
   z-index: 30;
-
   position: absolute;
   margin: auto;
   background: #000;
@@ -90,6 +104,13 @@
   color: white;
   background: black;
   font-size: larger;
+  padding: 5px;
+  font-family: 'Press Start 2P', cursive;
+
+}
+
+.choiceSelector:hover {
+  color: gray;
 }
 
 /*level 1 bedroom */
@@ -97,113 +118,117 @@
 #bedPic {
   max-width: 100%;
   margin-top: 10px;
-  /*height: auto;*/
-  /*remove the 800px h and w below, and uncomment height:auto above for full screen*/
   width:960px;
   height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
-  /*border: red solid 5px;*/
-  /*layering*/
- /* z-index: -10;*/
-  /*center the image*/
   display: block;
   margin-left: auto;
   margin-right: auto;
+-webkit-box-shadow: -7px -7px 17px 0px rgba(50, 50, 50, 1);
+-moz-box-shadow:    -7px -7px 17px 0px rgba(50, 50, 50, 1);
+box-shadow:         -7px -7px 17px 0px rgba(50, 50, 50, 1);
+border: 1px white solid;
+
 }
 
+
 #displayShadow {
-  background-image: url(../img/shadow.png);
- /* position: absolute;*/
-  opacity: 1;
+  /*background-image: url(../img/shadow3.png);*/
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  top: 50px;
-  right: 150px;
-  bottom: 0;
-    /*left:0;*/
   height: 100%;
-  height: 200px;
-  width: 200px;
-  /*border: solid green 4px;*/
-  display: none;
+  display: block;
+  animation: bobble 3s infinite;
+}
+/*shadow's animation css function*/
+@keyframes bobble{
+
+0%{
+
+  transform: translate3d(50px, 40px, 0px);
+  animation-timing-function: ease-in;
 }
 
+50%{
+  transform: translate3d(50px, 70px, 0px);
+  animation-timing-function: ease-out;
+}
 
+100%{
+
+  transform: translate3d(50px, 40px, 0px);
+}
+
+}
 
 /*level 2 forest*/
 #displayForest {
-/*  background: url(../img/Fairy_Forest.JPG);*/
-  max-width: 100%;
-  /*height: auto;*/
-   width:600px;
-  height: 600px;
+    max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  /*width: 100%;*/
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
-  border: red solid 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
 
 }
 
-/*#displayGoblin{
-   background-image: url(../img/goblin.png);
 
-}*/
-
-
-/*displaySpider*/
-#displaySpider {
-  background: url(../img/spider.jpeg);
-}
 
 /*level 4 underworld */
 #displayHell {
-  max-width: 100%;
-  /*height: auto;*/
-   width:600px;
-  height: 600px;
+
+    max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  /*width: 100%;*/
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
-  border: red solid 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
 }
 
-/*li{
-  color: red;
-  border: green 5px solid;
-}
-*/
 
 /*level 5*/
 #displayHall {
 
-    max-width: 100%;
-  /*height: auto;*/
-   width:600px;
-  height: 600px;
+  max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
-  border: red solid 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
 }
 
 /*level 6*/
@@ -213,36 +238,44 @@
 }
 
 
-/*level 7*/
-#displayFishing {
-    max-width: 100%;
-  /*height: auto;*/
-   width:600px;
-  height: 600px;
+/*level 7 FINAL STAGE*/
+#displayCongrats{
+
+  max-width: 100%;
+  margin-top: 10px;
+  width:960px;
+  height: auto;
   position: relative;
   min-height: 100%
   min-width: 100%;
-  top: 0;
+  top: 15px;
   left: 0;
-  border: red solid 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
 }
 
-#myModal{
+.modal-footer, .modal-body, .modal-header{
+background: black;
+ border: 0px;
+ color: white;
+}
+#displayGold, #displayRep{
+  border: red 2px solid;
+  color: white;
+}
 
-
+.modal-content{
+color: white;
+       box-shadow:
+   0 0 0  10px hsl(0, 0%, 80%),
+   0 0 0  15px hsl(0, 0%, 90%);
 }
 
 
-/*@media screen and (max-width: 1024px) {  Specific to this particular image
-  #bedPic {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-/*  }
-}*/
-*/
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
@@ -291,11 +324,4 @@
 @media only screen and (max-width : 320px) {
 }
 
-.displayNP {
-  color: red;
-}
 
- body {
-  background: black;
-  /*text-align: center;*/
-}

@@ -28,12 +28,3 @@ item_bonus INT NOT NULL,
 PRIMARY KEY(id)
 );
 
-
--- INSERT INTO Levels (level_name) VALUES ('Level 3');
--- INSERT INTO Levels (level_name) VALUES ('Level 5');
--- INSERT INTO Levels (level_name) VALUES ('Level 6');
-
-
-
--- INSERT INTO Shops (item_name, reputation, backpack, secret)
--- VALUES ("Motivation", 10), ("Nightmare book", 5), ("Curly lip hair", 15), ("Solved Folder", 10, false, true);

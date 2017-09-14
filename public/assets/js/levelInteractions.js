@@ -4,23 +4,31 @@ function displayData() {
 
   //display choices in individual divs in test space
   $("#choicePrompt").text(choiceArray[0]);
-  //Okay now for showing the choice prompt
+  //Shows the player choice prompt
   for (let i =0; i < 1; i++){
     var question = choiceArray[0];
         $(".testTitle").append(question);
     }
     /*hides the conversation div*/
   // $(".test").hide();
-
-  /*adds dialogues to the proper spaces*/
-      $(".displayNP").append(prArray[0]);
-   $(".displaySF").append(sfArray[0]);
-   $(".displayNP").append(prArray[1]);
-   $(".displaySF").append(sfArray[1]);
-  $(".displayNP").append(prArray[2]);
-   $(".displaySF").append(sfArray[2]);
-     $(".displayNP").append(prArray[3]);
-
+console.log("this is a preview of the script for this level:")
+console.log("contents of the prArray[0]" + prArray[0]);
+console.log("contents of the sfArray[0]" + sfArray[0]);
+console.log("contents of the prArray[1]" + prArray[1]);
+console.log("contents of the sfArray[1]" + sfArray[1]);
+console.log("contents of the prArray[2]" + prArray[2]);
+console.log("contents of the sfArray[2]" + sfArray[2]);
+// console.log("contents of the prArray[3]" + prArray[3]);
+// console.log("contents of the sfArray[3]" + sfArray[3]);
+  /*adds dialogues to the proper spaces:  append versus .text method here*/
+  //append seems to add ALL of the dialogue from the loop, while .text starts with array[2]
+   $(".displayNP").text(prArray[0]);
+   $(".displaySF").text(sfArray[0]);
+   $(".displayNP").text(prArray[1]);
+   $(".displaySF").text(sfArray[1]);
+  $(".displayNP").text(prArray[2]);
+   $(".displaySF").text(sfArray[2]);
+     // $(".displayNP").append(prArray[3]);
 }
 
 function delayChoice(){
@@ -35,43 +43,106 @@ function delayChoice(){
     $(".test").append(choiceDiv);
   }
   // $(".test").show();
-}, 25000)
+  /*run on 15 sec delay, was 25 secs for the longer version*/
+}, 15000)
 }
 
 function animateText(){
   // $('#webTicker').webTicker();
-  $('.ticker').ticker();
-}
+  $('.ticker').ticker({finishOnHover:false, cursorSpeed:50});
+  $(".displayNP").hide();
+  $(".displaySF").hide();
 
+}
 
 function animateShadow(){
   $("#displayShadow").animate({
-      top: '50px',
+      top: '10px',
       opacity: '1',
-      height:'500px',
+      height:'567px',
+      // width: '200px', 
+      easing: 'linear'
   });
    $("#displayShadow").show(5000);
    $("#displayShadow").hide();
   }
 
-// //animate the shadow figure
-// $("#displayShadow").on("click", function(){
+function displayFinalStats(){
 
-//   // $("#displayShadow").hide();
-//   // $("#displayShadow").toggle();
+//grab data from the games_db via $ajax call? or in the other getDataForLevel file?
+// var currentURL = window.location.origin;
+//   console.log(currentURL);
+// $.get("/api/playerLevel/" + sessionStorage.getItem('playerName'), function(data){
+// //display this data in the modal
+// console.log("the player's current rep is:" + data.reputation);
+// console.log("the player's current gold is" + data.gold);
+console.log("the player's current rep is:" + currentRep);
+console.log("the player's current rep is:" + currentGold);
+//make the modal work on an event? after the dialogue?
 
+    $("#displayGold").append(currentGold);
+    $("#displayRep").append(currentRep);
+    $("#myModal").modal('show');
 // });
+}
 
-// $("#displayShadow").show(5000, function(){
+function playClick(){
+var clickone = $("#mySoundClip")[0];
+  $(".choiceSelector").mouseenter(function(){
 
-//   $("#displayShadow").animate({
-//   // top: '500px',
-//   // opacity: '.8',
-//   height: $("#displayShadow".get(0).scrollHeight},
-//   );
-//   $("#displayShadow").hide(2000);
-// });
+    clickone.play();
+    alert("clickone played!");
+  }
+  )};
+// $(".choiceSelector")
+//   .each(function(i) {
+//     if (i != 0) {
+//       $("#mySoundClip")
+//         .clone()
+//         .attr("id", "beep-two" + i)
+//         .appendTo($(this).parent());
+//     }
+//     $(this).data("beeper", i);
+//   })
+//   .mouseenter(function() {
+//     $("#beep-two" + $(this).data("beeper"))[0].play();
+//   });
+// $("#beep-two").attr("id", "beep-two0");
 
+
+  // var choiceHover = $(".choiceSelectorSound");
+  //   var choiceClick = choicehover.find('audio')[0];
+
+  //   choiceHover.hover(function(){
+  //     choiceClick.play();
+  //   }, function(){
+
+  //     choiceClick.stop();
+  //     alert("click!!!");
+  //   });  
+
+ 
+// $("#displayCongratsPhoto").html()
+//LOOK INTO JPLAYER:  http://jplayer.org/
+// function playClick(){
+//   $(".choiceSelector")
+//   // .each(function(i) {
+//   //   if (i != 0) {
+//   //     $("#beep-two")
+//   //       .clone()
+//   //       .attr("id", "beep-two" + i)
+//   //       .appendTo($(this).parent());
+//   //   }
+//   //   $(this).data("beeper", i);
+//   // })
+//   .mouseenter(function() {
+//     $("#beep-two" + $(this).data("beeper"))[0].play();
+//   });
+// // $("#beep-two").attr("id", "beep-two0");
+// }
+
+//OR     var audio = $("audio")[0];
+    // audio.play();
 
 //portal replacement (takes the place of former next level advancement button)
 $("#portal").on("click", function( event ) {
