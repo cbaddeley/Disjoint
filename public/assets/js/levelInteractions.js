@@ -46,7 +46,6 @@ function animateText(){
 
 }
 
-
 function animateShadow(){
   $("#displayShadow").animate({
       top: '10px',
@@ -59,7 +58,21 @@ function animateShadow(){
    $("#displayShadow").hide();
   }
 
+function displayFinalStats(){
 
+//grab data from the games_db via $ajax call? or in the other getDataForLevel file?
+// var currentURL = window.location.origin;
+//   console.log(currentURL);
+console.log("the player's current rep is:" + currentRep);
+console.log("the player's current gold is" + currentGold);
+//display this data in the modal
+
+//make the modal work on an event? after the dialogue?
+$("#myModal").modal('show');
+$("#displayGold").text(currentGold);
+$("#displayRep").text(currentRep);
+// $("#displayCongratsPhoto").html()
+}
 // function playClick(){
 //   $(".choiceSelector")
 //   // .each(function(i) {

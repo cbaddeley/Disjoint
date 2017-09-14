@@ -104,7 +104,7 @@
   position: absolute;
   margin: auto;
   background: #000;
-    background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -162,19 +162,6 @@
 
 /*level 2 forest*/
 #displayForest {
-/*  background: url(../img/Fairy_Forest.JPG);*/
-/*  max-width: 100%;
-  margin-top: 10px;
-  width:960px;
-  height: auto;
-  position: relative;
-  min-height: 100%
-  min-width: 100%;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;*/
     max-width: 100%;
   margin-top: 10px;
   width:960px;
@@ -198,18 +185,7 @@
 
 /*level 4 underworld */
 #displayHell {
-/*  max-width: 100%;
-  margin-top: 10px;
-  width:960px;
-  height: auto;
-  position: relative;
-  min-height: 100%
-  min-width: 100%;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;*/
+
     max-width: 100%;
   margin-top: 10px;
   width:960px;
@@ -287,11 +263,18 @@
     0 0 0 15px hsl(0, 0%, 90%);
 }
 
-#myModal{
-
-
+.modal-footer, .modal-body, .modal-header{
+background: black;
+ border: 0px;
+ color: white;
 }
 
+.modal-content{
+
+       box-shadow:
+   0 0 0  10px hsl(0, 0%, 80%),
+   0 0 0  15px hsl(0, 0%, 90%);
+}
 
 /*@media screen and (max-width: 1024px) {  Specific to this particular image
   #bedPic {

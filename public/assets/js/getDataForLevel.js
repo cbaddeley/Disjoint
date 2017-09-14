@@ -40,6 +40,7 @@ $( document ).ready(function() {
       //animate the shadow figure and dialogue
       animateShadow();
       // playclick();
+      displayFinalStats();
       })
 });
 
