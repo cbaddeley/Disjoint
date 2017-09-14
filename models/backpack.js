@@ -18,6 +18,13 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
-
+Backpack.associate = function(models) {
+// Associating Backpack with Items
+// When a Backpack is deleted, also delete any associated Items
+    Backpack.hasMany(models.Item, {
+      onDelete: "cascade"
+    });
+  };
   return Backpack;
+
 };

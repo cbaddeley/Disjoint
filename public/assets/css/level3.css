@@ -1,18 +1,68 @@
 body {
+	background-image: url(../img/gradient_bkg01.png);
+	background-size: 100% 100%;
   text-align: center;
-  background-color: #deb887;
-
+	text-shadow: yellow;
+	color: white;
 }
 
+.Shop {
+
+	margin: 30px;
+	background-image: url(../img/gradient_bkg01.png);
+  text-align: center;
+  background-color: #2f4f4f;
+  font-family: 'Tahoma', Century Gothic;
+  
+}
+.shop-open{
+	background-image: url(../img/gradient_bkg01.png);
+	background-color: #696969;
+	border-color: white;
+	
+}
 .store-front {
+	background-image: url(../img/gradient_bkg01.png);
+	display: block;
+	float: left;
+	width: 50%;
+	height: 256px;
+	overflow: hidden;
+	background-color: #666666;
+	border-radius: 25px;
 	border: 3px solid #0000cd;
-	color: #db7093;
-
+	padding: 20px;
+	
+	
+}
+#sell-btn{
+	color: #0000cd;
+}
+#buy-btn{
+	color: #0000cd;
+}
+#add-item-btn{
+	color: #0000cd;
+}
+.backpack{
+	background-image: url(../img/gradient_bkg01.png);
+	display: block;
+	float: right;
+	width: 50%;
+	height: 256px;
+	overflow: auto;
+	border: 3px solid #0000cd;
+	border-radius: 25px;
+	padding: 20px;
+	border-left-style: dashed;	
 
 }
-#backpack{
-	border: 3px;
-	border-color: #800000;
-	color: #f5fffa;
 
+
+.shop-create{
+	background-image: url(../img/gradient_bkg01.png);
+	background-color: #4d4d4d;
+}
+textarea{
+	color: #0000cd;
 }

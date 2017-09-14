@@ -1,0 +1,63 @@
+
+<div class="Shop">
+  <heading class="shop-open">
+
+<h1>One Stop!</h1>
+  </heading>
+<div class="store-front">
+<h2>Shopping for Goods</h2>
+
+<ul>
+{{#each shop}}
+	{{#unless this.backpack}}
+	<li>
+	<p> {{this.id}}. {{this.item_name}}
+
+	<form action="/{{this.id}}?_method=PUT" method="POST">
+	<input type="hidden" name="backpack" value="true">
+	<button id="buy-btn" type="submit">Backpack</button>
+	</form>
+	</p>
+	</li>
+	{{/unless}}
+{{/each}}
+</ul>
+</div>
+
+<div class="backpack">
+<h2>these items are yours</h2>
+<br>
+<ul>
+  {{#each shop}}
+    {{#if this.backpack}}
+     <li>
+       {{this.item_name}}
+
+       <form action="/item/{{this.id}}?_method=PUT" method="POST">
+       	<input type="hidden" name="backpack" value="false"><button id="sell-btn" type="submit">Give back</button>
+       </form>
+       </li>
+       {{/if}}
+       {{/each}}
+ </ul>
+</div>
+<div class="clear"></div>
+  </div>{{!-- closesShop --}}
+  <div class="shop-create">
+  <h2>What should be in the store?</h2>
+  <br>
+
+  <form action="/level3" method="POST">
+    <textarea type="text" name="item_name">
+  </textarea>
+  <br>
+  {{!-- <input type="hidden" name="backpack" value="false"> --}}
+  <button id="add-item-btn" type="submit">gimme items, user </button>
+  </form>
+  </div>
+  
+
+
+<!--action will look similar for delete aswell-->
+
+
