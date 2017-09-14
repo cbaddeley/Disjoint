@@ -27,7 +27,6 @@ console.log("contents of the sfArray[2]" + sfArray[2]);
   $(".displayNP").append(prArray[2]);
    $(".displaySF").append(sfArray[2]);
      // $(".displayNP").append(prArray[3]);
-
 }
 
 function delayChoice(){
@@ -70,16 +69,24 @@ function displayFinalStats(){
 //grab data from the games_db via $ajax call? or in the other getDataForLevel file?
 // var currentURL = window.location.origin;
 //   console.log(currentURL);
+// $.get("/api/playerLevel/" + sessionStorage.getItem('playerName'), function(data){
+// //display this data in the modal
+// console.log("the player's current rep is:" + data.reputation);
+// console.log("the player's current gold is" + data.gold);
 console.log("the player's current rep is:" + currentRep);
-console.log("the player's current gold is" + currentGold);
-//display this data in the modal
-
+console.log("the player's current rep is:" + currentGold);
 //make the modal work on an event? after the dialogue?
-$("#myModal").modal('show');
-$("#displayGold").text(currentGold);
-$("#displayRep").text(currentRep);
+
+    $("#displayGold").html(currentGold);
+    $("#displayRep").html(currentRep);
+    $("#myModal").modal('show');
+// });
+}
+
+
+
 // $("#displayCongratsPhoto").html()
-}//LOOK INTO JPLAYER:  http://jplayer.org/
+//LOOK INTO JPLAYER:  http://jplayer.org/
 // function playClick(){
 //   $(".choiceSelector")
 //   // .each(function(i) {

@@ -54,8 +54,8 @@ $( document ).ready(function() {
   		currentRep = response[0].reputation;
       currentGold = response[0].gold;
   	})
+ });
 
-});
 
 // 
 // $(document).ready(function(){
