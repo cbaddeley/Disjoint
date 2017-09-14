@@ -1,6 +1,8 @@
 * {
-  font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
+/*  font-family: 'Source Code Pro', monospace;
+*/  
+  font-family: 'Press Start 2P', cursive;
+font-size: 18px;
 }
 
 body {
@@ -27,7 +29,8 @@ h3 {
 
 .btn-5 {
   margin-top: 20px;
-  font-size: 48px;
+/*  font-size: 48px;*/
+font-size: small;
   width: 240px;
 }
 
