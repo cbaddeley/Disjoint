@@ -39,7 +39,7 @@ $( document ).ready(function() {
       // playclick();
       //animate the shadow figure and dialogue
       animateShadow();
-      // playclick();
+      playClick();
       displayFinalStats();
       })
 });

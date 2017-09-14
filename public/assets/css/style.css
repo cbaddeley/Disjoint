@@ -1,6 +1,10 @@
 /*style sheet for general templating*/
 /*general elements*/
-
+ body {
+  background: black;
+   font-family: 'Press Start 2P', cursive;
+  /*text-align: center;*/
+}
 
 #portal {
   opacity: 1;
@@ -75,10 +79,7 @@
   background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-/*  border-radius: 15px 50px 30px;
-  padding: 20px;
-  width: 200px;
-  height: 150px;*/
+
 }
 
 .ticker {
@@ -144,7 +145,7 @@ border: 1px white solid;
   display: block;
   animation: bobble 3s infinite;
 }
-
+/*shadow's animation css function*/
 @keyframes bobble{
 
 0%{
@@ -239,19 +240,7 @@ border: 1px white solid;
 
 /*level 7 FINAL STAGE*/
 #displayCongrats{
-/*  max-width: 100%;
-  margin-top: 10px;
-  width:960px;
-  height: auto;
-  position: relative;
-  min-height: 100%
-  min-width: 100%;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;*/
-  /*top: 300px;*/
+
   max-width: 100%;
   margin-top: 10px;
   width:960px;
@@ -286,13 +275,7 @@ color: white;
    0 0 0  15px hsl(0, 0%, 90%);
 }
 
-/*@media screen and (max-width: 1024px) {  Specific to this particular image
-  #bedPic {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-/*  }
-}*/
-*/
+
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
@@ -341,12 +324,4 @@ color: white;
 @media only screen and (max-width : 320px) {
 }
 
-.displayNP {
-  color: red;
-}
 
- body {
-  background: black;
-   font-family: 'Press Start 2P', cursive;
-  /*text-align: center;*/
-}

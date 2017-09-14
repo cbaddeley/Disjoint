@@ -41,7 +41,8 @@ function delayChoice(){
     $(".test").append(choiceDiv);
   }
   // $(".test").show();
-}, 25000)
+  /*run on 20 sec delay*/
+}, 20000)
 }
 
 function animateText(){
@@ -77,14 +78,48 @@ console.log("the player's current rep is:" + currentRep);
 console.log("the player's current rep is:" + currentGold);
 //make the modal work on an event? after the dialogue?
 
-    $("#displayGold").html(currentGold);
-    $("#displayRep").html(currentRep);
+    $("#displayGold").append(currentGold);
+    $("#displayRep").append(currentRep);
     $("#myModal").modal('show');
 // });
 }
 
+function playClick(){
+var clickone = $("#mySoundClip")[0];
+  $(".choiceSelector").mouseenter(function(){
+
+    clickone.play();
+    alert("clickone played!");
+  }
+  )};
+// $(".choiceSelector")
+//   .each(function(i) {
+//     if (i != 0) {
+//       $("#mySoundClip")
+//         .clone()
+//         .attr("id", "beep-two" + i)
+//         .appendTo($(this).parent());
+//     }
+//     $(this).data("beeper", i);
+//   })
+//   .mouseenter(function() {
+//     $("#beep-two" + $(this).data("beeper"))[0].play();
+//   });
+// $("#beep-two").attr("id", "beep-two0");
 
 
+  // var choiceHover = $(".choiceSelectorSound");
+  //   var choiceClick = choicehover.find('audio')[0];
+
+  //   choiceHover.hover(function(){
+  //     choiceClick.play();
+  //   }, function(){
+
+  //     choiceClick.stop();
+  //     alert("click!!!");
+  //   });  
+
+ 
 // $("#displayCongratsPhoto").html()
 //LOOK INTO JPLAYER:  http://jplayer.org/
 // function playClick(){
