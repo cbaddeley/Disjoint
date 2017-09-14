@@ -50,7 +50,7 @@
 }
 
 .displaySF {
-  border: orange solid 4px;
+ /* border: orange solid 4px;*/
   font-family: 'Press Start 2P', cursive;
   font-size: large;
   width: 100%;
@@ -70,7 +70,7 @@
 .displayNP {
   font-size: large;
   font-family: 'Press Start 2P', cursive;
-  border: purple solid 4px;
+/*  border: purple solid 4px;*/
   width: 100%;
   bottom: .3rem;
   position: absolute;

@@ -5,7 +5,7 @@ function displayData() {
   //display choices in individual divs in test space
   $("#choicePrompt").text(choiceArray[0]);
   //Okay now for showing the choice prompt
-  for (let i =0; i < 1; i++){
+  for (let i =0; i < 3; i++){
     var question = choiceArray[0];
         $(".testTitle").append(question);
     }
@@ -19,13 +19,13 @@ console.log("contents of the prArray[2]" + prArray[2]);
 console.log("contents of the sfArray[2]" + sfArray[2]);
 // console.log("contents of the prArray[1]" + prArray[3]);
 // console.log("contents of the sfArray[1]" + sfArray[3]);
-  /*adds dialogues to the proper spaces*/
-    $(".displayNP").append(prArray[0]);
-   $(".displaySF").append(sfArray[0]);
-   $(".displayNP").append(prArray[1]);
-   $(".displaySF").append(sfArray[1]);
-  $(".displayNP").append(prArray[2]);
-   $(".displaySF").append(sfArray[2]);
+  /*adds dialogues to the proper spaces:  append versus .text method here*/
+   $(".displayNP").text(prArray[0]);
+   $(".displaySF").text(sfArray[0]);
+   $(".displayNP").text(prArray[1]);
+   $(".displaySF").text(sfArray[1]);
+  $(".displayNP").text(prArray[2]);
+   $(".displaySF").text(sfArray[2]);
      // $(".displayNP").append(prArray[3]);
 }
 
