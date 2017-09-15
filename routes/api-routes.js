@@ -175,5 +175,15 @@ app.delete("/api/level3/:id", function(req, res) {
     console.log("This is gathering all level data"+ dbLevelData);
   });
 });
+app.post('/api/Backpack', (req, res) => {
+
+  db.Backpack.create({
+    PlayerId: req.body.PlayerId,
+    ShopId: req.body.ShopId
+  })
+  .then(data => {
+    res.json(data);
+  });
+});
 
 };

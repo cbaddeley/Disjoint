@@ -101,20 +101,20 @@
 },
 "popup7.png":
 {
-	"frame": {"x":0,"y":322,"w":400,"h":202},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":202},
-	"sourceSize": {"w":400,"h":202},
-	"pivot": {"x":0.5,"y":0.5}
-},
-"popup8.png":
-{
 	"frame": {"x":326,"y":133,"w":433,"h":189},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":433,"h":189},
 	"sourceSize": {"w":433,"h":189},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"popup8.png":
+{
+	"frame": {"x":0,"y":322,"w":400,"h":202},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":202},
+	"sourceSize": {"w":400,"h":202},
 	"pivot": {"x":0.5,"y":0.5}
 },
 "redBeam.png":
