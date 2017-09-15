@@ -27,4 +27,3 @@ item_name VARCHAR(250) NOT NULL,
 item_bonus INT NOT NULL,
 PRIMARY KEY(id)
 );
-
