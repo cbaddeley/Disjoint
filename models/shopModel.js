@@ -1,4 +1,8 @@
-module.exports = function(sequelize, DataTypes) {var Shop = sequelize.define("Shop", {
+// var Sequelize = require("sequelize");
+// var sequelize = new Sequelize();
+// var playerModel = require("./playerModel.js");
+module.exports = function(sequelize, DataTypes) {
+	var Shop = sequelize.define("Shop", {
 	item_name: {
 	type: DataTypes.STRING,
 	allowNull: false,
@@ -21,5 +25,10 @@ module.exports = function(sequelize, DataTypes) {var Shop = sequelize.define("Sh
 },{
     timestamps: false
 });
+
+Shop.associate = function(models) {
+	Shop.hasMany(models.Backpack);
+};
+
 return Shop;
 };
