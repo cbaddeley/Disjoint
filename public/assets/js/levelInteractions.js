@@ -43,8 +43,8 @@ function delayChoice(){
     $(".test").append(choiceDiv);
   }
   // $(".test").show();
-  /*run on 15 sec delay, was 25 secs for the longer version*/
-}, 15000)
+  /*run on 10 sec delay, was 25 secs for the longer version*/
+}, 25000)
 }
 
 function animateText(){
