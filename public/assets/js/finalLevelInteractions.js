@@ -1,10 +1,11 @@
+//JS file for the final Level 7 Interactions 
 var choiceArray = [];
 var prArray = [];
 var sfArray = [];
 var currentGold;
 var currentRep;
 
-//Ajax request
+//Ajax request to grab the dialogue
 $( document ).ready(function() {
   var windowUrl = window.location.href;
   var lastChar = windowUrl[windowUrl.length -1];
@@ -40,7 +41,6 @@ $( document ).ready(function() {
       //animate the shadow figure and dialogue
       animateShadow();
       playClick();
-      // displayFinalStats();
       })
 });
 
@@ -54,5 +54,8 @@ $( document ).ready(function() {
   		currentRep = response[0].reputation;
       currentGold = response[0].gold;
   	})
+  	//grab the gold info from the database and push to modal
+  	 displayFinalStats();
  });
+
 

@@ -13,6 +13,7 @@ header {
 
 #worldMapHeader {
   font-size: 48px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .worldMap {
@@ -20,9 +21,9 @@ header {
     margin: auto;
     padding-left: 160px;
     margin-top: 10px;
-    border: 1px solid black;
-    height: 610px;
-    background-image: url(../img/oldmap.jpg);
+   /* border: 1px solid black;*/
+       height: 610px;
+    /*background-image: url(../img/oldmap.jpg);*/
 }
 .hexagon {
   /*display: none;*/

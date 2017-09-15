@@ -22,12 +22,12 @@ console.log("contents of the sfArray[2]" + sfArray[2]);
 // console.log("contents of the sfArray[3]" + sfArray[3]);
   /*adds dialogues to the proper spaces:  append versus .text method here*/
   //append seems to add ALL of the dialogue from the loop, while .text starts with array[2]
-   $(".displayNP").text(prArray[0]);
-   $(".displaySF").text(sfArray[0]);
-   $(".displayNP").text(prArray[1]);
-   $(".displaySF").text(sfArray[1]);
-  $(".displayNP").text(prArray[2]);
-   $(".displaySF").text(sfArray[2]);
+   $(".displayNP0").text(prArray[0]);
+   $(".displaySF0").text(sfArray[0]);
+   $(".displayNP1").text(prArray[1]);
+   $(".displaySF1").text(sfArray[1]);
+  $(".displayNP2").text(prArray[2]);
+   $(".displaySF2").text(sfArray[2]);
      // $(".displayNP").append(prArray[3]);
 }
 
@@ -206,26 +206,3 @@ $(".test").on("click", ".choiceSelector", function( event ) {
 
 });
 
-
-
-
-// var resultDiv = $("<div class='resultDiv container-fluid row'>");
-// var likeButton = $("<button class='btn-yes col-xs-4'>");
-// var dislikeButton = $("<button class='btn-no col-xs-4'>");
-// var moreInfoButton = $("<button class='btn-info col-xs-4'>");
-// var resultDivName = $("<p class='row'>");
-// moreInfoButton.text("Info");
-// moreInfoButton.attr("data-toggle", "modal");
-// moreInfoButton.attr("data-target", "#exampleModalLong");
-// dislikeButton.text("Nope");
-// likeButton.text("Like");
-// resultDiv.attr(arr[i]);
-// resultDiv.attr(arr[i].activities[0]);
-// resultDiv.attr(arr[i].activities[0].unique_id);
-// resultDivName.text(arr[i].name);
-// resultDiv.append(resultDivName);
-// resultDiv.append(dislikeButton);
-// resultDiv.append(moreInfoButton);
-// resultDiv.append(likeButton);
-// $(".resultsContainer").append(resultDiv);
-// }
