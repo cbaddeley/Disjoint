@@ -6,7 +6,9 @@ font-size: 18px;
 }
 
 body {
-  background: url(../img/vintage-concrete.png);
+  background: url(../img/darkcompbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -23,7 +25,7 @@ h3 {
   height: 600px;
   width: 960px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 100px;
   text-align: center;
     box-shadow:
     0 0 0 10px hsl(0, 0%, 80%),
