@@ -84,7 +84,8 @@ button {
 }
 
 body {
-  background-image: url(/assets/img/memphis-colorful.png);
+  /*background-image: url(/assets/img/memphis-colorful.png);*/
+  background-image: url(/assets/img/aolscreen.jpg);
 }
 
 #instructions {
