@@ -1,51 +1,62 @@
 body {
-	background-image: url(../img/gradient_bkg01.png);
+	background-image: url(https://i.pinimg.com/originals/e7/c0/f3/e7c0f3e93952b5afd8668cc83087ac09.gif);
 	background-size: 100% 100%;
   text-align: center;
 	text-shadow: yellow;
 	color: white;
+	  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .Shop {
 
 	margin: 30px;
-	background-image: url(../img/gradient_bkg01.png);
+	/*background-image: url(../img/gradient_bkg01.png);*/
   text-align: center;
   background-color: #2f4f4f;
-  font-family: 'Tahoma', Century Gothic;
+  font-family: 'Press Start 2P', cursive;
   
 }
 .shop-open{
-	background-image: url(../img/gradient_bkg01.png);
+	/*background-image: url(../img/gradient_bkg01.png);*/
 	background-color: #696969;
 	border-color: white;
 	
 }
 .store-front {
-	background-image: url(../img/gradient_bkg01.png);
+/*	background-image: url(../img/gradient_bkg01.png);*/
 	display: block;
 	float: left;
 	width: 50%;
-	height: 256px;
-	overflow: hidden;
-	background-color: #666666;
-	border-radius: 25px;
-	border: 3px solid #0000cd;
-	padding: 20px;
-	
-	
+	height: auto;
+	margin-top: 100px;
+	/*padding-top: 500px;*/
+	/*overflow: hidden;*/
+	/*background-color: #666666;*/
+	/*border-radius: 25px;
+	border: 3px solid #0000cd;*/
+	padding: 10px;
+	background-color: black;
+	    box-shadow:
+    0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
+    opacity: .8;
+
 }
 #sell-btn{
 	color: #0000cd;
+	font-family: 'Press Start 2P', cursive;
 }
 #buy-btn{
-	color: #0000cd;
+	color: black;
+	font-family: 'Press Start 2P', cursive;
 }
 #add-item-btn{
-	color: #0000cd;
+	color: black;
+	font-family: 'Press Start 2P', cursive;
 }
 .backpack{
-	background-image: url(../img/gradient_bkg01.png);
+	/*background-image: url(../img/gradient_bkg01.png);*/
 	display: block;
 	float: right;
 	width: 50%;
@@ -58,11 +69,23 @@ body {
 
 }
 
+h2{
 
+	font-family: 'Press Start 2P', cursive;
+}
 .shop-create{
-	background-image: url(../img/gradient_bkg01.png);
-	background-color: #4d4d4d;
+	/*background-image: url(../img/gradient_bkg01.png);*/
+	/*background-color: #4d4d4d;*/
 }
 textarea{
-	color: #0000cd;
+	color: black;
+}
+li{
+
+	border: 2px red solid;
+}
+
+.ticker{
+
+	border: yellow 2px solid;
 }
