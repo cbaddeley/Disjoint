@@ -1,3 +1,5 @@
+var currentPlayerId;
+
 $(".hexagon").click(function() {
   if ($(this).find("a").attr("href")) {
     window.location = $(this).find("a").attr("href");
@@ -13,6 +15,7 @@ $( document ).ready(function() {
   	}).done(function(response){
   		revealLevels(response[0].level_access);
       removeClicks(response[0].level_access);
+      currentPlayerId = response[0].id;
   	})
 
 });

@@ -222,4 +222,50 @@ adding shop values
 //   });
 // });
 
+app.put("/item/:id", function(req, res) {
+  db.Shop.update({
+    backpack: false
+  }, {
+    where: {
+      id: req.params.id
+    }
+
+  }).then(function(dbShop) {
+    res.redirect("/level3");
+  });
+});
+//DELETE by something other than id?Maybe shop item#?
+app.delete("/api/level3/:id", function(req, res) {
+  db.Shop.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(dbShop) {
+    res.redirect("/level3");
+  });
+});
+
+
+  app.get("/api/levelInfo/:level", function(req, res) {
+    console.log("the level is:" + req.params.level);
+    db.Level.findAll({where: {
+      id: parseInt(req.params.level)
+    }
+  }).then(function(dbLevelData) {
+    res.json(dbLevelData);
+    console.log("This is gathering all level data"+ dbLevelData);
+  });
+});
+app.post('/api/Backpack', (req, res) => {
+
+  db.Backpack.create({
+    PlayerId: req.body.PlayerId,
+    ShopId: req.body.ShopId
+  })
+  .then(data => {
+    res.json(data);
+  });
+});
+
+
 };

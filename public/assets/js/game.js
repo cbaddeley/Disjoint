@@ -356,6 +356,7 @@ function play() {
           ship.alpha = 0.5;
           healthBar.outer.width -= 1;
           stage.removeChild(redBeam);
+          redBeams.splice(redBeams.indexOf(redBeam), 1);
           explosionOneAnim.x = redBeam.getGlobalPosition().x + (redBeam.width / 2);
           explosionOneAnim.y = redBeam.getGlobalPosition().y + (redBeam.height / 2);
           explosionOneAnim.anchor.set(0.5);
@@ -369,7 +370,6 @@ function play() {
         } else {
           ship.alpha = 1;
         }
-
     });
     greenBeams.forEach(function(greenBeam) {
         greenBeam.x += greenBeam.vx;
