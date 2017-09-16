@@ -35,11 +35,14 @@ delayChoice();
 //function to later display the question prompt for the player (after the delay choices)
 function delayQuestPrompt(){
 setTimeout(function(){
-
-  for (let i =0; i < 1; i++){
+   // for (let i =0; i < 1; i++){
     var question = choiceArray[0];
         $(".testTitle").append(question);
-      }
+  //     }
+  // for (let i =0; i < 1; i++){
+  //   var question = choiceArray[0];
+  //       $(".testTitle").append(question);
+  //     }
 
 
 }, 15000)}
