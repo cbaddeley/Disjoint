@@ -34,13 +34,13 @@ $( document ).ready(function() {
       // $('#displaySF').html(choiceArray[0]);
       //push dialog choices to the dialog textbox space
       displayData();
-      delayChoice();
+      // delayChoice();
       animateText();
       // playclick();
       //animate the shadow figure and dialogue
       animateShadow();
-      playClick();
-      displayFinalStats();
+      // playClick();
+      // displayFinalStats();
       })
 });
 
@@ -57,17 +57,29 @@ $( document ).ready(function() {
  });
 
 
-// 
-// $(document).ready(function(){
-// resizeDiv();
-// });
-//
-// window.onresize = function(event) {
-// resizeDiv();
-// }
-//
-// function resizeDiv() {
-// vpw = $(window).width();
-// vph = $(window).height();
-// $('.container-fluid').css({'height': vph + 'px'});
-// }
+//handles css page transitions
+$(document).ready(function() {
+
+$('body').css('display', 'none');
+
+$('body').fadeIn(1000);
+
+
+
+$('.link').click(function() {
+
+event.preventDefault();
+
+newLocation = this.href;
+
+$('body').fadeOut(1000, newpage);
+
+});
+
+function newpage() {
+
+window.location = newLocation;
+
+}
+
+});

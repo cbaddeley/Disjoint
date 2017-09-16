@@ -22,21 +22,29 @@
                             </head>
                             <body>
                               <div id="choiceSelectorSound">
-                            <audio src="/assets/sounds/beep.mp3" preload="auto" id="mySoundClip"><!-- <audio></audio> src="/assets/sounds/beep.ogg"></source> -->
-    Your browser does not support this mouse click sound
-</audio>
+                         
 </div>
                               <div class="ticker">
-                                  <ul>
-                                      <li>
-                                          <div class="displayNP"></div>
-                                      </li>
-                                      <li>
-                                          <div class="displaySF"></div>
-                                      </li>
-                                      <li>
+                                  <ul><!--script pattern-->
+                                    <!--the question/prompt for the user-->
+                                       <li>
                                           <div class="testTitle"></div>
                                       </li>
+                                      <li>
+                                          <div class="displayNP0"></div>
+                                      </li>
+                                      <li>
+                                          <div class="displaySF0"></div>
+                                      </li>
+                                      <li><div class="displayNP1"></div>
+                                      </li>
+                                      <li><div class="displaySF1"></div></li>
+
+
+                                      <li><div class="displayNP2"></div></li>
+                                      
+                                    <li><div class="displaySF2"></div></li>
+
                                   </ul>
                               </div>
                                 <div class="container">
@@ -52,9 +60,10 @@
                                                 <div class="test"></div>
                                             </div>
                                         </body>
+<!--audio loop find better file-->
+  <audio loop="loop" autoplay="autoplay"><source src="/assets/sounds/shadowtheme.mp3"></audio>
                                        
                                         <!--ticker link-->
-
                                         <script type="text/javascript" src="/assets/js/jquery.ticker.js"></script>
                                         <!--makes dialog accessible-->
                                         <script type="text/javascript" src="/assets/js/getDataForLevel.js"></script>

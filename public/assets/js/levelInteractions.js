@@ -3,38 +3,57 @@
 function displayData() {
 
   //display choices in individual divs in test space
-  $("#choicePrompt").text(choiceArray[0]);
+  // $("#choicePrompt").text(choiceArray[0]);
   //Shows the player choice prompt
-  for (let i =0; i < 1; i++){
-    var question = choiceArray[0];
-        $(".testTitle").append(question);
-    }
+  // for (let i =0; i < 1; i++){
+  //   var question = choiceArray[0];
+  //       $(".testTitle").append(question);
+  //     }
     /*hides the conversation div*/
   // $(".test").hide();
-console.log("this is a preview of the script for this level:")
+console.log("this is a preview of the script for this level:");
 console.log("contents of the prArray[0]" + prArray[0]);
 console.log("contents of the sfArray[0]" + sfArray[0]);
 console.log("contents of the prArray[1]" + prArray[1]);
 console.log("contents of the sfArray[1]" + sfArray[1]);
 console.log("contents of the prArray[2]" + prArray[2]);
 console.log("contents of the sfArray[2]" + sfArray[2]);
-// console.log("contents of the prArray[3]" + prArray[3]);
-// console.log("contents of the sfArray[3]" + sfArray[3]);
-  /*adds dialogues to the proper spaces:  append versus .text method here*/
-  //append seems to add ALL of the dialogue from the loop, while .text starts with array[2]
-   $(".displayNP").text(prArray[0]);
-   $(".displaySF").text(sfArray[0]);
-   $(".displayNP").text(prArray[1]);
-   $(".displaySF").text(sfArray[1]);
-  $(".displayNP").text(prArray[2]);
-   $(".displaySF").text(sfArray[2]);
-     // $(".displayNP").append(prArray[3]);
+
+//SCRIPT FORMAT 
+   $(".displayNP0").text(prArray[0]);
+   $(".displaySF0").text(sfArray[0]);
+   $(".displayNP1").text(prArray[1]);
+   $(".displaySF1").text(sfArray[1]);
+  $(".displayNP2").text(prArray[2]);
+   $(".displaySF2").text(sfArray[2]);
+
+delayQuestPrompt();
+delayChoice();
+
 }
 
+//function to later display the question prompt for the player (after the delay choices)
+function delayQuestPrompt(){
+setTimeout(function(){
+   // for (let i =0; i < 1; i++){
+    var question = choiceArray[0];
+        $(".testTitle").append(question);
+  //     }
+  // for (let i =0; i < 1; i++){
+  //   var question = choiceArray[0];
+  //       $(".testTitle").append(question);
+  //     }
+
+
+}, 15000)}
+
+
+
+// function to make the choices for the player to select visible on a 25 sec 
 function delayChoice(){
   // setTimeout()
   setTimeout(function(){
- /*loop to provide choices for the player*/
+ // loop to provide choices for the player
     for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
     choiceDiv.text(choiceArray[i]);
@@ -42,10 +61,9 @@ function delayChoice(){
     // $(".testTitle").append(question);
     $(".test").append(choiceDiv);
   }
-  // $(".test").show();
-  /*run on 15 sec delay, was 25 secs for the longer version*/
-}, 15000)
-}
+    // $(".test").show();
+ //show the choices to be selected after 30 sec delay
+}, 30000)}
 
 function animateText(){
   // $('#webTicker').webTicker();
@@ -94,55 +112,7 @@ var clickone = $("#mySoundClip")[0];
     alert("clickone played!");
   }
   )};
-// $(".choiceSelector")
-//   .each(function(i) {
-//     if (i != 0) {
-//       $("#mySoundClip")
-//         .clone()
-//         .attr("id", "beep-two" + i)
-//         .appendTo($(this).parent());
-//     }
-//     $(this).data("beeper", i);
-//   })
-//   .mouseenter(function() {
-//     $("#beep-two" + $(this).data("beeper"))[0].play();
-//   });
-// $("#beep-two").attr("id", "beep-two0");
 
-
-  // var choiceHover = $(".choiceSelectorSound");
-  //   var choiceClick = choicehover.find('audio')[0];
-
-  //   choiceHover.hover(function(){
-  //     choiceClick.play();
-  //   }, function(){
-
-  //     choiceClick.stop();
-  //     alert("click!!!");
-  //   });  
-
- 
-// $("#displayCongratsPhoto").html()
-//LOOK INTO JPLAYER:  http://jplayer.org/
-// function playClick(){
-//   $(".choiceSelector")
-//   // .each(function(i) {
-//   //   if (i != 0) {
-//   //     $("#beep-two")
-//   //       .clone()
-//   //       .attr("id", "beep-two" + i)
-//   //       .appendTo($(this).parent());
-//   //   }
-//   //   $(this).data("beeper", i);
-//   // })
-//   .mouseenter(function() {
-//     $("#beep-two" + $(this).data("beeper"))[0].play();
-//   });
-// // $("#beep-two").attr("id", "beep-two0");
-// }
-
-//OR     var audio = $("audio")[0];
-    // audio.play();
 
 //portal replacement (takes the place of former next level advancement button)
 $("#portal").on("click", function( event ) {
@@ -206,26 +176,3 @@ $(".test").on("click", ".choiceSelector", function( event ) {
 
 });
 
-
-
-
-// var resultDiv = $("<div class='resultDiv container-fluid row'>");
-// var likeButton = $("<button class='btn-yes col-xs-4'>");
-// var dislikeButton = $("<button class='btn-no col-xs-4'>");
-// var moreInfoButton = $("<button class='btn-info col-xs-4'>");
-// var resultDivName = $("<p class='row'>");
-// moreInfoButton.text("Info");
-// moreInfoButton.attr("data-toggle", "modal");
-// moreInfoButton.attr("data-target", "#exampleModalLong");
-// dislikeButton.text("Nope");
-// likeButton.text("Like");
-// resultDiv.attr(arr[i]);
-// resultDiv.attr(arr[i].activities[0]);
-// resultDiv.attr(arr[i].activities[0].unique_id);
-// resultDivName.text(arr[i].name);
-// resultDiv.append(resultDivName);
-// resultDiv.append(dislikeButton);
-// resultDiv.append(moreInfoButton);
-// resultDiv.append(likeButton);
-// $(".resultsContainer").append(resultDiv);
-// }

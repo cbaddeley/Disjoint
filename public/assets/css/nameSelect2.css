@@ -1,12 +1,13 @@
 * {
-/*  font-family: 'Source Code Pro', monospace;
-*/  
   font-family: 'Press Start 2P', cursive;
 font-size: 18px;
 }
 
 body {
-  background: url(../img/vintage-concrete.png);
+  background: url(../img/darkcompbg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 
@@ -23,7 +24,7 @@ h3 {
   height: 600px;
   width: 960px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 100px;
   text-align: center;
     box-shadow:
     0 0 0 10px hsl(0, 0%, 80%),
@@ -32,9 +33,8 @@ h3 {
 
 .btn-5 {
   margin-top: 20px;
-/*  font-size: 48px;*/
-font-size: small;
-  width: 240px;
+  font-size: 48px;
+  width: 300px;
 }
 
 
@@ -42,11 +42,9 @@ font-size: small;
     background: #F2C777;
 }
 
-/*.input__field--haruki, .input__field {
-    color: black;
-}*/
 
 .input__field--haruki {
   font-size: 2em;
   color: black;
+  font-family: 'Press Start 2P', cursive;
 }
