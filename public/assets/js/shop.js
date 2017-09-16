@@ -16,6 +16,8 @@ $( document ).ready(function() {
       		crossDomain: 'true',
       		url: "/api/Backpack/" + currentPlayerId
       	}).done(function(response){
+          console.log(typeof response);
+          console.log(response[0]);
           moveShopToBackpack(response);
 
       	})
@@ -26,6 +28,7 @@ $( document ).ready(function() {
 $(".shop").on("click", ".shopItem", function() {
   console.log($(this).val());
    var currentShopId = $(this).val();
+     $(".ulBackpack").append($(this));
   $.post("/api/Backpack", {PlayerId:currentPlayerId,ShopId:currentShopId},
     function(data) {
       console.log(data);
@@ -35,7 +38,7 @@ $(".shop").on("click", ".shopItem", function() {
 
 function moveShopToBackpack(arr) {
   for (var i = 0; i <arr.length; i++) {
-    $(".ulBackpack").append($("#item" + i));
+    $(".ulBackpack").append($("#item" + arr[i].ShopId));
     console.log(arr[i].ShopId);
   }
 }
