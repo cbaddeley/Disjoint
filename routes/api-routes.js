@@ -73,179 +73,6 @@ module.exports = function(app) {
       });
   });
 
-
-  app.get("/level3", function(req, res) {
-    db.Shop.findAll({}).then(function(dbItems) {
-      var hbsObject = {
-       items: dbItems
-      };
-     console.log(hbsObject);
-      res.render("level3", hbsObject);
-      });
-  });
-  //check json
-
-  // app.get("/api/level3", function(req, res){
-  //   db.Shop.findAll({}).then(function(dbShop){
-  //     res.json(dbShop);
-  //   });
-  // });
-//This is the market page.
-  // app.get("/level3", function(req, res) {
-  //   db.Item.findAll({}).then(function(dbItems) {
-  //      var hbsObject = {
-  //       items: dbItems
-  //     };
-  //     console.log(hbsObject);
-  //     res.render("level3", hbsObject);
-  //     });
-  // });
-  
-// app.get("/api/posts/category/:category", function(req, res) {
-//     db.Post.findAll({
-//       where: {
-//         category: req.params.category
-//       }
-//     })
-//     .then(function(dbPost) {
-//       res.json(dbPost);
-//     });
-//   });
-////////////////////////////////////
-//Shop////////Shop///////////Shop///
-//so if we can make an api route that pulls the backpack table combined with the shop table then we’re gold
-
-
-// app.post('/level3', (req, res) => {
-//   db.Backpack.create({
-//     PlayerId: req.body.PlayerId,
-//     ShopId: req.body.ShopId
-//   })
-//   .then(data => {
-//     res.json(data);
-//   });
-// });
-// Add a join to include all of each Player's Shop items
-  app.get('/level3', (req, res) =>{
-   
-     db.Backpack.findAll({
-      where: {
-        PlayerId: req.body.currentPlayerId
-      },
-      include: [db.Shop]
-
-    }).then(function(dbBackpack) {
-      var bPack = dbBackpack;
-      db.Shop.findAll({})
-      
-      .then(function(dbShop){
-        var shopPack = {bPack, dbShop};
-        console.log(shopPack);
-        res.json(shopPack);
-      })
-    });
-  });
-app.post('/api/Backpack', (req, res) => {
-  db.Backpack.create({
-    PlayerId: req.body.PlayerId,
-    ShopId: req.body.ShopId
-  })
-  .then(data => {
-    res.json(data);
-  });
-});
-  //for all backpacks, connect
-
-
-adding shop values
-  app.get("/level3", function(req, res) {
-    db.Shop.findAll({}).then(function(dbShop) {
-      var hbsObject = {shop: dbShop};
-    console.log(hbsObject);//doesn't show in console
-    res.render("level3", hbsObject);
-    //res.json(dbShop);
-    });
-  });
-//route for creating shop stuff
-  // app.post("/level3", function(req, res) {
-  //   db.Shop.create({item_name: req.body.item_name//, reputation: req.body.reputation, backpack: req.body.backpack, secret: req.body.secret
-  //   }).then(function(dbShop) {
-  //     res.redirect("/level3");//maybe takeout hbsObject
-  //   });
-  // });
-//PUT route for 'buying' items from shop
-// app.put("/:id", function(req, res) {
-//   db.Shop.update({
-//     backpack: true
-//   }, {
-//     where: {
-//       id: req.params.id
-//     }
-//   }).then(function(dbShop) {
-//     res.redirect("/level3");
-//   });
-// });
-
-//PUT route for 'selling' items to shop
-// app.put("/item/:id", function(req, res) {
-//   db.Shop.update({
-//     backpack: false
-//   }, {
-//     where: {
-//       id: req.params.id
-//     }
-
-//   }).then(function(dbShop) {
-//     res.redirect("/level3");
-//   });
-// });
-
-// app.delete("/api/level3/:id", function(req, res) {
-//   db.Shop.destroy({
-//     where: {
-//       id: req.params.id
-//     }
-//   }).then(function(dbShop) {
-//     res.redirect("/level3");
-//   });
-// });
-
-
-//   app.get("/api/levelInfo/:level", function(req, res) {
-//     console.log("the level is:" + req.params.level);
-//     db.Level.findAll({where: {
-//       id: parseInt(req.params.level)
-//     }
-//   }).then(function(dbLevelData) {
-//     res.json(dbLevelData);
-//     console.log("This is gathering all level data"+ dbLevelData);
-//   });
-// });
-
-app.put("/item/:id", function(req, res) {
-  db.Shop.update({
-    backpack: false
-  }, {
-    where: {
-      id: req.params.id
-    }
-
-  }).then(function(dbShop) {
-    res.redirect("/level3");
-  });
-});
-//DELETE by something other than id?Maybe shop item#?
-app.delete("/api/level3/:id", function(req, res) {
-  db.Shop.destroy({
-    where: {
-      id: req.params.id
-    }
-  }).then(function(dbShop) {
-    res.redirect("/level3");
-  });
-});
-
-
   app.get("/api/levelInfo/:level", function(req, res) {
     console.log("the level is:" + req.params.level);
     db.Level.findAll({where: {
@@ -266,6 +93,28 @@ app.post('/api/Backpack', (req, res) => {
     res.json(data);
   });
 });
+
+
+app.get('/level3', (req, res) =>{
+
+     db.Shop.findAll({
+    }).then(function(dbShop) {
+      var hbsObject = {
+        items: dbShop
+      };
+        res.render("level3", hbsObject);
+      });
+    });
+
+  app.get("/api/Backpack/:id", (req, res) => {
+    db.Backpack.findAll({
+      where: {
+        PlayerId: req.params.id
+      }
+    }).then(function(dbBackpack) {
+      res.json(dbBackpack);
+    });
+  });
 
 
 };
