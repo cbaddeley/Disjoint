@@ -15,7 +15,7 @@ body {
   font-family: 'Tahoma', Century Gothic;
   
 }
-.shop-open{
+#shop-open{
 	background-image: url(../img/gradient_bkg01.png);
 	background-color: #696969;
 	border-color: white;

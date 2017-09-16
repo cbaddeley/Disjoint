@@ -1,22 +1,22 @@
-
 <div class="Shop">
-  <heading class="shop-open">
-
+<div class="row">
+ <heading class="col-lg-12" id="shop-open">
+ 
 <h1>One Stop!</h1>
   </heading>
-<div class="store-front">
+  </div>
+<div class="row">
+<div class="col-lg-6 store-front">
 <h2>Shopping for Goods</h2>
 
 <ul>
 {{#each shop}}
-	{{#unless this.backpack}}
+	
 	<li>
-	<p> {{this.id}}. {{this.item_name}}
+	<p> {{this.item_name}}
 
-	<form action="/{{this.id}}?_method=PUT" method="POST">
-	<input type="hidden" name="backpack" value="true">
 	<button id="buy-btn" type="submit">Backpack</button>
-	</form>
+	
 	</p>
 	</li>
 	{{/unless}}
@@ -24,11 +24,11 @@
 </ul>
 </div>
 
-<div class="backpack">
+<div class="col-lg-6 backpack">
 <h2>these items are yours</h2>
 <br>
-<ul>
-  {{#each shop}}
+{{!-- <ul>
+  {{#each backpack}}
     {{#if this.backpack}}
      <li>
        {{this.item_name}}
@@ -39,8 +39,9 @@
        </li>
        {{/if}}
        {{/each}}
- </ul>
+ </ul> --}}
 </div>
+</div>{{!-- row --}}
 <div class="clear"></div>
   </div>{{!-- closesShop --}}
   <div class="shop-create">
