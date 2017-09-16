@@ -11,7 +11,7 @@ header {
   padding-bottom: 5px;
   background-color: rgba(0,0,0,0.6);
   color: white;
-  font-family: 'Source Code Pro', monospace;
+ font-family: 'Press Start 2P', cursive;
 }
 
 #worldMapHeader {
@@ -24,9 +24,28 @@ header {
     margin: auto;
     padding-left: 160px;
     margin-top: 10px;
-   /* border: 1px solid black;*/
-       height: 610px;
-    /*background-image: url(../img/oldmap.jpg);*/
+    height: 610px;
+   
+}
+
+@keyframes bobble{
+
+0%{
+
+  transform: translate3d(50px, 10px, 0px);
+  animation-timing-function: ease-in;
+}
+
+50%{
+  transform: translate3d(50px, 30px, 0px);
+  animation-timing-function: ease-out;
+}
+
+100%{
+
+  transform: translate3d(50px, 10px, 0px);
+}
+
 }
 .hexagon {
   /*display: none;*/
@@ -107,41 +126,52 @@ header {
 #level1 {
     left: 117px;
     top: 5px;
-    background-image: url(/assets/img/smallBedroom.png);
+    background-image: url(/assets/img/bedroom.png);
+    animation: bobble 7s infinite; 
 }
 
 #level2 {
     left: 10px;
     top: 15px;
-    background-image: url(/assets/img/smallForest.png);
+    background-image: url(/assets/img/Fairy_Forest2.png);
+    animation: bobble 7.5s infinite; 
 }
 
 #level3 {
     left: 223px;
     top: -157px;
+    background-image: url(https://i.pinimg.com/originals/e7/c0/f3/e7c0f3e93952b5afd8668cc83087ac09.gif);
+    animation: bobble 7.8s infinite; 
 }
 
 #level4 {
     left: 116px;
     top: -148px;
-    background-image: url(/assets/img/smallVolcano.png);
+    background-image: url(/assets/img/volcano3.jpg);
+      animation: bobble 7.5s infinite; 
+
 }
+
 
 #level5 {
     top: -321px;
     left: 329px;
-    background-image: url(/assets/img/smallArmor.png);
+    background-image: url(/assets/img/alley.gif);
+      animation: bobble 7s infinite; 
 }
 
 #level6 {
     top: -677px;
     left: 435px;
     background-image: url(/assets/img/small90.png);
-}
+      animation: bobble 7.5s infinite; 
+    }
 
 #level7 {
     top: -1033px;
     left: 330px;
+    background-image: url(/assets/img/welcomehome.gif);
+      animation: bobble 7.5s infinite; 
 }
 
 
@@ -197,7 +227,8 @@ header {
 
 .innerText {
   text-align: center;
-  font-size: 36px;
+  font-size: 30px;
   margin-top: 35px;
   color: white;
+  font-family: 'Press Start 2P', cursive;
 }

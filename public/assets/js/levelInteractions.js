@@ -3,12 +3,12 @@
 function displayData() {
 
   //display choices in individual divs in test space
-  $("#choicePrompt").text(choiceArray[0]);
+  // $("#choicePrompt").text(choiceArray[0]);
   //Shows the player choice prompt
-  for (let i =0; i < 1; i++){
-    var question = choiceArray[0];
-        $(".testTitle").append(question);
-    }
+  // for (let i =0; i < 1; i++){
+  //   var question = choiceArray[0];
+  //       $(".testTitle").append(question);
+  //     }
     /*hides the conversation div*/
   // $(".test").hide();
 console.log("this is a preview of the script for this level:");
@@ -18,18 +18,34 @@ console.log("contents of the prArray[1]" + prArray[1]);
 console.log("contents of the sfArray[1]" + sfArray[1]);
 console.log("contents of the prArray[2]" + prArray[2]);
 console.log("contents of the sfArray[2]" + sfArray[2]);
-// console.log("contents of the prArray[3]" + prArray[3]);
-// console.log("contents of the sfArray[3]" + sfArray[3]);
-  /*adds dialogues to the proper spaces:  append versus .text method here*/
-  //append seems to add ALL of the dialogue from the loop, while .text starts with array[2]
+
+//SCRIPT FORMAT 
    $(".displayNP0").text(prArray[0]);
    $(".displaySF0").text(sfArray[0]);
    $(".displayNP1").text(prArray[1]);
    $(".displaySF1").text(sfArray[1]);
   $(".displayNP2").text(prArray[2]);
    $(".displaySF2").text(sfArray[2]);
-     // $(".displayNP").append(prArray[3]);
+
+delayQuestPrompt();
+delayChoice();
+
 }
+
+//function to later display the question prompt for the player (after the delay choices)
+function delayQuestPrompt(){
+setTimeout(function(){
+
+  for (let i =0; i < 1; i++){
+    var question = choiceArray[0];
+        $(".testTitle").append(question);
+      }
+
+
+}, 15000)}
+
+
+
 // function to make the choices for the player to select visible on a 25 sec 
 function delayChoice(){
   // setTimeout()
@@ -43,8 +59,8 @@ function delayChoice(){
     $(".test").append(choiceDiv);
   }
     // $(".test").show();
- //run on 10 sec delay, was 25 secs for the longer version
-}, 25000)}
+ //show the choices to be selected after 30 sec delay
+}, 30000)}
 
 function animateText(){
   // $('#webTicker').webTicker();
