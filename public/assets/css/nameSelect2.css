@@ -1,14 +1,13 @@
 * {
-/*  font-family: 'Source Code Pro', monospace;
-*/  
   font-family: 'Press Start 2P', cursive;
 font-size: 18px;
 }
 
 body {
-  background: url(../img/darkcompbg.jpg);
+  background: url(../img/darkcompbg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+
 }
 
 
@@ -43,11 +42,9 @@ h3 {
     background: #F2C777;
 }
 
-/*.input__field--haruki, .input__field {
-    color: black;
-}*/
 
 .input__field--haruki {
   font-size: 2em;
   color: black;
+  font-family: 'Press Start 2P', cursive;
 }
