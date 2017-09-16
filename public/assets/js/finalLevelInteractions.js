@@ -1,4 +1,4 @@
-//JS file for the final Level 7 Interactions 
+//JS file for the final Level 7 Interactions
 var choiceArray = [];
 var prArray = [];
 var sfArray = [];
@@ -35,7 +35,7 @@ $( document ).ready(function() {
       // $('#displaySF').html(choiceArray[0]);
       //push dialog choices to the dialog textbox space
       displayData();
-      delayChoice();
+      // delayChoice();
       animateText();
       // playclick();
       //animate the shadow figure and dialogue
@@ -53,9 +53,10 @@ $( document ).ready(function() {
   	}).done(function(response){
   		currentRep = response[0].reputation;
       currentGold = response[0].gold;
+      displayFinalStats();
   	})
   	//grab the gold info from the database and push to modal
-  	 displayFinalStats();
+
  });
 
 
@@ -80,7 +81,7 @@ console.log("contents of the sfArray[1]" + sfArray[1]);
 console.log("contents of the prArray[2]" + prArray[2]);
 console.log("contents of the sfArray[2]" + sfArray[2]);
 
-//SCRIPT FORMAT 
+//SCRIPT FORMAT
    $(".displayNP0").text(prArray[0]);
    $(".displaySF0").text(sfArray[0]);
    $(".displayNP1").text(prArray[1]);
@@ -110,7 +111,7 @@ setTimeout(function(){
 
 
 
-// function to make the choices for the player to select visible on a 25 sec 
+// function to make the choices for the player to select visible on a 25 sec
 function delayChoice(){
   // setTimeout()
   setTimeout(function(){
@@ -139,7 +140,7 @@ function animateShadow(){
       top: '10px',
       opacity: '1',
       height:'567px',
-      // width: '200px', 
+      // width: '200px',
       easing: 'linear'
   });
    $("#displayShadow").show(5000);
@@ -161,7 +162,7 @@ console.log("the player's current rep is:" + currentGold);
 
     $("#displayGold").append(currentGold);
     $("#displayRep").append(currentRep);
-    $("#myModal").modal('show');
+
 // });
 }
 
@@ -231,9 +232,9 @@ $(".test").on("click", ".choiceSelector", function( event ) {
 
   //hide the test  div
   $(".test").hide(1000);
+  $("#myModal").modal('show');
   //call the portal to appear to take user to the next page
   $("#portal").show(2000);
    $("#displayShadow").hide(2000);
 
 });
-
