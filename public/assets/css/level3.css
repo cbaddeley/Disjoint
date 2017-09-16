@@ -9,10 +9,12 @@ body {
 }
 
 .Shop {
-  margin: 30px;
+ /* margin: 30px;*/
   text-align: center;
   background-color: #2f4f4f;
   font-family: 'Press Start 2P', cursive;
+  max-height: auto;
+  max-width: auto;
 }
 
 .shop-open {
@@ -23,16 +25,16 @@ body {
 .store-front {
   display: block;
   float: left;
-  width: 50%;
-  height: auto;
-  margin-top: 100px;
+  max-width: 700px;
+   height: auto;
+  margin: auto;
   overflow: auto;
-  padding: 10px;
   background-color: black;
   box-shadow: 0 0 0 10px hsl(0, 0%, 80%),
     0 0 0 15px hsl(0, 0%, 90%);
   opacity: .8;
-}
+  animation: bobble 4s infinite;
+  }
 
 #sell-btn {
   color: #0000cd;
@@ -49,17 +51,43 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+#homeButton{
+  max-width: 700px;
+  margin: auto;
+/*position: relative;
+bottom: 0;*/
+  padding: 5px;
+   background-color: black;
+  box-shadow: 0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
+  opacity: .8;
+/*  animation: bobble 4s infinite;*/
+}
+
+#footer{
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+
+}
+
+
 .backpack {
 	/*background-image: url(../img/gradient_bkg01.png);*/
   display: block;
-  float: right;
-  width: 50%;
-  height: 256px;
+  /*float: right;*/
+  max-width: 700px;
+  height: auto;
+  margin: auto;
+  margin-left: 120px;
+   /*margin-top: 100px;*/
   overflow: auto;
-  border: 3px solid #0000cd;
-  border-radius: 25px;
-  padding: 20px;
-  border-left-style: dashed;
+   background-color: black;
+  box-shadow: 0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
+  opacity: .8;
+  animation: bobble 4s infinite;
+
 }
 
 h2 {
@@ -75,10 +103,22 @@ textarea {
   color: black;
 }
 
-li {
-  /*border: 2px red solid;*/
+@keyframes bobble{
+
+0%{
+
+  transform: translate3d(50px, 40px, 0px);
+  animation-timing-function: ease-in;
 }
 
-/*.ticker {
-  border: yellow 2px solid;
-}*/
+50%{
+  transform: translate3d(50px, 70px, 0px);
+  animation-timing-function: ease-out;
+}
+
+100%{
+
+  transform: translate3d(50px, 40px, 0px);
+}
+
+}
