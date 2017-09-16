@@ -23,4 +23,4 @@ INSERT INTO Levels (level_name, choices, sf_dialog, player_dialog) VALUES ('Leve
 
 
 INSERT INTO Shops (item_name, gold, reputation)
-VALUES ("Motivation", 10, 10), ("Nightmare book", 5, 5), ("Curly lip hair", 15, 15), ("Solved Folder", 10, 10);
+VALUES ("Motivation", 10, 10), ("Nightmare book", 5, 5), ("Curly lip hair", 15, 15), ("Solved Folder", 10, 10), ("Lvl 3 Key", 20, 25), ("Automagic", 30, 44), ("Extra Pants", 44, 19), ("Magical Mocha Chai", 7, 20), ("2 Bootstraps", 9, 50), ("Pancakes", 11, 55);
