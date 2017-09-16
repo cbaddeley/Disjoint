@@ -35,17 +35,17 @@ delayChoice();
 //function to later display the question prompt for the player (after the delay choices)
 function delayQuestPrompt(){
 setTimeout(function(){
-   // for (let i =0; i < 1; i++){
+   $("#choicePrompt").text(choiceArray[0]);
+   for (let i =0; i < 1; i++){
     var question = choiceArray[0];
-        $(".testTitle").append(question);
-  //     }
+        $(".testTitle").text(question);
+      }
+      $(".testTitle").show();
   // for (let i =0; i < 1; i++){
   //   var question = choiceArray[0];
   //       $(".testTitle").append(question);
   //     }
-
-
-}, 15000)}
+}, 3000)}
 
 
 
@@ -67,7 +67,7 @@ function delayChoice(){
 
 function animateText(){
   // $('#webTicker').webTicker();
-  $('.ticker').ticker({finishOnHover:false, cursorSpeed:50});
+  $('.ticker').ticker({finishOnHover:false, cursorSpeed:10});
   $(".displayNP").hide();
   $(".displaySF").hide();
 

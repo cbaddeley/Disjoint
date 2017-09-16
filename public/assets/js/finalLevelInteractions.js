@@ -65,7 +65,7 @@ $( document ).ready(function() {
 function displayData() {
 
   //display choices in individual divs in test space
-  // $("#choicePrompt").text(choiceArray[0]);
+  $("#choicePrompt").text(choiceArray[0]);
   //Shows the player choice prompt
   // for (let i =0; i < 1; i++){
   //   var question = choiceArray[0];
@@ -105,9 +105,7 @@ setTimeout(function(){
   //   var question = choiceArray[0];
   //       $(".testTitle").append(question);
   //     }
-
-
-}, 15000)}
+}, 5000)}
 
 
 
@@ -129,7 +127,7 @@ function delayChoice(){
 
 function animateText(){
   // $('#webTicker').webTicker();
-  $('.ticker').ticker({finishOnHover:false, cursorSpeed:50});
+  $('.ticker').ticker({finishOnHover:false, cursorSpeed:15});
   $(".displayNP").hide();
   $(".displaySF").hide();
 
@@ -231,7 +229,8 @@ $(".test").on("click", ".choiceSelector", function( event ) {
       });
 
   //hide the test  div
-  $(".test").hide(1000);
+  // $(".test").hide(20000);
+  // $(".test").fadeIn();
   $("#myModal").modal('show');
   //call the portal to appear to take user to the next page
   $("#portal").show(2000);

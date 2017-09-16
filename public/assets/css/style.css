@@ -38,6 +38,7 @@
   color: white;
   font-size: large;
   font-family: 'Press Start 2P', cursive;
+  border: 3px red solid;
 }
 
 .container {
@@ -264,8 +265,7 @@ background: black;
  color: white;
 }
 #displayGold, #displayRep{
-  border: red 2px solid;
-  color: white;
+   color: white;
 }
 
 .modal-content{
@@ -273,6 +273,7 @@ color: white;
        box-shadow:
    0 0 0  10px hsl(0, 0%, 80%),
    0 0 0  15px hsl(0, 0%, 90%);
+   animation: bobble 4s infinite;
 }
 
 

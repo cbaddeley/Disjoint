@@ -66,7 +66,7 @@ $('body').fadeIn(1000);
 
 
 
-$('.link').click(function() {
+$('.link').click(function(event) {
 
 event.preventDefault();
 
@@ -75,6 +75,8 @@ newLocation = this.href;
 $('body').fadeOut(1000, newpage);
 
 });
+
+
 
 function newpage() {
 
