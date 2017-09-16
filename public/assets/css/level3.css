@@ -1,93 +1,124 @@
 body {
-	background-image: url(https://i.pinimg.com/originals/e7/c0/f3/e7c0f3e93952b5afd8668cc83087ac09.gif);
-	background-size: 100% 100%;
+  background-image: url(https://i.pinimg.com/originals/e7/c0/f3/e7c0f3e93952b5afd8668cc83087ac09.gif);
+  background-size: 100% 100%;
   text-align: center;
-	text-shadow: yellow;
-	color: white;
-	  background-repeat: no-repeat;
+  text-shadow: yellow;
+  color: white;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .Shop {
-
-	margin: 30px;
-	/*background-image: url(../img/gradient_bkg01.png);*/
+ /* margin: 30px;*/
   text-align: center;
   background-color: #2f4f4f;
   font-family: 'Press Start 2P', cursive;
-  
+  max-height: auto;
+  max-width: auto;
 }
 
-.shop-open{
-	/*background-image: url(../img/gradient_bkg01.png);*/
-
-	background-color: #696969;
-	border-color: white;
-	
+.shop-open {
+  background-color: #696969;
+  border-color: white;
 }
+
 .store-front {
-/*	background-image: url(../img/gradient_bkg01.png);*/
-	display: block;
-	float: left;
-	width: 50%;
-	height: auto;
-	margin-top: 100px;
-	/*padding-top: 500px;*/
-	/*overflow: hidden;*/
-	/*background-color: #666666;*/
-	/*border-radius: 25px;
-	border: 3px solid #0000cd;*/
-	padding: 10px;
-	background-color: black;
-	    box-shadow:
-    0 0 0 10px hsl(0, 0%, 80%),
+  display: block;
+  float: left;
+  max-width: 700px;
+   height: auto;
+  margin: auto;
+  overflow: auto;
+  background-color: black;
+  box-shadow: 0 0 0 10px hsl(0, 0%, 80%),
     0 0 0 15px hsl(0, 0%, 90%);
-    opacity: .8;
+  opacity: .8;
+  animation: bobble 4s infinite;
+  }
+
+#sell-btn {
+  color: #0000cd;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#buy-btn {
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#add-item-btn {
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#homeButton{
+  max-width: 700px;
+  margin: auto;
+/*position: relative;
+bottom: 0;*/
+  padding: 5px;
+   background-color: black;
+  box-shadow: 0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
+  opacity: .8;
+/*  animation: bobble 4s infinite;*/
+}
+
+#footer{
+  position: fixed;
+  bottom: 0px;
+  width:100%;
 
 }
-#sell-btn{
-	color: #0000cd;
-	font-family: 'Press Start 2P', cursive;
-}
-#buy-btn{
-	color: black;
-	font-family: 'Press Start 2P', cursive;
-}
-#add-item-btn{
-	color: black;
-	font-family: 'Press Start 2P', cursive;
-}
-.backpack{
+
+
+.backpack {
 	/*background-image: url(../img/gradient_bkg01.png);*/
-	display: block;
-	float: right;
-	width: 50%;
-	height: 256px;
-	overflow: auto;
-	border: 3px solid #0000cd;
-	border-radius: 25px;
-	padding: 20px;
-	border-left-style: dashed;	
+  display: block;
+  /*float: right;*/
+  max-width: 700px;
+  height: auto;
+  margin: auto;
+  margin-left: 120px;
+   /*margin-top: 100px;*/
+  overflow: auto;
+   background-color: black;
+  box-shadow: 0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
+  opacity: .8;
+  animation: bobble 4s infinite;
 
 }
 
-h2{
-
-	font-family: 'Press Start 2P', cursive;
+h2 {
+  font-family: 'Press Start 2P', cursive;
 }
-.shop-create{
+
+.shop-create {
 	/*background-image: url(../img/gradient_bkg01.png);*/
-	/*background-color: #4d4d4d;*/
-}
-textarea{
-	color: black;
-}
-li{
-
-	border: 2px red solid;
+	/*background-color: #4d4d4d;*/;
 }
 
-.ticker{
+textarea {
+  color: black;
+}
 
-	border: yellow 2px solid;
+@keyframes bobble{
+
+0%{
+
+  transform: translate3d(50px, 40px, 0px);
+  animation-timing-function: ease-in;
+}
+
+50%{
+  transform: translate3d(50px, 70px, 0px);
+  animation-timing-function: ease-out;
+}
+
+100%{
+
+  transform: translate3d(50px, 40px, 0px);
+}
+
 }
