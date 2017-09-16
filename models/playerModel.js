@@ -1,3 +1,6 @@
+// var Sequelize = require("sequelize");
+// var sequelize = new Sequelize();
+// var shopModel = require("./shopModel.js");
 module.exports = function(sequelize, DataTypes) {
   var Player = sequelize.define("Player", {
     player_name: {
@@ -25,11 +28,7 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Player.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Player.hasOne(models.Backpack, {
-      onDelete: "cascade"
-    });
+    Player.hasMany(models.Backpack);
   };
 
   return Player;
