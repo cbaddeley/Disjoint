@@ -1,26 +1,32 @@
-
 <div class="Shop">
-  <heading class="shop-open">
-
+<div class="row">
+ <heading class="col-lg-12" id="shop-open">
+ 
 <h1>One Stop!</h1>
   </heading>
-<div class="store-front">
+  </div>
+<div class="row">
+<div class="col-lg-6 store-front">
 <h2>Shopping for Goods</h2>
+
 
 <ul class="shop">
 {{#each items}}
 	<li class="shopItem" value="{{this.id}}" id="item{{this.id}}">
 	<p> {{this.id}}. {{this.item_name}}
+
 	</li>
 {{/each}}
 </ul>
 </div>
 
-<div class="backpack">
+<div class="col-lg-6 backpack">
 <h2>these items are yours</h2>
 <br>
+
 <ul class="ulBackpack">
 </ul>
 </div>
+
 
 <script type="text/javascript" src="/assets/js/shop.js"></script>

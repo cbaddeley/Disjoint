@@ -94,6 +94,7 @@ app.post('/api/Backpack', (req, res) => {
   });
 });
 
+
 app.get('/level3', (req, res) =>{
 
      db.Shop.findAll({
@@ -114,5 +115,6 @@ app.get('/level3', (req, res) =>{
       res.json(dbBackpack);
     });
   });
+
 
 };
