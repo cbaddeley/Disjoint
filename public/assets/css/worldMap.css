@@ -25,7 +25,7 @@ header {
     padding-left: 160px;
     margin-top: 10px;
     height: 610px;
-   
+
 }
 
 @keyframes bobble{
@@ -48,7 +48,7 @@ header {
 
 }
 .hexagon {
-  /*display: none;*/
+  display: none;
   position: relative;
   width: 200px;
   height: 115.47px;
@@ -127,28 +127,28 @@ header {
     left: 117px;
     top: 5px;
     background-image: url(/assets/img/bedroom.png);
-    animation: bobble 7s infinite; 
+    animation: bobble 7s infinite;
 }
 
 #level2 {
     left: 10px;
     top: 15px;
     background-image: url(/assets/img/Fairy_Forest2.png);
-    animation: bobble 7.5s infinite; 
+    animation: bobble 7.5s infinite;
 }
 
 #level3 {
     left: 223px;
     top: -157px;
     background-image: url(https://i.pinimg.com/originals/e7/c0/f3/e7c0f3e93952b5afd8668cc83087ac09.gif);
-    animation: bobble 7.8s infinite; 
+    animation: bobble 7.8s infinite;
 }
 
 #level4 {
     left: 116px;
     top: -148px;
     background-image: url(/assets/img/volcano3.jpg);
-      animation: bobble 7.5s infinite; 
+      animation: bobble 7.5s infinite;
 
 }
 
@@ -157,21 +157,21 @@ header {
     top: -321px;
     left: 329px;
     background-image: url(/assets/img/alley.gif);
-      animation: bobble 7s infinite; 
+      animation: bobble 7s infinite;
 }
 
 #level6 {
     top: -677px;
     left: 435px;
     background-image: url(/assets/img/small90.png);
-      animation: bobble 7.5s infinite; 
+      animation: bobble 7.5s infinite;
     }
 
 #level7 {
     top: -1033px;
     left: 330px;
     background-image: url(/assets/img/welcomehome.gif);
-      animation: bobble 7.5s infinite; 
+      animation: bobble 7.5s infinite;
 }
 
 
