@@ -1,4 +1,4 @@
-// *********************************************************************************
+s// *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
 // Dependencies
@@ -74,15 +74,15 @@ module.exports = function(app) {
   });
 
 
-  //app.get("/level3", function(req, res) {
-    //db.Item.findAll({}).then(function(dbItems) {
-      //var hbsObject = {
-      //  items: dbItems
-      //};
-     // console.log(hbsObject);
-      //res.render("level3", hbsObject);
-      //});
-  //});
+  app.get("/level3", function(req, res) {
+    db.Shop.findAll({}).then(function(dbItems) {
+      var hbsObject = {
+       items: dbItems
+      };
+     console.log(hbsObject);
+      res.render("level3", hbsObject);
+      });
+  });
   //check json
 
   // app.get("/api/level3", function(req, res){
