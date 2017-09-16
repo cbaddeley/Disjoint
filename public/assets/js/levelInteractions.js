@@ -11,7 +11,7 @@ function displayData() {
     }
     /*hides the conversation div*/
   // $(".test").hide();
-console.log("this is a preview of the script for this level:")
+console.log("this is a preview of the script for this level:");
 console.log("contents of the prArray[0]" + prArray[0]);
 console.log("contents of the sfArray[0]" + sfArray[0]);
 console.log("contents of the prArray[1]" + prArray[1]);
@@ -30,11 +30,11 @@ console.log("contents of the sfArray[2]" + sfArray[2]);
    $(".displaySF2").text(sfArray[2]);
      // $(".displayNP").append(prArray[3]);
 }
-
+// function to make the choices for the player to select visible on a 25 sec 
 function delayChoice(){
   // setTimeout()
   setTimeout(function(){
- /*loop to provide choices for the player*/
+ // loop to provide choices for the player
     for (let i = 1; i < choiceArray.length; i++) {
     var choiceDiv = $("<div class='choiceSelector'>");
     choiceDiv.text(choiceArray[i]);
@@ -42,10 +42,9 @@ function delayChoice(){
     // $(".testTitle").append(question);
     $(".test").append(choiceDiv);
   }
-  // $(".test").show();
-  /*run on 10 sec delay, was 25 secs for the longer version*/
-}, 25000)
-}
+    // $(".test").show();
+ //run on 10 sec delay, was 25 secs for the longer version
+}, 25000)}
 
 function animateText(){
   // $('#webTicker').webTicker();
@@ -94,55 +93,7 @@ var clickone = $("#mySoundClip")[0];
     alert("clickone played!");
   }
   )};
-// $(".choiceSelector")
-//   .each(function(i) {
-//     if (i != 0) {
-//       $("#mySoundClip")
-//         .clone()
-//         .attr("id", "beep-two" + i)
-//         .appendTo($(this).parent());
-//     }
-//     $(this).data("beeper", i);
-//   })
-//   .mouseenter(function() {
-//     $("#beep-two" + $(this).data("beeper"))[0].play();
-//   });
-// $("#beep-two").attr("id", "beep-two0");
 
-
-  // var choiceHover = $(".choiceSelectorSound");
-  //   var choiceClick = choicehover.find('audio')[0];
-
-  //   choiceHover.hover(function(){
-  //     choiceClick.play();
-  //   }, function(){
-
-  //     choiceClick.stop();
-  //     alert("click!!!");
-  //   });  
-
- 
-// $("#displayCongratsPhoto").html()
-//LOOK INTO JPLAYER:  http://jplayer.org/
-// function playClick(){
-//   $(".choiceSelector")
-//   // .each(function(i) {
-//   //   if (i != 0) {
-//   //     $("#beep-two")
-//   //       .clone()
-//   //       .attr("id", "beep-two" + i)
-//   //       .appendTo($(this).parent());
-//   //   }
-//   //   $(this).data("beeper", i);
-//   // })
-//   .mouseenter(function() {
-//     $("#beep-two" + $(this).data("beeper"))[0].play();
-//   });
-// // $("#beep-two").attr("id", "beep-two0");
-// }
-
-//OR     var audio = $("audio")[0];
-    // audio.play();
 
 //portal replacement (takes the place of former next level advancement button)
 $("#portal").on("click", function( event ) {
