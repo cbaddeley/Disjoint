@@ -8,19 +8,13 @@ module.exports = function(sequelize, DataTypes) {
 	allowNull: false,
 	validate: {len: [1, 50]}
 	},
+	gold: {
+		type: DataTypes.INTEGER,
+		defaultValue: 5
+	},
 	reputation: {
 	type: DataTypes.INTEGER,
 	defaultValue: 30
-	},
-	backpack: {
-	type: DataTypes.BOOLEAN,
-	defaultValue: false
-	},
-	//backpack will only exist on shop object
-	//plan to change
-	secret: {
-	type: DataTypes.BOOLEAN,
-	defaultValue: false,
 	}
 },{
     timestamps: false
