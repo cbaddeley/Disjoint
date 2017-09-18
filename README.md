@@ -8,17 +8,17 @@ Suggested Rating:  E10+for language
 
 It all starts late one night, with a mysterious visit from a hooded stranger…
 
-![World Map Logo](/assets/img/logo.png)
+![World Map Logo](https://github.com/cbaddeley/Disjoint/blob/master/public/assets/img/logo.png)
 
 _________________________________________
 ## Technologies Used Include:  
 
-* Pixi.JS [Pixi.JS](www.pixijs.com)
+* [Pixi.JS](www.pixijs.com)
 * HTML5 CSS3
 * Handlebars.js 
 * Bootstrap 3 
 * Express, MySQL, Node.JS 
-* Animate.CSS(https://daneden.github.io/animate.css/)
+* [Animate.CSS](https://daneden.github.io/animate.css/)
 * All art is the property of their respective creators (not us)
 __________________________________
 ## Upcoming Features:
