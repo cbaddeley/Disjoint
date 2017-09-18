@@ -48,3 +48,8 @@ h3 {
   color: black;
   font-family: 'Press Start 2P', cursive;
 }
+
+#creditModalButton {
+  float: right;
+  margin-right: 20px;
+}
